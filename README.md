@@ -37,10 +37,10 @@ The Tingen web service is actually two components:
 			</td>
 		</tr>
     <tr>
-			<td align="left">
+			<td align="center">
 				The Tingen <b>front end</b>
 			</td>
-      <td align="left">
+      <td align="center">
 				The Tingen <b>back end</b>
 			</td>
 		</tr>
@@ -57,7 +57,7 @@ When Tingen is released, both Tingen_development and Outpost31 are compiled into
 			</td>
       </tr>
       <tr>
-      <td>
+      <td align="center">
 				The Tingen web service!
 			</td>
 		</tr>
