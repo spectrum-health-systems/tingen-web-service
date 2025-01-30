@@ -89,8 +89,10 @@ Tingen/Outpost31 **development** is done using both [Tingen-Development](https:/
 
 ## Stable releases
 
-Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
+> WARNING!  
+> Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
 
+Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
 
 <div align="center">
 	<table>
@@ -102,7 +104,7 @@ Once the development version of Tingen has been tested and verified to be **stab
 	</table>
 </div>
 
-Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
+
 
 ## Community releases
 
