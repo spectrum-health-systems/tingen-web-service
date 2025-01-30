@@ -51,7 +51,11 @@ And they work like this:
 
 ```mermaid
 flowchart LR
-  Avatar(Avatar) -- ScriptLink(ScriptLink) --> Tingen(Tingen) --> Outpost31(Outpost31) --> Avatar
+Input(Input) -.-> Tingen(Tingen) --> Outpost31(Outpost31) -.-> Output(Output)
+style Input color:#6A6A6A,fill:#444444
+style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
+style Outpost31 color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
+style Output color:#6A6A6A,fill:#444444
 ```
 
 # Tingen releases
@@ -73,7 +77,36 @@ When a new Tingen release is ready, Tingen_development and Outpost31 are compile
 	</table>
 </div>
 
+And they work like this:
+
+```mermaid
+flowchart LR
+Avatar(Avatar) -- Request --> Tingen(Tingen) -- Reply --> Avatar
+style Avatar color:#000000,fill:#1b8eb7,stroke:#FFFFFF,stroke-width:2px
+style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
+```
+
 ## Types of releases
+
+<div align="center">
+		<table>
+		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
+        <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
+			</td>
+      <td align="center">
+				<b>The Tingen web service!</b>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+
 
 ### Development releases
 
