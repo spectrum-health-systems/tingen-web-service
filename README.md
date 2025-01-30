@@ -95,11 +95,7 @@ Tingen/Outpost31 **development** is done using [Tingen-Development](https://gith
 		<tr>
 			<td>
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
-        <b>+</b>
         <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
-			</td>
-      <td align="center">
-				<b>Development releases</b>
 			</td>
 		</tr>
 	</table>
