@@ -24,7 +24,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 
 # Tingen_development and Outpost31
 
-The Tingen web service is actually two components smushed together:
+The Tingen web service is actually two components:
 
 <div align="center">
 		<table>
@@ -47,9 +47,20 @@ The Tingen web service is actually two components smushed together:
 	</table>
 </div>
 
-When Tingen is released, both Tingen_development and Outpost31 are compiled into 
+When Tingen is released, both Tingen_development and Outpost31 are compiled into:
 
-
+<div align="center">
+		<table>
+		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
+			</td>
+      <td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_194x254.png"></a>
+			</td>
+		</tr>
+	</table>
+</div>
 
 
 ## Tingen utilities
