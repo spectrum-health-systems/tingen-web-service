@@ -63,7 +63,6 @@ flowchart RL
   style Avatar color:#000000,fill:#1b8eb7,stroke:#FFFFFF,stroke-width:2px
   style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
   style Outpost31 color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
-  style Output color:#6A6A6A,fill:#444444
 ```
 
 # Tingen releases
@@ -84,15 +83,6 @@ When a new Tingen release is ready, Tingen_development and Outpost31 are compile
 		</tr>
 	</table>
 </div>
-
-And they work like this:
-
-```mermaid
-flowchart LR
-Avatar(Avatar) -- Request --> Tingen(Tingen) -- Reply --> Avatar
-style Avatar color:#000000,fill:#1b8eb7,stroke:#FFFFFF,stroke-width:2px
-style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
-```
 
 ## Development releases
 
