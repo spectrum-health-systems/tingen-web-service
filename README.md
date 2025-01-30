@@ -47,6 +47,14 @@ The Tingen web service is actually two components:
 	</table>
 </div>
 
+Basically...
+
+```mermaid
+flowchart LR
+  Avatar -- ScriptLink --> Tingen --> Outpost31
+```
+
+
 Avatar communicates with Tingen_development via ScriptLink, and Tingen_development hands the work off to Outpost31.
 
 # Tingen releases
