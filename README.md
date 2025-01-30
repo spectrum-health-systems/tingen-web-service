@@ -138,6 +138,22 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 
 <div align="center">
 		<table>
+    		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Lieutenant"><img src="https://github.com/spectrum-health-systems/Tingen-Lieutenant/blob/main/.github/image/logo/TingenLieutenant_logo_194x254.png"></a>
+			</td>
+      <td>
+				Text
+			</td>
+		</tr>
+      <tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Commander"><img src="https://github.com/spectrum-health-systems/Tingen-Commander/blob/main/.github/image/logo/TingenCommander_logo_194x254.png"></a>
+			</td>
+      <td>
+				Text
+			</td>
+		</tr>
 		<tr>
 			<td>
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-DevDeploy"><img src="https://github.com/spectrum-health-systems/Tingen-DevDeploy/blob/main/.github/image/logo/TingenDevDeploy_logo_194x254.png"></a>
