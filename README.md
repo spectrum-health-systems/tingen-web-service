@@ -104,8 +104,6 @@ Once the development version of Tingen has been tested and verified to be **stab
 	</table>
 </div>
 
-
-
 ## Community releases
 
 Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as the Tingen **Community Release**.
@@ -121,6 +119,8 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 </div>
 
 # Tingen utilities
+
+There are a few Tingen utilities:
 
 <div align="center">
 		<table>
@@ -169,7 +169,7 @@ You should probably start here:
 
 ## Other documentation
 
-There is also:
+There are also:
 
 * [Changelogs](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Changelogs/CHANGELOGS.md)
 * [Roadmaps](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Roadmaps/ROADMAPS.md)
