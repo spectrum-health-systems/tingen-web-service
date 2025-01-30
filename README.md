@@ -22,7 +22,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * Robust logging
 * ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TingenFeatures.md)!
 
-# Tingen_development and Outpost31
+# Tingen development
 
 The Tingen web service is actually two components:
 
@@ -47,6 +47,8 @@ The Tingen web service is actually two components:
 	</table>
 </div>
 
+## Tingen releases
+
 When Tingen is released, both Tingen_development and Outpost31 are compiled into:
 
 <div align="center">
@@ -58,7 +60,7 @@ When Tingen is released, both Tingen_development and Outpost31 are compiled into
       </tr>
       <tr>
       <td align="center">
-				The Tingen web service!
+				<b>The Tingen web service!</b>
 			</td>
 		</tr>
 	</table>
