@@ -67,22 +67,7 @@ flowchart RL
 
 # Tingen releases
 
-When a new Tingen release is ready, Tingen_development and Outpost31 are compiled into:
-
-<div align="center">
-		<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_194x254.png"></a>
-			</td>
-      </tr>
-      <tr>
-      <td align="center">
-				<b>The Tingen web service!</b>
-			</td>
-		</tr>
-	</table>
-</div>
+There are three types of Tingen releases:
 
 ## Development releases
 
