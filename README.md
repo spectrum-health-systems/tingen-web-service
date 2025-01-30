@@ -51,7 +51,7 @@ Basically...
 
 ```mermaid
 flowchart LR
-  Avatar -- ScriptLink --> Tingen --> Outpost31
+  Avatar(Avatar) -- ScriptLink(ScriptLink) --> Tingen(Tingen) --> Outpost31(Outpost31) --> Avatar
 ```
 
 
