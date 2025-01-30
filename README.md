@@ -47,15 +47,12 @@ The Tingen web service is actually two components:
 	</table>
 </div>
 
-Basically...
+And they work like this:
 
 ```mermaid
 flowchart LR
   Avatar(Avatar) -- ScriptLink(ScriptLink) --> Tingen(Tingen) --> Outpost31(Outpost31) --> Avatar
 ```
-
-
-Avatar communicates with Tingen_development via ScriptLink, and Tingen_development hands the work off to Outpost31.
 
 # Tingen releases
 
@@ -76,12 +73,25 @@ When a new Tingen release is ready, Tingen_development and Outpost31 are compile
 	</table>
 </div>
 
-## The `stable` release
+## Tingen releases:
 
+### Development releases
 
-## The `Community` release
+Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
 
-## Tingen utilities
+Development releases may be broken and not fully tested, and should not be used in production environments.
+
+### Stable releases
+
+Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
+
+Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
+
+### Community releases
+
+Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as the Tingen **Community Release**.
+
+# Tingen utilities
 
 
 
