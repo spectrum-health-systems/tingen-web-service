@@ -120,7 +120,7 @@ Once the development version of Tingen has been tested and verified to be **stab
 
 Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
 
-### Community releases
+## Community releases
 
 Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as the Tingen **Community Release**.
 
@@ -134,10 +134,20 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 	</table>
 </div>
 
-
 # Tingen utilities
 
-
+<div align="center">
+		<table>
+		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-DevDeploy"><img src="https://github.com/spectrum-health-systems/Tingen-DevDeploy/blob/main/.github/image/logo/TingenDevDeploy_logo_194x254.png"></a>
+			</td>
+      <td>
+				Text
+			</td>
+		</tr>
+	</table>
+</div>
 
 
 For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
