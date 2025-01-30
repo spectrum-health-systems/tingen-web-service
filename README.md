@@ -168,16 +168,21 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 
 For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
 
-# Tingen components
+# Tingen documentation
 
-The Tingen web service is actually two parts:
+There's a *ton* of documentation for Tingen.
 
+You should probably start here:
 
-
-
-# Tingen components
-
-# Repository branches
+<div align="center">
+	<table>
+		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Documentation"><img src="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/.github/image/logo/TingenDocumentation_logo_194x254.png"></a>
+			</td>
+		</tr>
+	</table>
+</div>
 
 There are three two types of branches in this repository:
 
