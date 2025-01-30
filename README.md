@@ -71,7 +71,10 @@ There are three types of Tingen releases:
 
 ## Development releases
 
-Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
+> WARNING!  
+> Development releases may be broken and not fully tested, and should not be used in production environments!
+
+Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) (the *front end*) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31) (the *back* end).
 
 <div align="center">
 		<table>
@@ -83,9 +86,6 @@ Tingen/Outpost31 **development** is done using [Tingen-Development](https://gith
 		</tr>
 	</table>
 </div>
-
-> WARNING!  
-> Development releases may be broken and not fully tested, and should not be used in production environments.
 
 ## Stable releases
 
