@@ -58,7 +58,7 @@ When Tingen is released, both Tingen_development and Outpost31 are compiled into
       </tr>
       <tr>
       <td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_194x254.png"></a>
+				The Tingen web service!
 			</td>
 		</tr>
 	</table>
