@@ -2,22 +2,9 @@
 
 <div align="center">
 
-  ![logo](/.github/images/logos/Tingen_README.png)
-
-  ![PRODUCTION_VERSION](https://img.shields.io/badge/release-00.00-seagreen?style=flat-square)
-  ![DotNet](https://img.shields.io/badge/.net-Framework_4.8-darkslateblue?style=flat-square)&nbsp;&nbsp;
-  ![Platform](https://img.shields.io/badge/platform-Windows-blue?style=flat-square)&nbsp;&nbsp;
-  ![License](https://img.shields.io/github/license/spectrum-health-systems/Outpost31?style=flat-square)&nbsp;&nbsp;
+  ![logo](/.github/image/logo/TingenWebService_logo_320x568.png)
 
 </div>
-
-> HI THERE!  
-> 
-> This is the *stable version* of Tingen, and is used to do internal testing.
->
-> While you *can* use this version of Tingen in production environments, it *is not recommended*.
->
-> Production environments should use the Tingen [Community Release](https://github.com/spectrum-health-systems/Tingen-CommunityRelease).
 
 # About Tingen
 
@@ -29,12 +16,43 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 
 ## Tingen features
 
-* Several built-in tools and utilities for use with Avatar™
+* Several built-in tools and utilities that extend the functionality of Avatar™
 * A solid foundation to build additional Avatar™ custom tools and utilities
 * Extremely customizable
 * Robust logging
+* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TingenFeatures.md)!
+
+
 
 For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
+
+# Tingen components
+
+The Tingen web service is actually two parts:
+
+<div align="center">
+		<table>
+		<tr>
+			<td>
+				<a HREF="https://github.com/spectrum-health-systems/ScriptLink-and-Web-Services"><img src="https://github.com/spectrum-health-systems/ScriptLink-and-Web-Services/blob/main/.github/images/logos/ScriptLinkAndWebServices_256x256.jpeg"></a>
+			</td>
+			<td align="left">
+				Information, documentation, and additional resources about:
+				<ul>
+					<li>ScriptLink and web services</li> 
+					<li>Creating a custom web service for Avatar</li> 
+					<li>Self-hosting custom web services</li>
+					<li>Third-party components</li>
+					<li>...and more!</li>
+				</ul>
+				<br>       
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+# Tingen components
 
 # Repository branches
 
