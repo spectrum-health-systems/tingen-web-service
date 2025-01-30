@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  ![logo](/.github/image/logo/TingenWebService_logo_320x568.png)
+  ![logo](/.github/image/logo/TingenWebService_logo_854x480.png)
 
 </div>
 
