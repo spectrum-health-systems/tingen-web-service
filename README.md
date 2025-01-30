@@ -74,7 +74,7 @@ There are three types of Tingen releases:
 > WARNING!  
 > Development releases may be broken and not fully tested, and should not be used in production environments!
 
-Tingen/Outpost31 **development** is done using both **Tingen-Development** and **Outpost31**.
+Tingen/Outpost31 **development** is done using both Tingen-Development and Outpost31.
 
 <div align="center">
 		<table>
