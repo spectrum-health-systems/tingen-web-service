@@ -88,10 +88,14 @@ style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
 
 ## Types of releases
 
+### Development
+
+Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
+
 <div align="center">
 		<table>
 		<tr>
-			<td valign="middle">
+			<td>
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
         <b>+</b>
         <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
@@ -103,19 +107,11 @@ style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
 	</table>
 </div>
 
-
-
-
-
-
-
-### Development releases
-
-Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
-
 Development releases may be broken and not fully tested, and should not be used in production environments.
 
-### Stable releases
+### Stable
+
+
 
 Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
 
