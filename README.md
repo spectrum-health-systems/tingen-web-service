@@ -73,7 +73,7 @@ When a new Tingen release is ready, Tingen_development and Outpost31 are compile
 	</table>
 </div>
 
-## Tingen releases:
+## Types of releases
 
 ### Development releases
 
