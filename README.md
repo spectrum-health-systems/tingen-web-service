@@ -86,9 +86,7 @@ style Avatar color:#000000,fill:#1b8eb7,stroke:#FFFFFF,stroke-width:2px
 style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
 ```
 
-## Types of releases
-
-### Development
+## Development releases
 
 Tingen/Outpost31 **development** is done using [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
 
