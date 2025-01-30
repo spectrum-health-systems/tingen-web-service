@@ -91,7 +91,7 @@ style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
 <div align="center">
 		<table>
 		<tr>
-			<td vertical-align: middle>
+			<td valign="middle">
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
         <b>+</b>
         <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
