@@ -47,9 +47,11 @@ The Tingen web service is actually two components:
 	</table>
 </div>
 
-## Tingen releases
+Avatar communicates with Tingen_development via ScriptLink, and Tingen_development hands the work off to Outpost31.
 
-When Tingen is released, both Tingen_development and Outpost31 are compiled into:
+# Tingen releases
+
+When a new Tingen release is ready, Tingen_development and Outpost31 are compiled into:
 
 <div align="center">
 		<table>
@@ -66,6 +68,10 @@ When Tingen is released, both Tingen_development and Outpost31 are compiled into
 	</table>
 </div>
 
+## The `stable` release
+
+
+## The `Community` release
 
 ## Tingen utilities
 
