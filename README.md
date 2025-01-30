@@ -50,12 +50,20 @@ The Tingen web service is actually two components:
 And they work like this:
 
 ```mermaid
-flowchart LR
-Input(Input) -.-> Tingen(Tingen) --> Outpost31(Outpost31) -.-> Output(Output)
-style Input color:#6A6A6A,fill:#444444
-style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
-style Outpost31 color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
-style Output color:#6A6A6A,fill:#444444
+flowchart RL
+  subgraph TingenWebService["The Tingen Web Service"]
+    direction LR
+    %% Components
+    Tingen(Tingen)
+    Outpost31(Outpost31) 
+  end
+  %% Layout
+  Avatar(Avatar) -- Request --> Tingen --> Outpost31 -- Reply --> Avatar
+  %% Styles
+  style Avatar color:#000000,fill:#1b8eb7,stroke:#FFFFFF,stroke-width:2px
+  style Tingen color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
+  style Outpost31 color:#000000,fill:#ff9800,stroke:#4caf50,stroke-width:3px
+  style Output color:#6A6A6A,fill:#444444
 ```
 
 # Tingen releases
