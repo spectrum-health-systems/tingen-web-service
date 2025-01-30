@@ -143,7 +143,7 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Lieutenant"><img src="https://github.com/spectrum-health-systems/Tingen-Lieutenant/blob/main/.github/image/logo/TingenLieutenant_logo_194x254.png"></a>
 			</td>
       <td>
-				Text
+				A utility for monitoring Tingen from workstations
 			</td>
 		</tr>
       <tr>
@@ -151,7 +151,7 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Commander"><img src="https://github.com/spectrum-health-systems/Tingen-Commander/blob/main/.github/image/logo/TingenCommander_logo_194x254.png"></a>
 			</td>
       <td>
-				Text
+				A Tingen maintenance utility
 			</td>
 		</tr>
 		<tr>
@@ -159,7 +159,7 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-DevDeploy"><img src="https://github.com/spectrum-health-systems/Tingen-DevDeploy/blob/main/.github/image/logo/TingenDevDeploy_logo_194x254.png"></a>
 			</td>
       <td>
-				Text
+				A tool for deploying development versions of Tingen
 			</td>
 		</tr>
 	</table>
