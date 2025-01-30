@@ -6,7 +6,7 @@
 
 </div>
 
-# About Tingen
+# The Tingen Web Service
 
 [Netsmart's Avatar™](https://www.ntst.com/Solutions-and-Services/Offerings/myAvatar) is a behavioral health EHR that offers a recovery-focused suite of solutions that leverage real-time analytics and clinical decision support to drive value-based care.
 
@@ -22,20 +22,18 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * Robust logging
 * ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TingenFeatures.md)!
 
+## Tingen components
 
-
-For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
-
-# Tingen components
-
-The Tingen web service is actually two parts:
+The Tingen web service is actually two components smushed together:
 
 <div align="center">
 		<table>
 		<tr>
 			<td>
-				<a HREF="https://github.com/spectrum-health-systems/ScriptLink-and-Web-Services"><img src="https://github.com/spectrum-health-systems/ScriptLink-and-Web-Services/blob/main/.github/images/logos/ScriptLinkAndWebServices_256x256.jpeg"></a>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_320x420.png"></a>
 			</td>
+		</tr>
+    <tr>
 			<td align="left">
 				Information, documentation, and additional resources about:
 				<ul>
@@ -50,6 +48,21 @@ The Tingen web service is actually two parts:
 		</tr>
 	</table>
 </div>
+
+
+
+## Tingen utilities
+
+
+
+
+For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
+
+# Tingen components
+
+The Tingen web service is actually two parts:
+
+
 
 
 # Tingen components
