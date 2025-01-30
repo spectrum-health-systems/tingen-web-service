@@ -32,18 +32,16 @@ The Tingen web service is actually two components smushed together:
 			<td>
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
 			</td>
+      <td>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
+			</td>
 		</tr>
     <tr>
 			<td align="left">
-				Information, documentation, and additional resources about:
-				<ul>
-					<li>ScriptLink and web services</li> 
-					<li>Creating a custom web service for Avatar</li> 
-					<li>Self-hosting custom web services</li>
-					<li>Third-party components</li>
-					<li>...and more!</li>
-				</ul>
-				<br>       
+				The "front end" of Tingen.    
+			</td>
+      <td align="left">
+				The "back end" of Tingen.    
 			</td>
 		</tr>
 	</table>
