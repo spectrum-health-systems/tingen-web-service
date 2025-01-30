@@ -165,9 +165,6 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 	</table>
 </div>
 
-
-For more infomation about Tingen, please read the [documentation](https://github.com/spectrum-health-systems/Tingen-Documentation).
-
 # Tingen documentation
 
 There's a *ton* of documentation for Tingen.
@@ -184,30 +181,11 @@ You should probably start here:
 	</table>
 </div>
 
-There are three two types of branches in this repository:
+## Roadmaps
 
-* **[main](https://github.com/spectrum-health-systems/Tingen/tree/main)**  
-  This is the latest stable release of Tingen. You can think of this as the Release Candidate for the Tingen [Community Release](https://github.com/spectrum-health-systems/Tingen-CommunityRelease).
-
-* **Tingen archive snapshots**  
-  When development starts on a new monthly version, the previous version is archived to a separate branch (e.g., `24.9.0-stable`).
-
-# Roadmaps and Changelogs
+## Changelogs
 
 You can also review the Tingen [Roadmap](https://github.com/orgs/spectrum-health-systems/projects/51/views/3) and [Changelog](https://github.com/orgs/spectrum-health-systems/projects/51/views/4?groupedBy%5BcolumnId%5D=141162315&filterQuery=status%3ACompleted).
 
 Remember, though, that the majority of the upcoming features/changes will be part of [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
 
-## Other projects
-
-The reason why this repository is pretty bare-bones is because all of the development work is really done in 
-
-* [**Tingen_development**](https://github.com/spectrum-health-systems/Tingen_development)  
-  The development version of Tingen
-
-* [**Outpost31**](https://github.com/spectrum-health-systems/Outpost31)  
-  The core components/logic of Tingen
-
-# Documentation
-
-You can find all the documentation you could ever want about Tingen (and related projects) [here](https://github.com/spectrum-health-systems/Tingen-Documentation).
