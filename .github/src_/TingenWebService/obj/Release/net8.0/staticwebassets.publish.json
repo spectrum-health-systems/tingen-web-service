@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "W95LTc2vpz6xuKYwsw+QpqLRh3qFUVxvCbDTKPGqfNU=",
+  "Source": "TingenWebService",
+  "BasePath": "_content/TingenWebService",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
