@@ -4,18 +4,17 @@
 // Documentation: https://github.com/spectrum-health-systems/Tingen-Documentation
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-// ================================================================ 250121 =====
+// ================================================================ 250207 =====
 
-// u250204_code
-// u250204_documentation
+// u250207_code
+// u250207_documentation
 
 using System.IO;
 using System.Reflection;
 using System.Web.Services;
 
 using Outpost31.Core;
-//using Outpost31.Core.Logger;
-//using Outpost31.Core.Session;
+
 
 using ScriptLinkStandard.Objects;
 
@@ -55,21 +54,6 @@ namespace TingenWebService
                */
 
             string systemCode = Startup.GetSystemCode();
-
-
-
-
-            // -- WAIT -- TingenSession tnSession = TingenSession.Build(sentOptionObject, sentScriptParameter, TingenVersionNumber);
-
-            // -- WAIT -- tnSession.AvData.SystemCode = "UAT";
-
-            // -- WAIT -- LogEvent.Trace(1, ExeAsm, tnSession.TraceInfo);
-
-            // -- WAIT -- TingenApp.StartApp(tnSession);
-
-            // -- WAIT -- TingenApp.StopApp(tnSession);
-
-            // -- WAIT -- return tnSession.AvData.ReturnOptionObject;
 
             return sentOptionObject;
         }

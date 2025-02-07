@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="Tingen_UAT" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\IT\\CSB_Development\\GitHub\\Spectrum\ -\ Tingen\\Tingen-WebService\\src\\TingenWebService\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
-  </parameter>
-</parameters>
