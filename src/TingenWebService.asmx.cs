@@ -4,7 +4,7 @@
 // Documentation: https://github.com/spectrum-health-systems/Tingen-Documentation
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-// ================================================================ 250207 =====
+// ================================================================ 250213 =====
 
 // u250207_code
 // u250207_documentation
@@ -12,8 +12,6 @@
 using System.IO;
 using System.Reflection;
 using System.Web.Services;
-
-using Outpost31.Core;
 
 
 using ScriptLinkStandard.Objects;
@@ -53,7 +51,7 @@ namespace TingenWebService
                * need to create a log file here, use a Primeval Log.
                */
 
-            string systemCode = Startup.GetSystemCode();
+            string systemCode = Outpost31.Core.Runtime.Startup.GetSystemCode();
 
             return sentOptionObject;
         }

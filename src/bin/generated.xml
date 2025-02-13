@@ -24,7 +24,7 @@
             <summary>The executing Assembly name.</summary>
             <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
         </member>
-        <member name="P:TingenWebService.TingenWebService.TingenVersionNumber">
+        <member name="P:TingenWebService.TingenWebService.TngnVersionNumber">
             <summary>The Tingen current version number.</summary>
             <remarks>
                 <para>
@@ -73,7 +73,7 @@
                 <para>
                     <b>This method is required by Avatar and should not be modified.</b><br />
                     <br />
-                    The Tingen <see cref="P:TingenWebService.TingenWebService.TingenVersionNumber">Version Number</see> is kinda complex, so it might make sense to<br />
+                    The Tingen <see cref="!:TingenVersionNumber">Version Number</see> is kinda complex, so it might make sense to<br />
                     read about it.
                 </para>
             </remarks>

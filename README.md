@@ -118,38 +118,7 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 	</table>
 </div>
 
-# Tingen utilities
 
-There are a few Tingen utilities:
-
-<div align="center">
-		<table>
-    		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Lieutenant"><img src="https://github.com/spectrum-health-systems/Tingen-Lieutenant/blob/main/.github/image/logo/TingenLieutenant_logo_194x254.png"></a>
-			</td>
-      <td>
-				A utility for monitoring Tingen from workstations
-			</td>
-		</tr>
-      <tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Commander"><img src="https://github.com/spectrum-health-systems/Tingen-Commander/blob/main/.github/image/logo/TingenCommander_logo_194x254.png"></a>
-			</td>
-      <td>
-				A Tingen maintenance utility
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-DevDeploy"><img src="https://github.com/spectrum-health-systems/Tingen-DevDeploy/blob/main/.github/image/logo/TingenDevDeploy_logo_194x254.png"></a>
-			</td>
-      <td>
-				A tool for deploying development versions of Tingen
-			</td>
-		</tr>
-	</table>
-</div>
 
 # Tingen documentation
 
@@ -173,3 +142,19 @@ There are also:
 
 * [Changelogs](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Changelogs/CHANGELOGS.md)
 * [Roadmaps](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Roadmaps/ROADMAPS.md)
+
+
+
+There are three two types of branches in this repository:
+
+* **[main](https://github.com/spectrum-health-systems/Tingen/tree/main)**  
+  This is the latest stable release of Tingen. You can think of this as the Release Candidate for the Tingen [Community Release](https://github.com/spectrum-health-systems/Tingen-CommunityRelease).
+
+* **Tingen archive snapshots**  
+  When development starts on a new monthly version, the previous version is archived to a separate branch (e.g., `24.9.0-stable`).
+
+# Roadmaps and Changelogs
+
+You can also review the Tingen [Roadmap](https://github.com/orgs/spectrum-health-systems/projects/51/views/3) and [Changelog](https://github.com/orgs/spectrum-health-systems/projects/51/views/4?groupedBy%5BcolumnId%5D=141162315&filterQuery=status%3ACompleted).
+
+Remember, though, that the majority of the upcoming features/changes will be part of [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
