@@ -3,20 +3,26 @@
   "WorkspaceRootPath": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2F7200A-582F-4209-ABFC-6412974425FA}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\runtime\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2F7200A-582F-4209-ABFC-6412974425FA}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\xmldoc\\outpost31.core.runtime.startup_doc.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2F7200A-582F-4209-ABFC-6412974425FA}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\xmldoc\\outpost31.corelogger.primevallog_doc.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2F7200A-582F-4209-ABFC-6412974425FA}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\logger\\primevallog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\welcometooutpost31.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\appdata\\xmldocumentation\\welcometooutpost31.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\catalog\\path\\files.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\runtime\\tngnapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\catalog\\path\\folders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\catalog\\path\\directories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,67 +48,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TingenWebService.asmx.cs",
-              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
-              "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
-              "RelativeToolTip": "TingenWebService.asmx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "TngnApp.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\TngnApp.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnApp.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\TngnApp.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnApp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T20:34:25.84Z",
+              "WhenOpened": "2025-02-25T19:26:29.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\Startup.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\Startup.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\Startup.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Title": "TingenWebService.asmx.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
+              "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
+              "RelativeToolTip": "TingenWebService.asmx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:50:21.327Z",
+              "WhenOpened": "2025-02-25T19:28:32.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PrimevalLog.cs",
-              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Folders.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Folders.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Folders.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Folders.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Folders.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:57:36.501Z",
+              "WhenOpened": "2025-02-25T19:29:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Directories.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Directories.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Directories.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Directories.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Directories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T19:37:14.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Files.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Files.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Files.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Catalog\\Path\\Files.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Catalog\\Path\\Files.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T19:37:31.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Outpost31.CoreLogger.PrimevalLog_doc.xml",
-              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\XmlDoc\\Outpost31.CoreLogger.PrimevalLog_doc.xml",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\XmlDoc\\Outpost31.CoreLogger.PrimevalLog_doc.xml",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\XmlDoc\\Outpost31.CoreLogger.PrimevalLog_doc.xml",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\XmlDoc\\Outpost31.CoreLogger.PrimevalLog_doc.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Title": "WelcomeToOutpost31.xml",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\AppData\\XmlDocumentation\\WelcomeToOutpost31.xml",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\AppData\\XmlDocumentation\\WelcomeToOutpost31.xml",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\AppData\\XmlDocumentation\\WelcomeToOutpost31.xml",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\AppData\\XmlDocumentation\\WelcomeToOutpost31.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-02-13T14:58:20.611Z",
+              "WhenOpened": "2025-02-25T20:27:33.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Outpost31.Core.Runtime.Startup_doc.xml",
-              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\XmlDoc\\Outpost31.Core.Runtime.Startup_doc.xml",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\XmlDoc\\Outpost31.Core.Runtime.Startup_doc.xml",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\XmlDoc\\Outpost31.Core.Runtime.Startup_doc.xml",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\XmlDoc\\Outpost31.Core.Runtime.Startup_doc.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-02-13T14:59:53.563Z",
+              "Title": "WelcomeToOutpost31.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\WelcomeToOutpost31.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\WelcomeToOutpost31.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\WelcomeToOutpost31.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\WelcomeToOutpost31.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T20:27:36.961Z",
               "EditorCaption": ""
             }
           ]

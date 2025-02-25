@@ -6,19 +6,7 @@
     <members>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry point for the Tingen web service.</summary>
-            <remarks>
-                <para>
-                    There should only two methods in this class, both of which are required by Avatar:
-                    <list type="bullet">
-                        <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
-                        <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
-                    </list>
-                </para>
-                <para>
-                    This class doesn't do much actual work, and should remain fairly static. For the<br />
-                    most part, it just hands information to  <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
-                </para>
-            </remarks><seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
+            <!-- Failed to insert some or all of included XML --><include file="XmlDocumentation/TingenWebService.xml" path="TingenWebService/Class[@name=&quot;TingenWebService&quot;]/*" />
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsm">
             <summary>The executing Assembly name.</summary>
@@ -35,9 +23,15 @@
                 <para>
                     This isn't 'Nam, there are rules:
                     <list type="bullet">
-                        <item>The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")</item>
-                        <item>If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.</item>
-                        <item>The version number cannot exceed three components (example: "<c>25.07.1</c>")</item>
+                        <item>
+                            The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")
+                        </item>
+                        <item>
+                            If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.
+                        </item>
+                        <item>
+                            The version number cannot exceed three components (example: "<c>25.07.1</c>")
+                        </item>
                     </list>
                 </para>
                 <para>
@@ -60,9 +54,15 @@
                 </code>
             </example><value>
                 <list type="bullet">
-                    <item>December 2024 release: <c>24.12</c></item>
-                    <item>July 2025 release: <c>25.07</c></item>
-                    <item>Patched July 2025 release: <c>25.07.1</c></item>
+                    <item>
+                        December 2024 release: <c>24.12</c>
+                    </item>
+                    <item>
+                        July 2025 release: <c>25.07</c>
+                    </item>
+                    <item>
+                        Patched July 2025 release: <c>25.07.1</c>
+                    </item>
                 </list>
             </value>
         </member>

@@ -31,7 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>XmlDoc\GeneratedXml\generated.xml</DocumentationFile>
+    <DocumentationFile>AppData\XmlDocumentation\Generated\Generated.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,9 +68,10 @@
     <None Include="AppData\Runtime\system.code">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="AppData\XmlDocumentation\TingenWebService - Copy.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
-    <Content Include="XmlDoc\TingenWebService_doc.xml" />
+    <Content Include="AppData\XmlDocumentation\TingenWebService.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,14 +88,13 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="XmlDoc\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XmlDoc\GeneratedXml\" />
+    <Folder Include="AppData\XmlDocumentation\Generated\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Outpost31\src\Outpost31.csproj">
-      <Project>{b2f7200a-582f-4209-abfc-6412974425fa}</Project>
+      <Project>{b0dbedeb-4b64-4fb6-8ef6-0e3e3d2d63d9}</Project>
       <Name>Outpost31</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Tingen-ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">

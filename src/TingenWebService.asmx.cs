@@ -1,41 +1,48 @@
-﻿// =============================================================== 25.2.0 ======
-// TingenWebService: The entry point for the Tingen web service.
-// Repository: https://github.com/APrettyCoolProgram/Tingen-WebService
-// Documentation: https://github.com/spectrum-health-systems/Tingen-Documentation
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
-// ================================================================ 250213 =====
+﻿/* 
+ * The
+ * ████████╗██╗███╗   ██╗ ██████╗ ███████╗███╗   ██╗
+ * ╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝████╗  ██║
+ *    ██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██╔██╗ ██║
+ *    ██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║╚██╗██║
+ *    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
+ *    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
+ *                                       Web Service
+ *                                 
+ * https://github.com/APrettyCoolProgram/Tingen-WebService
+ * Copyright (c) A Pretty Cool Program. All rights reserved.
+ * Licensed under the Apache 2.0 license.
+ * 
+ * Release 25.2.0-development
+ */
 
-// u250207_code
-// u250207_documentation
+// u250225_code
+// u250225_documentation
 
-using System.IO;
 using System.Reflection;
 using System.Web.Services;
-
 
 using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
 {
     /// <summary>The entry point for the Tingen web service.</summary>
-    /// <include file='XmlDoc/TingenWebService_doc.xml' path='TingenWebService/Type[@name="Class"]/TingenWebService/*'/>
+    /// <include file='XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/*'/>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class TingenWebService : System.Web.Services.WebService
+    public class TingenWebService : WebService
     {
         /// <summary>The executing Assembly name.</summary>
         /// <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
         public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The Tingen current version number.</summary>
-        /// <include file='XmlDoc/TingenWebService_doc.xml' path='TingenWebService/Type[@name="Property"]/TingenVersionNumber/*'/>
+        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TingenVersionNumber/*'/>
         public static string TngnVersionNumber { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of Tingen.</summary>
         /// <returns>The current version number of Tingen.</returns>
-        /// <include file='XmlDoc/TingenWebService_doc.xml' path='TingenWebService/Type[@name="Method"]/GetVersion/*'/>
+        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
         [WebMethod]
         public string GetVersion() => $"VERSION {TngnVersionNumber}";
 
@@ -43,7 +50,7 @@ namespace TingenWebService
         /// <param name="sentOptionObject">The SentOptionObject sent from Avatar.</param>
         /// <param name="sentScriptParameter">The SentScriptParameter sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
-        /// <include file='XmlDoc/TingenWebService_doc.xml' path='TingenWebService/Type[@name="Method"]/RunScript/*'/>
+        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
         {
@@ -51,7 +58,9 @@ namespace TingenWebService
                * need to create a log file here, use a Primeval Log.
                */
 
-            string systemCode = Outpost31.Core.Runtime.Startup.GetSystemCode();
+            Outpost31.Core.Runtime.TngnApp.Startup();
+
+            //string systemCode = Outpost31.Core.Runtime.Startup.GetSystemCode();
 
             return sentOptionObject;
         }
