@@ -6,7 +6,7 @@
     <members>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry point for the Tingen web service.</summary>
-            <!-- Failed to insert some or all of included XML --><include file="XmlDocumentation/TingenWebService.xml" path="TingenWebService/Class[@name=&quot;TingenWebService&quot;]/*" />
+            <!-- Failed to insert some or all of included XML --><include file="AppData/XmlDoc/TingenWebService.xml" path="TingenWebService/Class[@name=&quot;TingenWebService&quot;]/TingenWebService*" />
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsm">
             <summary>The executing Assembly name.</summary>

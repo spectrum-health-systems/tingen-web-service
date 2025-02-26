@@ -1,4 +1,4 @@
-﻿/* 
+﻿/*
  * The
  * ████████╗██╗███╗   ██╗ ██████╗ ███████╗███╗   ██╗
  * ╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝████╗  ██║
@@ -7,16 +7,16 @@
  *    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
  *    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
  *                                       Web Service
- *                                 
+ *
  * https://github.com/APrettyCoolProgram/Tingen-WebService
  * Copyright (c) A Pretty Cool Program. All rights reserved.
  * Licensed under the Apache 2.0 license.
- * 
+ *
  * Release 25.2.0-development
  */
 
 // u250225_code
-// u250225_documentation
+// u250226_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -26,7 +26,7 @@ using ScriptLinkStandard.Objects;
 namespace TingenWebService
 {
     /// <summary>The entry point for the Tingen web service.</summary>
-    /// <include file='XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/*'/>
+    /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TingenWebService/*'/>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -37,12 +37,12 @@ namespace TingenWebService
         public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The Tingen current version number.</summary>
-        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TingenVersionNumber/*'/>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TingenVersionNumber/*'/>
         public static string TngnVersionNumber { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of Tingen.</summary>
         /// <returns>The current version number of Tingen.</returns>
-        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
         [WebMethod]
         public string GetVersion() => $"VERSION {TngnVersionNumber}";
 
@@ -50,7 +50,7 @@ namespace TingenWebService
         /// <param name="sentOptionObject">The SentOptionObject sent from Avatar.</param>
         /// <param name="sentScriptParameter">The SentScriptParameter sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
-        /// <include file='AppData/XmlDocumentation/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
         {

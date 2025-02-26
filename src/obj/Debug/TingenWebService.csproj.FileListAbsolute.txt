@@ -2,7 +2,7 @@ C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.dll.config
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.dll
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.pdb
-C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\generated.xml
+C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\Generated.xml
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\roslyn\csc.exe
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\roslyn\csc.exe.config
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\roslyn\csc.rsp

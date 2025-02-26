@@ -1,13 +1,11 @@
-﻿<!--
-    u250204
--->
+﻿<TingenWebService>
 
-<TingenWebService>
+    <!-- ======================================================================
+    TingenWebService.asmx.cs
+    ======================================================================= -->
+    <Class name="TingenWebService">
 
-    <!-- Classes -->
-    <Type name="Class">
-
-        <!-- Tingen.cs -->
+        <!-- TingenWebService.asmx.cs -->
         <TingenWebService>
             <remarks>
                 <para>
@@ -25,12 +23,7 @@
             <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </TingenWebService>
 
-    </Type>
-
-    <!-- Properties-->
-    <Type name="Property">
-
-        <!-- TingenVersionNumber -->
+        <!-- string TingenVersionNumber -->
         <TingenVersionNumber>
             <remarks>
                 <para>
@@ -41,9 +34,15 @@
                 <para>
                     This isn't 'Nam, there are rules:
                     <list type="bullet">
-                        <item>The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")</item>
-                        <item>If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.</item>
-                        <item>The version number cannot exceed three components (example: "<c>25.07.1</c>")</item>
+                        <item>
+                            The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")
+                        </item>
+                        <item>
+                            If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.
+                        </item>
+                        <item>
+                            The version number cannot exceed three components (example: "<c>25.07.1</c>")
+                        </item>
                     </list>
                 </para>
                 <para>
@@ -68,14 +67,20 @@
             </example>
             <value>
                 <list type="bullet">
-                    <item>December 2024 release: <c>24.12</c></item>
-                    <item>July 2025 release: <c>25.07</c></item>
-                    <item>Patched July 2025 release: <c>25.07.1</c></item>
+                    <item>
+                        December 2024 release: <c>24.12</c>
+                    </item>
+                    <item>
+                        July 2025 release: <c>25.07</c>
+                    </item>
+                    <item>
+                        Patched July 2025 release: <c>25.07.1</c>
+                    </item>
                 </list>
             </value>
         </TingenVersionNumber>
 
-        <!-- TingenBuildNumber -->
+        <!-- string TingenBuildNumber -->
         <TingenBuildNumber>
             <remarks>
                 <para>
@@ -85,23 +90,10 @@
                     most part it's not visible to the user.
                 </para>
             </remarks>
-            <value>If Tingen is built at 10:30AM, the build number would be "<c>1030</c>"</value>
+            <value>
+                If Tingen is built at 10:30AM, the build number would be "<c>1030</c>"
+            </value>
         </TingenBuildNumber>
-
-        <!-- DEPRECIATED 241031
-        <TingenConfig>
-            <remarks>
-                <para>
-                    See <b>Outpost31.Core.Configuration.TingenFramework.cs</b> for more information.
-                </para>
-            </remarks>
-        </TingenConfig
-        -->
-
-    </Type>
-
-    <!-- Methods -->
-    <Type name="Method">
 
         <!-- GetVersion() -->
         <GetVersion>
@@ -139,6 +131,6 @@
             </remarks>
         </RunScript>
 
-    </Type>
+    </Class>
 
 </TingenWebService>

@@ -31,7 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>AppData\XmlDocumentation\Generated\Generated.xml</DocumentationFile>
+    <DocumentationFile>AppData\XmlDoc\Generated.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,10 +68,9 @@
     <None Include="AppData\Runtime\system.code">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="AppData\XmlDocumentation\TingenWebService - Copy.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
-    <Content Include="AppData\XmlDocumentation\TingenWebService.xml" />
+    <Content Include="AppData\XmlDoc\TingenWebService.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,9 +88,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AppData\XmlDocumentation\Generated\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Outpost31\src\Outpost31.csproj">
       <Project>{b0dbedeb-4b64-4fb6-8ef6-0e3e3d2d63d9}</Project>
