@@ -65,7 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AppData\Runtime\system.code">
+    <Content Include="AppData\Runtime\tgng.mode" />
+    <None Include="AppData\Runtime\tngn.systemcode">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="TingenWebService.asmx" />
@@ -80,6 +81,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\Runtime\tngn.build" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

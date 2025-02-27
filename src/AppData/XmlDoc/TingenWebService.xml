@@ -1,4 +1,9 @@
-﻿<TingenWebService>
+﻿<!--
+XML documentation for:
+    * TingenWebServiceApp.asmx.cs (u250227)
+-->
+
+<TingenWebService>
 
     <!-- ======================================================================
     TingenWebService.asmx.cs
@@ -23,26 +28,20 @@
             <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </TingenWebService>
 
-        <!-- string TingenVersionNumber -->
-        <TingenVersionNumber>
+        <!-- string TingenVersion -->
+        <TngnVersion>
             <remarks>
                 <para>
-                    The syntax for the Tingen version number is "<c>YY.MM&lt;.patch&gt;</c>".<br/>
+                    The syntax for the Tingen version is "<c>YY.MM&lt;.patch&gt;</c>".<br/>
                     <br/>
-                    The version number is pulled from <c>Properties/AssemblyInfo.cs</c>.
+                    The version is pulled from <c>Properties/AssemblyInfo.cs</c>.
                 </para>
                 <para>
                     This isn't 'Nam, there are rules:
                     <list type="bullet">
-                        <item>
-                            The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")
-                        </item>
-                        <item>
-                            If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.
-                        </item>
-                        <item>
-                            The version number cannot exceed three components (example: "<c>25.07.1</c>")
-                        </item>
+                        <item>The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")</item>
+                        <item>If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.</item>
+                        <item>The version cannot exceed four components (example: "<c>25.07.2.1</c>")</item>
                     </list>
                 </para>
                 <para>
@@ -67,66 +66,30 @@
             </example>
             <value>
                 <list type="bullet">
-                    <item>
-                        December 2024 release: <c>24.12</c>
-                    </item>
-                    <item>
-                        July 2025 release: <c>25.07</c>
-                    </item>
-                    <item>
-                        Patched July 2025 release: <c>25.07.1</c>
-                    </item>
+                    <item>December 2024 release: <c>24.12</c></item>
+                    <item>July 2025 release: <c>25.07</c></item>
+                    <item>Patched July 2025 release: <c>25.07.1</c></item>
                 </list>
             </value>
-        </TingenVersionNumber>
-
-        <!-- string TingenBuildNumber -->
-        <TingenBuildNumber>
-            <remarks>
-                <para>
-                    The syntax for the Tingen build number is "<c>HHMM</c>", and is set at runtime<br/>
-                    via <see href="https://spectrum-health-systems.github.io/Tingen-Documentation/API/Outpost31/html/M_Outpost31_Core_Session_TingenSession_BuildStaticVars.htm">TingenSession.BuildStaticVars()</see>.<br/>                    <br/>
-                    The build number is used in log files, and to help troubleshoot issues. For the<br/>
-                    most part it's not visible to the user.
-                </para>
-            </remarks>
-            <value>
-                If Tingen is built at 10:30AM, the build number would be "<c>1030</c>"
-            </value>
-        </TingenBuildNumber>
-
-        <!-- GetVersion() -->
-        <GetVersion>
-            <remarks>
-                <para>
-                    <b>This method is required by Avatar and should not be modified.</b><br/>
-                    <br/>
-                    The Tingen <see cref="TingenVersionNumber">Version Number</see> is kinda complex, so it might make sense to<br/>
-                    read about it.
-                </para>
-            </remarks>
-        </GetVersion>
+        </TngnVersion>
 
         <!-- RunScript() -->
         <RunScript>
             <remarks>
                 <para>
-                    <b>This method is required by Avatar and should not be modified.</b><br/>
+                   <b>This method is required by Avatar and should not be modified.</b>
+                </para>
+                <para>
+                    This is the main entry point for the Tingen Web Service, and it's where Avatar sends its requests.<br/>
                     <br/>
-                    The only difference between the development and stable versions of Tingen is that<br/>
-                    the development version uses the<i>"UAT"</i> Avatar System Code, while the stable<br/>
-                    version uses the <i>"LIVE"</i> Avatar System Code.<br/>
-                    <br/>
-                    For the development/UAT version of Tingen, you will see the following line:<br/>
-                    <br/>
-                    <code>
-                        tnSession.AvData.SystemCode = "UAT";
-                    </code>
-                    And for the stable/LIVE version of Tingen, you will see the following line:<br/>
-                    <br/>
-                    <code>
-                        tnSession.AvData.SystemCode = "LIVE";
-                    </code>
+                    The method is responsible for:
+                    <list type="number">
+                        <item>Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
+                        <item>Creating a new Tingen Session</item>
+                        <item>Initializing the Tingen Web Service</item>
+                        <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
+                        <item>Returning the <c>FinalOptionObject</c> to Avatar</item>
+                    </list>
                 </para>
             </remarks>
         </RunScript>

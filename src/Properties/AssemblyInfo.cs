@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TingenWebService")]
 [assembly: AssemblyDescription("The entry point for the Tingen web service")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("TingenWebService")]
-[assembly: AssemblyCopyright("Copyright © 2015 - 2025")]
+[assembly: AssemblyCopyright("Copyright (c) A Pretty Cool Program")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
