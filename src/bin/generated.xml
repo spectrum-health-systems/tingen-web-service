@@ -78,18 +78,26 @@
             <returns>The finalized OptionObject to myAvatar.</returns>
             <remarks>
                 <para>
-                   <b>This method is required by Avatar and should not be modified.</b>
+                    <list type="bullet">
+                        <item><b>This method is required by Avatar and should not be modified.</b></item>
+                        <item>This is the main entry point for the Tingen Web Service, and it's where Avatar sends its requests.</item>
+                        <item>Trace Logs can't go here because the logging infrastructure hasn't been initialized yet.</item>
+                    </list>
                 </para>
                 <para>
-                    This is the main entry point for the Tingen Web Service, and it's where Avatar sends its requests.<br />
-                    <br />
                     The method is responsible for:
                     <list type="number">
-                        <item>Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
+                        <item>
+                            Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar
+                        </item>
                         <item>Creating a new Tingen Session</item>
                         <item>Initializing the Tingen Web Service</item>
-                        <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
-                        <item>Returning the <c>FinalOptionObject</c> to Avatar</item>
+                        <item>
+                            Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31
+                        </item>
+                        <item>
+                            Returning the <c>FinalOptionObject</c> to Avatar
+                        </item>
                     </list>
                 </para>
             </remarks>

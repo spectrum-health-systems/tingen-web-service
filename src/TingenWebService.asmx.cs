@@ -12,8 +12,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 //
-// u250227_code
-// u250227_documentation
+// u250311_code
+// u250311_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -53,12 +53,11 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
         {
-            /* Logging infrastructure hasn't been initialized yet, so if you need to create a log file here, use a Primeval Log.
-               */
+            /* Trace Logs won't work here. */
 
             TngnSession tngnSession = new TngnSession();
 
-            Spin.Up(tngnSession, TngnVersion);
+            Spin.Up(tngnSession, TngnVersion, sentOptionObject, sentScriptParameter);
 
             return sentOptionObject;
         }
