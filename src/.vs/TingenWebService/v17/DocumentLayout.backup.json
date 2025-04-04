@@ -3,11 +3,14 @@
   "WorkspaceRootPath": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\logger\\logevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\avatar\\optobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\logger\\logevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\core\\session\\tngnsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -50,7 +53,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,20 +73,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TingenWebService.asmx.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
-              "RelativeToolTip": "TingenWebService.asmx.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDkAAAAtAAAAAAAAAA==",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs \u2B24",
+              "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswD4AAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T11:08:19.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "TngnSession.Catalog.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Session\\TngnSession.Catalog.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Session\\TngnSession.Catalog.cs",
@@ -95,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Spin.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\Spin.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\Spin.cs",
@@ -107,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TngnConfiguration.Catalog.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.Catalog.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.Catalog.cs",
@@ -119,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TngnConfiguration.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.cs",
@@ -131,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TngnSession.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Session\\TngnSession.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Session\\TngnSession.cs",
@@ -143,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DuFile.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
@@ -155,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PrimevalLog.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
@@ -167,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PrimevalLog.Catalog.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\PrimevalLog.Catalog.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.Catalog.cs",
@@ -179,15 +182,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LogEvent.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T14:36:30.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OptObj.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Avatar\\OptObj.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Avatar\\OptObj.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Avatar\\OptObj.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Avatar\\OptObj.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAuwM8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T15:16:56.066Z",
               "EditorCaption": ""
             }
           ]
@@ -198,7 +214,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Core.Runtime.xml",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
@@ -210,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Core.Session.xml",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\AppData\\XmlDoc\\Core.Session.xml",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Session.xml",
@@ -223,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "TngnConfiguration.Properties.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.Properties.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.Properties.cs",

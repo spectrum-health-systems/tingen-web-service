@@ -57,13 +57,34 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\IT", ExeAsm, "Tingen primeval log");
+            /* START PROTO
+             */
 
-            TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
+            File.WriteAllText(@"C:\IT", sentOptionObject.OptionId.ToString());
 
-            Spin.Up(tngnSession, TngnVersion, sentOptionObject, sentScriptParameter);
+            OptionObject2015 workObj = sentOptionObject.Clone();
 
-            return sentOptionObject;
+            if (workObj.SystemCode == "UAT" && workObj.OptionId != "USER_Report118")
+            {
+                return sentOptionObject.ToReturnOptionObject(3, "OK!");
+                
+            }
+            else
+            {
+                return sentOptionObject.ToReturnOptionObject(3, "NO!");
+            }
+
+
+            /* END PROTO
+             */
+
+           // Outpost31.Core.Logger.LogEvent.Primeval(@"C:\IT", ExeAsm, "Tingen primeval log");
+
+            //TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
+
+           // Spin.Up(tngnSession, TngnVersion, sentOptionObject, sentScriptParameter);
+
+            //return sentOptionObject;
         }
     }
 }
