@@ -65,7 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\Runtime\tgng.mode" />
+    <None Include="AppData\Runtime\tngn.hostdatapath" />
     <None Include="AppData\Runtime\tngn.systemcode">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -81,7 +81,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\Runtime\tngn.build" />
+    <Content Include="AppData\Runtime\tngn.build">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

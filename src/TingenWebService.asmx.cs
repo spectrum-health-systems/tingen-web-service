@@ -12,8 +12,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 //
-// u250311_code
-// u250311_documentation
+// u250404_code
+// u250404_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -55,7 +55,7 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            TngnSession tngnSession = new TngnSession();
+            TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
 
             Spin.Up(tngnSession, TngnVersion, sentOptionObject, sentScriptParameter);
 

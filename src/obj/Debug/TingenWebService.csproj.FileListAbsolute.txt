@@ -46,3 +46,4 @@ C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\T
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWe.D3F8E642.Up2Date
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.dll
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.pdb
+C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\tngn.build
