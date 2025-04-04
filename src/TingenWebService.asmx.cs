@@ -73,7 +73,7 @@ namespace TingenWebService
             }
             else
             {
-                return sentOptionObject.ToReturnOptionObject(3, "NO!");
+                return sentOptionObject.ToReturnOptionObject(1, "NO!");
             }
 
 
