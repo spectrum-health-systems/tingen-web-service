@@ -66,14 +66,15 @@ namespace TingenWebService
 
             OptionObject2015 workObj = sentOptionObject.Clone();
 
-            if (workObj.SystemCode == "UAT" && workObj.OptionId != "USER53")
+            if (workObj.SystemCode == "UAT" && workObj.OptionId == "USER_Report118")
             {
-                return sentOptionObject.ToReturnOptionObject(3, "OK!");
+                return sentOptionObject.ToReturnOptionObject(1, "NO!");
+                
                 
             }
             else
             {
-                return sentOptionObject.ToReturnOptionObject(1, "NO!");
+                return sentOptionObject.ToReturnOptionObject(3, "OK!");
             }
 
 
