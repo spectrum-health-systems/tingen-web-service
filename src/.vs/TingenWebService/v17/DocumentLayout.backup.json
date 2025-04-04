@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
               "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs \u2B24",
               "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T11:08:19.331Z",
               "EditorCaption": ""
@@ -115,8 +115,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnConfiguration.Catalog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:19:43.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T11:19:43.804Z"
             },
             {
               "$type": "Document",
@@ -140,8 +139,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Session\\TngnSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:17:31.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T11:17:31.465Z"
             },
             {
               "$type": "Document",
@@ -189,8 +187,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T14:36:30.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:36:30.663Z"
             }
           ]
         },

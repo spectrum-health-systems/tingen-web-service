@@ -56,7 +56,7 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            File.WriteAllText(@"C:\IT", "test.txt");
+            File.WriteAllText(@"C:\IT\test.txt", "sentScriptParameter.txt");
 
             TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
 
