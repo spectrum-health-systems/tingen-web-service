@@ -79,7 +79,7 @@
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
               "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs \u2B24",
               "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAswDYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswEQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-04T11:08:19.331Z",
               "EditorCaption": ""
@@ -166,8 +166,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T14:13:24.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:13:24.206Z"
             },
             {
               "$type": "Document",
@@ -179,8 +178,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\PrimevalLog.Catalog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T14:28:45.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:28:45.261Z"
             },
             {
               "$type": "Document",
@@ -192,8 +190,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T14:36:30.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:36:30.663Z"
             },
             {
               "$type": "Document",
