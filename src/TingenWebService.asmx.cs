@@ -21,6 +21,7 @@ using System.Web.Services;
 using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Runtime;
+using System.IO;
 
 namespace TingenWebService
 {
@@ -54,6 +55,8 @@ namespace TingenWebService
         public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
         {
             /* Trace Logs won't work here. */
+
+            File.WriteAllText(@"C:\IT", "test.txt");
 
             TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
 
