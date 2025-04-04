@@ -60,7 +60,9 @@ namespace TingenWebService
             /* START PROTO
              */
 
-            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\IT", ExeAsm, "Tingen primeval log");
+            File.WriteAllText(@"C:\Tingen_Data\test.txt", sentOptionObject.OptionId.ToString());
+
+            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\Tingen_Data", ExeAsm, sentOptionObject.OptionId.ToString());
 
             OptionObject2015 workObj = sentOptionObject.Clone();
 
