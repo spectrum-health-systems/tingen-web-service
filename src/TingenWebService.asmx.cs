@@ -22,6 +22,7 @@ using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Runtime;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace TingenWebService
 {
@@ -56,7 +57,7 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            File.WriteAllText(@"C:\IT\test.txt", "sentScriptParameter.txt");
+            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\IT", ExeAsm, "Tingen primeval log");
 
             TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
 
