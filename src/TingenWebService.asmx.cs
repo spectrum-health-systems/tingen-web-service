@@ -12,8 +12,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 //
-// u250404_code
-// u250404_documentation
+// u250408_code
+// u250408_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -21,8 +21,6 @@ using System.Web.Services;
 using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Runtime;
-using System.IO;
-using System.Data.SqlClient;
 
 namespace TingenWebService
 {
@@ -48,46 +46,21 @@ namespace TingenWebService
         public string GetVersion() => $"VERSION {TngnVersion}";
 
         /// <summary>Starts the Tingen web service.</summary>
-        /// <param name="sentOptionObject">The SentOptionObject sent from Avatar.</param>
-        /// <param name="sentScriptParameter">The SentScriptParameter sent from Avatar.</param>
+        /// <param name="sentOptObj">The SentOptionObject sent from Avatar.</param>
+        /// <param name="sentScriptParam">The SentScriptParameter sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
         {
             /* Trace Logs won't work here. */
 
-            /* START PROTO
-             */
+            // #DEVNOTE# Defined here so it can be used throughout app.
+            TngnSession tngnSession = TngnSession.New(sentOptObj, sentScriptParam, TngnVersion);
 
-            File.WriteAllText(@"C:\Tingen_Data\test.txt", sentOptionObject.OptionId.ToString());
+            Spin.Up(tngnSession);
 
-            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\Tingen_Data", ExeAsm, sentOptionObject.OptionId.ToString());
-
-            OptionObject2015 workObj = sentOptionObject.Clone();
-
-            if (workObj.SystemCode == "UAT" && workObj.OptionId == "USER_Report118")
-            {
-                return sentOptionObject.ToReturnOptionObject(1, "NO!");
-                
-                
-            }
-            else
-            {
-                return sentOptionObject.ToReturnOptionObject(3, "OK!");
-            }
-
-
-            /* END PROTO
-             */
-
-           // Outpost31.Core.Logger.LogEvent.Primeval(@"C:\IT", ExeAsm, "Tingen primeval log");
-
-            //TngnSession tngnSession = new TngnSession(); // #DEVNOTE# Defined here so it can be used throughout app.
-
-           // Spin.Up(tngnSession, TngnVersion, sentOptionObject, sentScriptParameter);
-
-            //return sentOptionObject;
+            return sentOptObj; // should be returnOptObj
         }
     }
 }
