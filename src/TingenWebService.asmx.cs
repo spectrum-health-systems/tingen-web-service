@@ -58,7 +58,7 @@ namespace TingenWebService
             // #DEVNOTE# Defined here so it can be used throughout app.
             TngnSession tngnSession = TngnSession.New(sentOptObj, sentScriptParam, TngnVersion);
 
-            Spin.Up(tngnSession);
+            SpinUp.Up(tngnSession);
 
             return sentOptObj; // should be returnOptObj
         }
