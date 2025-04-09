@@ -11,7 +11,7 @@
 // https://github.com/APrettyCoolProgram/Tingen-WebService
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-//
+
 // u250408_code
 // u250408_documentation
 
@@ -25,7 +25,7 @@ using Outpost31.Core.Runtime;
 namespace TingenWebService
 {
     /// <summary>The entry point for the Tingen web service.</summary>
-    /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TingenWebService/*'/>
+    /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/ClassDescription/*'/>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]

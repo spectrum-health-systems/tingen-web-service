@@ -1,5 +1,3 @@
-C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.csproj.AssemblyReference.cache
-C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.csproj.CoreCompileInputs.cache
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\tngn.build
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\tngn.systemcode
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.dll.config
@@ -44,6 +42,8 @@ C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\Newtons
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\Outpost31.pdb
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\ScriptLinkStandard.pdb
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.csproj.AssemblyReference.cache
+C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.csproj.CoreCompileInputs.cache
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWe.D3F8E642.Up2Date
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.dll
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\obj\Debug\TingenWebService.pdb

@@ -10,8 +10,12 @@
                 <para>
                     There should only two methods in this class, both of which are required by Avatar:
                     <list type="bullet">
-                        <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
-                        <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
+                        <item>
+                            <see cref="M:TingenWebService.TingenWebService.GetVersion" />
+                        </item>
+                        <item>
+                            <see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" />
+                        </item>
                     </list>
                 </para>
                 <para>
@@ -87,17 +91,11 @@
                 <para>
                     The method is responsible for:
                     <list type="number">
-                        <item>
-                            Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar
-                        </item>
+                        <item>Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
                         <item>Creating a new Tingen Session</item>
                         <item>Initializing the Tingen Web Service</item>
-                        <item>
-                            Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31
-                        </item>
-                        <item>
-                            Returning the <c>FinalOptionObject</c> to Avatar
-                        </item>
+                        <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
+                        <item>Returning the <c>FinalOptionObject</c> to Avatar</item>
                     </list>
                 </para>
             </remarks>
