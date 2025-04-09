@@ -12,15 +12,13 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 
-// u250408_code
-// u250408_documentation
+// u250409_code
+// u250409_documentation
 
 using System.Reflection;
 using System.Web.Services;
-
-using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
-using Outpost31.Core.Runtime;
+using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
 {
@@ -56,9 +54,9 @@ namespace TingenWebService
             /* Trace Logs won't work here. */
 
             // #DEVNOTE# Defined here so it can be used throughout app.
-            TngnSession tngnSession = TngnSession.New(sentOptObj, sentScriptParam, TngnVersion);
+            TngnWbsvSession tngnSession = TngnWbsvSession.New(sentOptObj, sentScriptParam, TngnVersion);
 
-            SpinUp.Up(tngnSession);
+            Outpost31.Core.Service.Spin.Up(tngnSession);
 
             return sentOptObj; // should be returnOptObj
         }
