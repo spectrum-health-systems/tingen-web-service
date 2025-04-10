@@ -53,6 +53,8 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
+
+            File.WriteAllText(@"C:\Tingen_Data\test.txt", "test");
             /* Trace Logs won't work here. */
 
             // START PROTOTYPE CODE
