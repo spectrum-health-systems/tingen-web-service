@@ -1,4 +1,4 @@
-﻿<!-- u250409 -->
+﻿<!-- u250410 -->
 
 <!--
 ===========
@@ -20,7 +20,11 @@
         <ClassDescription>
             <remarks>
                 <para>
-                    There should only two methods in this class, both of which are required by Avatar:
+                    This class doesn't do much actual work, and should remain fairly static. For the<br/>
+                    most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br/>
+                </para>
+                <para>
+                    There are only two methods in this class, both of which are required by Avatar:
                     <list type="bullet">
                         <item>
                             <see cref="GetVersion()"/>
@@ -30,10 +34,7 @@
                         </item>
                     </list>
                 </para>
-                <para>
-                    This class doesn't do much actual work, and should remain fairly static. For the<br/>
-                    most part, it just hands information to  <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br/>
-                </para>
+
             </remarks>
             <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </ClassDescription>

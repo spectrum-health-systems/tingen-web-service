@@ -1,5 +1,4 @@
-C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\tngn.build
-C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\tngn.systemcode
+C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\AppData\Runtime\TngnWbsv.Env
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.dll.config
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.dll
 C:\IT\CSB_Development\GitHub\Spectrum - Tingen\Tingen-WebService\src\bin\TingenWebService.pdb

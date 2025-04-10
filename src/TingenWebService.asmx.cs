@@ -12,9 +12,10 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 
-// u250409_code
-// u250409_documentation
+// u250410_code
+// u250410_documentation
 
+using System;
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Session;
@@ -44,21 +45,50 @@ namespace TingenWebService
         public string GetVersion() => $"VERSION {TngnVersion}";
 
         /// <summary>Starts the Tingen web service.</summary>
-        /// <param name="sentOptObj">The SentOptionObject sent from Avatar.</param>
-        /// <param name="sentScriptParam">The SentScriptParameter sent from Avatar.</param>
+        /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
+        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
             /* Trace Logs won't work here. */
 
-            // #DEVNOTE# Defined here so it can be used throughout app.
-            TngnWbsvSession tngnSession = TngnWbsvSession.New(sentOptObj, sentScriptParam, TngnVersion);
+            // START PROTOTYPE CODE
 
-            Outpost31.Core.Service.Spin.Up(tngnSession);
+            var msg = $"Access Denied{Environment.NewLine}" +
+                        Environment.NewLine +
+                       "Please access this data via the Console Widget Viewer.";
 
-            return sentOptObj; // should be returnOptObj
+            if (sentOptObj.SystemCode == "DOC")
+            {
+                return sentOptObj.ToReturnOptionObject(1, msg);
+
+
+            }
+            else
+            {
+                return sentOptObj.ToReturnOptionObject(3, "OK!");
+            }
+
+            // END PROTOTYPE CODE
+
+
+
+
+            // START NON-PROTOTYPE CODE
+
+            /* #DEVNOTE#
+             * We'll create the TngnWbsvSession object here, and initialize it with a bunch of data, so we can use it
+             * throughout the session.
+             */
+            //TngnWbsvSession tngnSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnVersion);
+
+            //Outpost31.Core.Service.Spin.Up(tngnSession);
+
+            //return sentOptObj; // should be returnOptObj
+
+            // END NON-PROTOTYPE CODE
         }
     }
 }

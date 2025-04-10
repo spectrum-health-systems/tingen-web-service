@@ -8,7 +8,11 @@
             <summary>The entry point for the Tingen web service.</summary>
             <remarks>
                 <para>
-                    There should only two methods in this class, both of which are required by Avatar:
+                    This class doesn't do much actual work, and should remain fairly static. For the<br />
+                    most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
+                </para>
+                <para>
+                    There are only two methods in this class, both of which are required by Avatar:
                     <list type="bullet">
                         <item>
                             <see cref="M:TingenWebService.TingenWebService.GetVersion" />
@@ -18,10 +22,7 @@
                         </item>
                     </list>
                 </para>
-                <para>
-                    This class doesn't do much actual work, and should remain fairly static. For the<br />
-                    most part, it just hands information to  <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
-                </para>
+
             </remarks><seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsm">
@@ -77,8 +78,8 @@
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Starts the Tingen web service.</summary>
-            <param name="sentOptObj">The SentOptionObject sent from Avatar.</param>
-            <param name="sentScriptParam">The SentScriptParameter sent from Avatar.</param>
+            <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
+            <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
             <returns>The finalized OptionObject to myAvatar.</returns>
             <remarks>
                 <para>
