@@ -60,7 +60,7 @@ namespace TingenWebService
                         Environment.NewLine +
                        "Please access this data via the Console Widget Viewer.";
 
-            if (sentOptObj.SystemCode == "DOC")
+            if (sentOptObj.SystemCode == "UATDOC")
             {
                 return sentOptObj.ToReturnOptionObject(1, msg);
 

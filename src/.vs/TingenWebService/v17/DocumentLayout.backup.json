@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -104,8 +104,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T13:17:08.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:17:08.316Z"
             },
             {
               "$type": "Document",
@@ -141,8 +140,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAowA4AAAB/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T13:17:49.647Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:17:49.647Z"
             },
             {
               "$type": "Document",
@@ -152,7 +150,7 @@
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
               "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs \u2B24",
               "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwDgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwD4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T13:18:03.131Z",
               "EditorCaption": ""
@@ -167,8 +165,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAwwDkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T13:40:12.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:40:12.848Z"
             },
             {
               "$type": "Document",
@@ -216,8 +213,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T14:58:32.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T14:58:32.612Z"
             },
             {
               "$type": "Document",
@@ -229,8 +225,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.Properties.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T14:59:09.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T14:59:09.626Z"
             },
             {
               "$type": "Document",
@@ -242,8 +237,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Access\\FormAccess.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:26:54.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T15:26:54.649Z"
             }
           ]
         },
@@ -261,8 +255,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Avatar.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-04-10T13:14:53.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:14:53.273Z"
             },
             {
               "$type": "Document",
@@ -274,8 +267,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAwwCgAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-04-10T13:15:00.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T13:15:00.124Z"
             },
             {
               "$type": "Document",
