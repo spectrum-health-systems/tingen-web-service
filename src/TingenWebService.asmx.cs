@@ -61,7 +61,7 @@ namespace TingenWebService
                         Environment.NewLine +
                        "Please access this data via the Console Widget Viewer.";
 
-            //File.WriteAllText(@"C:\Tingen_Data\test.txt", sentOptObj.OptionId.ToString());
+            File.WriteAllText(@"C:\Tingen_Data\test.txt", sentOptObj.SystemCode.ToString());
             Outpost31.Core.Logger.LogEvent.Primeval(@"C:\Tingen_Data", ExeAsm, sentOptObj.SystemCode.ToString());
 
 
