@@ -16,6 +16,7 @@
 // u250410_documentation
 
 using System;
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Session;
@@ -59,6 +60,10 @@ namespace TingenWebService
             var msg = $"Access Denied{Environment.NewLine}" +
                         Environment.NewLine +
                        "Please access this data via the Console Widget Viewer.";
+
+            //File.WriteAllText(@"C:\Tingen_Data\test.txt", sentOptObj.OptionId.ToString());
+            Outpost31.Core.Logger.LogEvent.Primeval(@"C:\Tingen_Data", ExeAsm, sentOptObj.SystemCode.ToString());
+
 
             if (sentOptObj.SystemCode == "UATDOC")
             {
