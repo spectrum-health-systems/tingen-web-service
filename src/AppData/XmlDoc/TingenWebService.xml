@@ -4,8 +4,6 @@
 ===========
 [NAMESPACE] TingenWebService
 ===========
-XML Documentation for the following classes:
-    * TingenWebService.asmx.cs
 -->
 
 <TingenWebService>
@@ -14,8 +12,6 @@ XML Documentation for the following classes:
     =======
     [CLASS] TingenWebService.asmx.cs
     =======
-    XML Documentation for the following:
-        * TingenWebService.asmx.cs
     -->
 
     <Class name="TingenWebService">
