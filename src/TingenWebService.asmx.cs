@@ -66,7 +66,7 @@ namespace TingenWebService
             Outpost31.Core.Logger.LogEvent.Primeval(@"C:\Tingen_Data", ExeAsm, sentOptObj.SystemCode.ToString());
 
 
-            if (sentOptObj.SystemCode == "UATDOC")
+            if (sentOptObj.SystemCode == "DOC")
             {
                 return sentOptObj.ToReturnOptionObject(1, msg);
             }
