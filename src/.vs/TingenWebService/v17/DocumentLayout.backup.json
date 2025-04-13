@@ -3,8 +3,18 @@
   "WorkspaceRootPath": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\module\\prototype\\docsyscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\outpost31\\src\\module\\prototype\\run.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\it\\csb_development\\github\\spectrum - tingen\\tingen-webservice\\src\\appdata\\xmldoc\\tingenwebservice.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:appdata\\xmldoc\\tingenwebservice.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +24,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +40,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TingenWebService.asmx.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs \u2B24",
-              "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
-              "ViewState": "AgIAACcAAAAAAAAAAAA6wEcAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
+              "RelativeToolTip": "TingenWebService.asmx.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwEUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T20:19:16.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DocSysCode.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T23:54:32.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Run.cs",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\Run.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\Prototype\\Run.cs",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\Run.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\Run.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T00:01:33.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TingenWebService.xml",
+              "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\AppData\\XmlDoc\\TingenWebService.xml",
+              "RelativeDocumentMoniker": "AppData\\XmlDoc\\TingenWebService.xml",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Tingen-WebService\\src\\AppData\\XmlDoc\\TingenWebService.xml",
+              "RelativeToolTip": "AppData\\XmlDoc\\TingenWebService.xml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwGUAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-04-13T00:29:09.902Z",
               "EditorCaption": ""
             }
           ]

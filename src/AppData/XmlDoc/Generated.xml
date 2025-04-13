@@ -90,13 +90,20 @@
                     </list>
                 </para>
                 <para>
-                    The method is responsible for:
+                    The method is responsible for both prototype and production code.<br />
+                    <br />
+                    Prototype code is used to develop and test future functionality, and is handled differently than<br />
+                    production code. Protoype code is handed off to <c>Module.Prototype</c>, and follows the logic of<br />
+                    individual prototype commands instead of initializing a new session.<br />
+                    <br />
+                    Production code follows the standard Tingen Web Service logic, which looks like this:
                     <list type="number">
-                        <item>Receiving the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
-                        <item>Creating a new Tingen Session</item>
-                        <item>Initializing the Tingen Web Service</item>
+                        <item>Receive the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
+                        <item>Initialize a new Tingen Session</item>
+                        <item>Start the Tingen Web Service</item>
                         <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
-                        <item>Returning the <c>FinalOptionObject</c> to Avatar</item>
+                        <item>Outpost31 processes the request and returns a finalized <c>OptionObject</c></item>
+                        <item>Returning the finalized <c>OptionObject</c> to Avatar</item>
                     </list>
                 </para>
             </remarks>
