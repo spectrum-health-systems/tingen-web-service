@@ -15,6 +15,7 @@
 // u250412_code
 // u250412_documentation
 
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Session;
@@ -53,8 +54,12 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", "START");
+            
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
+                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.proto", "PROTO");
+
                 return Outpost31.Module.Prototype.Run.Code(sentOptObj, sentSlnkScriptParam);
             }
             else
