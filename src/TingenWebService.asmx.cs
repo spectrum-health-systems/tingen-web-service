@@ -69,8 +69,8 @@ namespace TingenWebService
                 Thread.Sleep(1000);
                 File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentSlnkScriptParam);
 
-                Environment.Exit(0);
-                //return sentOptObj.ToReturnOptionObject(0,"");
+                //Environment.Exit(0);
+                return sentOptObj;
             }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
