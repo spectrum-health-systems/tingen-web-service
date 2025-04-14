@@ -56,41 +56,20 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            var dateTimeStamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-
-            Thread.Sleep(1000);
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", sentSlnkScriptParam);
-
-            Thread.Sleep(1000);
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.{sentSlnkScriptParam}", sentSlnkScriptParam);
-
-            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
+            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                var stat = "";
+                /* #DEVNOTE#
+                 * If we are missing the OptionObject or Script Parameter, write a Defcon1 file. Generally the fix for
+                 * this issue is to re-import the Tingen Web Service WSDL.
+                 */
 
-                if (sentOptObj == null)
-                {
-                    stat = "no opt obj";
-                }
-                else
-                {
-                    stat = "yes";
-                }
+                Defcon1();
 
-
-                Thread.Sleep(1000);
-                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", stat);
-                //File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentOptObj.SystemCode);
-
-                //Environment.Exit(0);
-                return sentOptObj; //.ToReturnOptionObject(0,"");
+                return sentOptObj.ToReturnOptionObject(0, "Missing OptionObject and/or Script Parameter");
             }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
-                Thread.Sleep(1000);
-                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.proto", "PROTO");
-
                 return Outpost31.Module.Prototype.Run.Code(sentOptObj, sentSlnkScriptParam);
             }
             else
@@ -101,6 +80,16 @@ namespace TingenWebService
 
                 return sentOptObj; // should be "returnOptObj = Session.WorkOptObj", or something like that.
             }
+        }
+
+        /// <summary>Writes a Defcon1 file to the Tingen Web Service log directory.</summary>
+        private void Defcon1()
+        {
+            const string message = "Missing OptionObject and/or Script Parameter";
+            var dateTimeStamp    = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+            var fileName         = $@"C:\Tingen_Data\WebService\UAT\Defcon1.{dateTimeStamp}";
+
+            File.WriteAllText(fileName, message);
         }
     }
 }

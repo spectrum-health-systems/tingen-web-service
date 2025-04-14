@@ -108,5 +108,8 @@
                 </para>
             </remarks>
         </member>
+        <member name="M:TingenWebService.TingenWebService.Defcon1">
+            <summary>Writes a Defcon1 file to the Tingen Web Service log directory.</summary>
+        </member>
     </members>
 </doc>
