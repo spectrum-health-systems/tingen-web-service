@@ -70,7 +70,7 @@ namespace TingenWebService
                 File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentOptObj.SystemCode);
 
                 //Environment.Exit(0);
-                return sentOptObj;
+                return sentOptObj.ToReturnOptionObject(0,"");
             }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
