@@ -53,7 +53,7 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            if (sentSlnkScriptParam.ToLower().StartsWith("_p")) // sentSlnkScriptParam.StartsWith("proto", StringComparison.CurrentCultureIgnoreCase)?
+            if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
                 return Outpost31.Module.Prototype.Run.Code(sentOptObj, sentSlnkScriptParam);
             }
