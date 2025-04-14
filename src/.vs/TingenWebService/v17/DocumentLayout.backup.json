@@ -44,8 +44,7 @@
               "RelativeToolTip": "TingenWebService.asmx.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T20:19:16.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T20:19:16.706Z"
             },
             {
               "$type": "Document",
@@ -53,9 +52,9 @@
               "Title": "DocSysCode.cs",
               "DocumentMoniker": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
-              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\IT\\CSB_Development\\GitHub\\Spectrum - Tingen\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs \u2B24",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\DocSysCode.cs \u2B24",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T23:54:32.288Z",
               "EditorCaption": ""
@@ -70,8 +69,7 @@
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\Run.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T00:01:33.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T00:01:33.164Z"
             }
           ]
         }
