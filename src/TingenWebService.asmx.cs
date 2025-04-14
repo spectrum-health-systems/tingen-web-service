@@ -66,12 +66,20 @@ namespace TingenWebService
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
             {
+                var stat = "";
+
+                if (sentOptObj == null)
+                {
+                    stat = "no opt obj";
+                }
+
+
                 Thread.Sleep(1000);
-                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", "");
+                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", stat);
                 //File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentOptObj.SystemCode);
 
                 //Environment.Exit(0);
-                return sentOptObj.ToReturnOptionObject(0,"");
+                return sentOptObj //.ToReturnOptionObject(0,"");
             }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
