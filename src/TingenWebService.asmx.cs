@@ -12,13 +12,12 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 
-// u250412_code
-// u250412_documentation
+// u250414_code
+// u250414_documentation
 
 using System;
 using System.IO;
 using System.Reflection;
-using System.Threading;
 using System.Web.Services;
 using Outpost31.Core.Session;
 using ScriptLinkStandard.Objects;
@@ -59,11 +58,11 @@ namespace TingenWebService
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
                 /* #DEVNOTE#
-                 * If we are missing the OptionObject or Script Parameter, write a Defcon1 file. Generally the fix for
-                 * this issue is to re-import the Tingen Web Service WSDL.
+                 * Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
+                 * the Tingen Web Service WSDL.
                  */
 
-                Defcon1();
+                Outpost31.Core.Logger.LogEvent.Defcon1(@"C:\\Tingen_Data\Defcon1", "Missing OptionObject and/or Script Parameter");
 
                 return sentOptObj.ToReturnOptionObject(0, "Missing OptionObject and/or Script Parameter");
             }
@@ -80,16 +79,6 @@ namespace TingenWebService
 
                 return sentOptObj; // should be "returnOptObj = Session.WorkOptObj", or something like that.
             }
-        }
-
-        /// <summary>Writes a Defcon1 file to the Tingen Web Service log directory.</summary>
-        private void Defcon1()
-        {
-            const string message = "Missing OptionObject and/or Script Parameter";
-            var dateTimeStamp    = DateTime.Now.ToString("yyyyMMdd-HHmmss");
-            var fileName         = $@"C:\Tingen_Data\WebService\UAT\Defcon1.{dateTimeStamp}";
-
-            File.WriteAllText(fileName, message);
         }
     }
 }
