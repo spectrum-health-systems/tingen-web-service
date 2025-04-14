@@ -57,16 +57,18 @@ namespace TingenWebService
             /* Trace Logs won't work here. */
 
             var dateTimeStamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+
             Thread.Sleep(1000);
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", sentSlnkScriptParam);
+
             Thread.Sleep(1000);
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.{sentSlnkScriptParam}", sentSlnkScriptParam);
-            Thread.Sleep(1000);
+
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
             {
                 Thread.Sleep(1000);
                 File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentSlnkScriptParam);
-                Thread.Sleep(1000);
+
                 return sentOptObj;
             }
 
@@ -74,7 +76,7 @@ namespace TingenWebService
             {
                 Thread.Sleep(1000);
                 File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.proto", "PROTO");
-                Thread.Sleep(1000);
+
                 return Outpost31.Module.Prototype.Run.Code(sentOptObj, sentSlnkScriptParam);
             }
             else
