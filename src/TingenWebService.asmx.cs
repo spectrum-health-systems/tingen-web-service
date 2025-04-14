@@ -15,6 +15,7 @@
 // u250412_code
 // u250412_documentation
 
+using System;
 using System.IO;
 using System.Reflection;
 using System.Web.Services;
@@ -54,8 +55,17 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
+            var dateTimeStamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", sentSlnkScriptParam);
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.{sentSlnkScriptParam}", sentSlnkScriptParam);
+
+            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
+            {
+                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentSlnkScriptParam);
+                
+                return sentOptObj.ToReturnOptionObject(0, "No Script Parameter was sent.");
+            }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
