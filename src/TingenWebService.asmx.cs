@@ -54,7 +54,7 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", "START");
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Prototype\DocSysCodeDenyAccessToForm.start", sentSlnkScriptParam);
             
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
