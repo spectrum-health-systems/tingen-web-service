@@ -67,7 +67,7 @@ namespace TingenWebService
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
             {
                 Thread.Sleep(1000);
-                File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentOptObj.SystemCode);
+                //File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\NoScriptParameter.{dateTimeStamp}", sentOptObj.SystemCode);
 
                 //Environment.Exit(0);
                 return sentOptObj;
