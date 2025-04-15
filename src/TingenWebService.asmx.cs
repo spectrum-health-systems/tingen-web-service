@@ -12,11 +12,9 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 
-// u250414_code
-// u250414_documentation
+// u250415_code
+// u250415_documentation
 
-using System;
-using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Session;
@@ -55,13 +53,15 @@ namespace TingenWebService
         {
             /* Trace Logs won't work here. */
 
+            /* #DEVNOTE#
+             * If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail. Since this
+             * can be difficult to troubleshoot, we'll write a Defcon1 file with the error message 
+             * 
+             * Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
+             * the Tingen Web Service WSDL.
+             */
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                /* #DEVNOTE#
-                 * Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
-                 * the Tingen Web Service WSDL.
-                 */
-
                 Outpost31.Core.Logger.LogEvent.Defcon1(@"C:\\Tingen_Data\Defcon1", "Missing OptionObject and/or Script Parameter");
 
                 return sentOptObj.ToReturnOptionObject(0, "Missing OptionObject and/or Script Parameter");

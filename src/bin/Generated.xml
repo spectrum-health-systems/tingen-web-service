@@ -8,8 +8,9 @@
             <summary>The entry point for the Tingen web service.</summary>
             <remarks>
                 <para>
-                    This class doesn't do much actual work, and should remain fairly static. For the<br />
-                    most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
+                    This class doesn't do much actual work, and should remain fairly static.<br />
+                    <br />
+                    For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
                 </para>
                 <para>
                     There are only two methods in this class, both of which are required by Avatar:
@@ -90,15 +91,21 @@
                     </list>
                 </para>
                 <para>
-                    The method is responsible for both <i>prototype</i> and <i>production</i> code.<br />
-                    <br />
+                    The main components of this method are:
+                    <list type="bullet">
+                        <item>Receive the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
+                        <item>Determine if the OptionObject and/or Script Parameter are missing (a critical failure)</item>
+                        <item>Handle prototype code</item>
+                        <item>Handle requests sent from Avatar</item>
+                    </list>
+                </para>
+                <para>
                     <i>Prototype code</i> is used to develop and test future functionality, and is handled differently than<br />
                     production code. Prototype code is handed off to <c>Module.Prototype</c>, and follows the logic of<br />
                     individual prototype commands instead of initializing a new session.<br />
                     <br />
                     <i>Production code</i> follows the standard Tingen Web Service logic, which looks like this:
                     <list type="number">
-                        <item>Receive the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
                         <item>Initialize a new Tingen Session</item>
                         <item>Start the Tingen Web Service</item>
                         <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
@@ -107,9 +114,6 @@
                     </list>
                 </para>
             </remarks>
-        </member>
-        <member name="M:TingenWebService.TingenWebService.Defcon1">
-            <summary>Writes a Defcon1 file to the Tingen Web Service log directory.</summary>
         </member>
     </members>
 </doc>
