@@ -12,8 +12,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 
-// u250418_code
-// u250418_documentation
+// u250421_code
+// u250421_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -22,7 +22,7 @@ using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
 {
-    /// <summary>The entry point for the Tingen web service.</summary>
+    /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/ClassDescription/*'/>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -38,12 +38,12 @@ namespace TingenWebService
         public static string TngnVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of Tingen.</summary>
-        /// <remarks><b>This method is required by Avatar and should not be modified.</b></remarks>
         /// <returns>The current version number of Tingen.</returns>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
         [WebMethod]
         public string GetVersion() => $"VERSION {TngnVersion}";
 
-        /// <summary>Starts the Tingen web service.</summary>
+        /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
         /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
         /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
@@ -51,15 +51,9 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
-            /* Trace Logs won't work here. */
-
-            /* #DEVNOTE#
-             * If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail. Since this
-             * can be difficult to troubleshoot, we'll write a Defcon file with the error message 
-             * 
-             * Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
-             * the Tingen Web Service WSDL.
+            /* Please see method documentation for important information about this method.
              */
+
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
                 Outpost31.Core.Logger.LogEvent.Defcon1(@"C:\\Tingen_Data\Defcon", "Missing OptionObject and/or Script Parameter");

@@ -5,15 +5,16 @@
     </assembly>
     <members>
         <member name="T:TingenWebService.TingenWebService">
-            <summary>The entry point for the Tingen web service.</summary>
+            <summary>The entry class for the Tingen Web Service.</summary>
             <remarks>
-                <para>
+                <note title="About this class">
                     This class doesn't do much actual work, and should remain fairly static.<br />
                     <br />
-                    For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the heavy lifting is done.<br />
-                </para>
-                <para>
-                    There are only two methods in this class, both of which are required by Avatar:
+                    For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the<br />
+                    heavy lifting is done.<br />
+                    <br />
+                    There are only two methods in this class, both of which <i>are required</i><br />
+                    by Avatar:
                     <list type="bullet">
                         <item>
                             <see cref="M:TingenWebService.TingenWebService.GetVersion" />
@@ -22,8 +23,7 @@
                             <see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" />
                         </item>
                     </list>
-                </para>
-
+                </note>
             </remarks><seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsm">
@@ -34,83 +34,108 @@
             <summary>The Tingen current version number.</summary>
             <remarks>
                 <para>
-                    The syntax for the Tingen version is "<c>YY.MM&lt;.patch&gt;</c>".<br />
-                    <br />
-                    The version is pulled from <c>Properties/AssemblyInfo.cs</c>.
+                    The version number is pulled from <i>Properties/AssemblyInfo.cs</i>.
                 </para>
                 <para>
+                    <b>Version syntax</b><br />
+                    The Tingen Web Service is closer to Semantic versioning than the Microsoft<br />
+                    versioning scheme, and consists of up to three components:<br />
+                    <list type="bullet">
+                        <item>The release year</item>
+                        <item>The release month</item>
+                        <item>An optional patch number</item>
+                    </list>
+                    Put those together and you get a version number that looks like this:<br />
+                    <code language="text" title="Example version">
+                        YY.MM.Patch (e.g., <c>25.02.1</c>)
+                    </code>      
                     This isn't 'Nam, there are rules:
                     <list type="bullet">
-                        <item>The <c>MM</c> component is always two digits (ex: July would be "<c>07</c>")</item>
-                        <item>If a release doesn't include a patch number, omit the <c>&lt;.patch&gt;</c> component.</item>
-                        <item>The version cannot exceed four components (example: "<c>25.07.2.1</c>")</item>
+                        <item>The <c>YY</c> component is two digits (e.g., 2025 would be "<c>25</c>")</item>
+                        <item>The <c>MM</c> component is two digits (e.g., July would be "<c>07</c>")</item>
+                        <item>The <c>Patch</c> component is a single digit, and is <c>0</c> if there are no patches</item>
+                        <item>The <c>Revision</c> component in the <i>AssemblyInfo.cs</i> file) is always <c>0</c></item>
                     </list>
                 </para>
                 <para>
                     For each release of Tingen the following lines:<br />
-                    <code>
-                        [assembly: AssemblyVersion("#.#.#.#")]
-                        [assembly: AssemblyFileVersion("#.#.#.#")]
+                    <code language="CSharp" title="Before modification">
+                        [assembly: AssemblyVersion("Major.Minor.Build.Revision")]
+                        [assembly: AssemblyFileVersion("Major.Minor.Build.Revision")]
                     </code>
                     Need to be modified as so:<br />
-                    <code>
-                        [assembly: AssemblyVersion("YY.MM.&lt;.patch&gt;.0")]
-                        [assembly: AssemblyFileVersion("YY.MM.&lt;.patch&gt;.0")]
+                    <code language="CSharp" title="After modification">
+                        [assembly: AssemblyVersion("YY.MM.Patch.0")]
+                        [assembly: AssemblyFileVersion("YY.MM.Patch.0")]
                     </code>
                 </para>
             </remarks><example>
-                The December 2024 release would look like:<br />
-                <code>
+                The December 2024 release, without a patch, would look like:<br />
+                <code language="text" title="Example AssemblyInfo.cs content">
                     [assembly: AssemblyVersion("24.12.0.0")]
                     [assembly: AssemblyFileVersion("24.12.0.0")]
                 </code>
             </example><value>
-                <list type="bullet">
-                    <item>December 2024 release: <c>24.12</c></item>
-                    <item>July 2025 release: <c>25.07</c></item>
-                    <item>Patched July 2025 release: <c>25.07.1</c></item>
-                </list>
+                YY.MM.Patch (e.g., <c>25.02.1</c>)
             </value>
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of Tingen.</summary>
-            <remarks><b>This method is required by Avatar and should not be modified.</b></remarks>
             <returns>The current version number of Tingen.</returns>
+            <remarks>
+                <note title="About this method">
+                    This method is required by Avatar and <i>should not be modified</i>.<br />
+                    <br />
+                    For more information on the Tingen Web Service version<br />
+                    number, please see the <see cref="P:TingenWebService.TingenWebService.TngnVersion">TngnVersion</see> property.
+                </note>
+            </remarks>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
-            <summary>Starts the Tingen web service.</summary>
+            <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
             <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
             <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
             <returns>The finalized OptionObject to myAvatar.</returns>
             <remarks>
-                <para>
+                <note title="Important information about this method">
                     <list type="bullet">
-                        <item><b>This method is required by Avatar and should not be modified.</b></item>
-                        <item>This is the main entry point for the Tingen Web Service, and it's where Avatar sends its requests.</item>
-                        <item>Trace Logs can't go here because the logging infrastructure hasn't been initialized yet.</item>
+                        <item>This method is required by Avatar and <i>should not be modified</i>.</item>
+                        <item>
+                            Trace Logs can't go here because the logging infrastructure<br />
+                            hasn't been initialized yet.
+                        </item>
                     </list>
-                </para>
+                </note>
+                <note type="warning" title="Critical failure warning">
+                    If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail.<br />
+                    <br />
+                    Since this can be difficult to troubleshoot, a <c>Defcon Log</c> will be created.<br />
+                    <br />
+                    Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
+                    the Tingen Web Service WSDL from within Avatar.
+                </note>
                 <para>
-                    The main components of this method are:
+                    The main functions of this method are:
                     <list type="bullet">
                         <item>Receive the <c>SentOptionObject</c> and <c>ScriptParameter</c> from Avatar</item>
-                        <item>Determine if the OptionObject and/or Script Parameter are missing (a critical failure)</item>
-                        <item>Handle prototype code</item>
-                        <item>Handle requests sent from Avatar</item>
+                        <item>Handle prototype requests</item>
+                        <item>Handle standard requests</item>
                     </list>
                 </para>
                 <para>
-                    <i>Prototype code</i> is used to develop and test future functionality, and is handled differently than<br />
-                    production code. Prototype code is handed off to <c>Module.Prototype</c>, and follows the logic of<br />
-                    individual prototype commands instead of initializing a new session.<br />
+                    When the Tingen Web Service receives a request from Avatar, the first thing it<br />
+                    does is determine if it is a <i>prototype</i> or <i>standard</i> request.<br />
                     <br />
-                    <i>Production code</i> follows the standard Tingen Web Service logic, which looks like this:
+                    <i>Prototype requests</i> are used to test new functionality. They start with <c>_p</c>, and<br />
+                    are handed off to <c>Module.Prototype.</c><br />
+                    <br />
+                    <i>Standard requests</i> follow the normal Avatar workflow, which is:
                     <list type="number">
                         <item>Initialize a new Tingen Session</item>
                         <item>Start the Tingen Web Service</item>
-                        <item>Passing the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
+                        <item>Pass the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
                         <item>Outpost31 processes the request and returns a finalized <c>OptionObject</c></item>
-                        <item>Returning the finalized <c>OptionObject</c> to Avatar</item>
+                        <item>Return the finalized <c>OptionObject</c> to Avatar</item>
                     </list>
                 </para>
             </remarks>
