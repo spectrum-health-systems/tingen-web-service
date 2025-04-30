@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\runtime\\tngnwbsvruntimesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\admin\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\admin\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\runtime\\tngnwbsvruntimesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -205,26 +205,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TngnWbsvRuntimeSettings.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs \u2B24",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs \u2B24",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwEEAAABGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwGMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T17:57:17.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Status.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\Admin\\Status.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\Admin\\Status.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\Admin\\Status.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Admin\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\Admin\\Status.cs \u2B24",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Admin\\Status.cs \u2B24",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T18:04:58.887Z",
               "EditorCaption": ""
