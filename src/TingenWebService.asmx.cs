@@ -64,7 +64,7 @@ namespace TingenWebService
             {
                 string TngnWbsvEnvironment = File.ReadAllText(@".\AppData\Runtime\TngnWbsv.Environment");
 
-                Outpost31.Core.Logger.LogEvent.CriticalFailure(@"C:\Tingen_Data\{TngnWbsvEnvironment}", "Missing OptionObject and/or Script Parameter");
+                Outpost31.Core.Logger.LogEvent.Critical(TngnWbsvEnvironment, "Missing OptionObject and/or Script Parameter");
 
                 return sentOptObj.ToReturnOptionObject(0, MsgCriticalFailure());
             }
