@@ -65,7 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AppData\Runtime\TngnWbsv.Env">
+    <None Include="AppData\Runtime\TngnWbsv.Environment">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="TingenWebService.asmx" />

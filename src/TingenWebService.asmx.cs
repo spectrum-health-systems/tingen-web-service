@@ -18,6 +18,7 @@
 // u250430_code
 // u250430_documentation
 
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Session;
@@ -38,13 +39,13 @@ namespace TingenWebService
 
         /// <summary>The Tingen current version number.</summary>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TngnVersion/*'/>
-        public static string TngnVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string TngnWbsvVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of Tingen.</summary>
         /// <returns>The current version number of Tingen.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
         [WebMethod]
-        public string GetVersion() => $"VERSION {TngnVersion}";
+        public string GetVersion() => $"VERSION {TngnWbsvVersion}";
 
         /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
         /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
@@ -55,13 +56,15 @@ namespace TingenWebService
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
             /* Please see XML Documentation for important information about this method.
-             */
+             */        
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                Outpost31.Core.Logger.LogEvent.Defcon1(@"C:\\Tingen_Data\Defcon", "Missing OptionObject and/or Script Parameter");
+                string TngnWbsvEnvironment = File.ReadAllText(@".\AppData\Runtime\TngnWbsv.Environment");
 
-                return sentOptObj.ToReturnOptionObject(0, "Missing OptionObject and/or Script Parameter");
+                Outpost31.Core.Logger.LogEvent.CriticalFailure(@"C:\Tingen_Data\{TngnWbsvEnvironment}", "Missing OptionObject and/or Script Parameter");
+
+                return sentOptObj.ToReturnOptionObject(0, MsgCriticalFailure());
             }
 
             if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
@@ -70,12 +73,17 @@ namespace TingenWebService
             }
             else
             {
-                TngnWbsvSession tngnSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnVersion);
+                TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion);
 
-                Outpost31.Core.Service.Spin.Up(tngnSession);
+                Outpost31.Core.Service.Spin.Up(tngnWbsvSession);
 
-                return sentOptObj; // should be "returnOptObj = Session.WorkOptObj", or something like that.
+                return sentOptObj.ToReturnOptionObject(0, ""); // THIS IS A PLACEHOLDER.
             }
+        }
+
+        private static string MsgCriticalFailure()
+        {
+            return File.ReadAllText(@"C:\Tingen_Data\WebService\UAT\ErrorCodeMessages\TingenWebService.CriticalFailure");
         }
     }
 }

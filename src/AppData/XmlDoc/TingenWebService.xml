@@ -25,15 +25,12 @@
                     For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the<br/>
                     heavy lifting is done.<br/>
                     <br/>
-                    There are only two methods in this class, both of which <i>are required</i><br/>
+                    There are three methods in this class, two of which <i>are required</i><br/>
                     by Avatar:
                     <list type="bullet">
-                        <item>
-                            <see cref="GetVersion()"/>
-                        </item>
-                        <item>
-                            <see cref="RunScript(OptionObject2015, string)"/>
-                        </item>
+                        <item><see cref="GetVersion()"/> <b>&lt;-- Required</b></item>
+                        <item><see cref="RunScript(OptionObject2015, string)"/> <b>&lt;-- Required</b></item>
+                        <item><see cref="MsgCriticalFailure()"/></item>
                     </list>
                 </note>
             </remarks>
@@ -119,10 +116,10 @@
                 <note type="security" title="Critical failure warning">
                     If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail.<br/>
                     <br/>
-                    Since this can be difficult to troubleshoot, a <c>Defcon Log</c> will be created.<br/>
+                    Since this can be difficult to troubleshoot, a <c>Critical Failure Log</c> will be created.<br/>
                     <br/>
-                    Generally the fix for a missing OptionObject and/or Script Parameter is to re-import<br/>
-                    the Tingen Web Service WSDL from within Avatar.
+                    Generally the fix for a missing OptionObject and/or Script Parameter is to<br/>
+                    re-import the Tingen Web Service WSDL.
                 </note>
                 <para>
                     When Avatar calls the Tingen Web Service, it passes very important components:

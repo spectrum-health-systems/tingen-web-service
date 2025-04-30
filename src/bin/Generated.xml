@@ -13,15 +13,12 @@
                     For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the<br />
                     heavy lifting is done.<br />
                     <br />
-                    There are only two methods in this class, both of which <i>are required</i><br />
+                    There are three methods in this class, two of which <i>are required</i><br />
                     by Avatar:
                     <list type="bullet">
-                        <item>
-                            <see cref="M:TingenWebService.TingenWebService.GetVersion" />
-                        </item>
-                        <item>
-                            <see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" />
-                        </item>
+                        <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /> <b>&lt;-- Required</b></item>
+                        <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /> <b>&lt;-- Required</b></item>
+                        <item><see cref="M:TingenWebService.TingenWebService.MsgCriticalFailure" /></item>
                     </list>
                 </note>
             </remarks><seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
@@ -30,7 +27,7 @@
             <summary>The executing Assembly name.</summary>
             <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
         </member>
-        <member name="P:TingenWebService.TingenWebService.TngnVersion">
+        <member name="P:TingenWebService.TingenWebService.TngnWbsvVersion">
             <summary>The Tingen current version number.</summary>
             <remarks>
                 <para>
@@ -87,7 +84,7 @@
                     This method is required by Avatar and <i>should not be modified</i>.<br />
                     <br />
                     For more information on the Tingen Web Service version<br />
-                    number, please see the <see cref="P:TingenWebService.TingenWebService.TngnVersion">TngnVersion</see> property.
+                    number, please see the <see cref="!:TngnVersion">TngnVersion</see> property.
                 </note>
             </remarks>
         </member>
@@ -109,10 +106,10 @@
                 <note type="security" title="Critical failure warning">
                     If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail.<br />
                     <br />
-                    Since this can be difficult to troubleshoot, a <c>Defcon Log</c> will be created.<br />
+                    Since this can be difficult to troubleshoot, a <c>Critical Failure Log</c> will be created.<br />
                     <br />
-                    Generally the fix for a missing OptionObject and/or Script Parameter is to re-import<br />
-                    the Tingen Web Service WSDL from within Avatar.
+                    Generally the fix for a missing OptionObject and/or Script Parameter is to<br />
+                    re-import the Tingen Web Service WSDL.
                 </note>
                 <para>
                     When Avatar calls the Tingen Web Service, it passes very important components:
