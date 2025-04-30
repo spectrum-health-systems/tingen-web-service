@@ -11,9 +11,12 @@
 // https://github.com/APrettyCoolProgram/Tingen-WebService
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
+//
+// Tingen Web Service documentation:
+//  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250421_code
-// u250421_documentation
+// u250430_code
+// u250430_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -51,7 +54,7 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
-            /* Please see method documentation for important information about this method.
+            /* Please see XML Documentation for important information about this method.
              */
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)

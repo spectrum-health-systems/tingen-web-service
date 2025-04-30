@@ -97,7 +97,7 @@
             <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
             <returns>The finalized OptionObject to myAvatar.</returns>
             <remarks>
-                <note title="Important information about this method">
+                <note title="About this method">
                     <list type="bullet">
                         <item>This method is required by Avatar and <i>should not be modified</i>.</item>
                         <item>
@@ -106,14 +106,51 @@
                         </item>
                     </list>
                 </note>
-                <note type="warning" title="Critical failure warning">
+                <note type="security" title="Critical failure warning">
                     If Avatar doesn't pass an OptionObject or Script Parameter, the Tingen Web Service will fail.<br />
                     <br />
                     Since this can be difficult to troubleshoot, a <c>Defcon Log</c> will be created.<br />
                     <br />
-                    Generally the fix for a missing OptionObject and/or Script Parameter is to re-import
+                    Generally the fix for a missing OptionObject and/or Script Parameter is to re-import<br />
                     the Tingen Web Service WSDL from within Avatar.
                 </note>
+                <para>
+                    When Avatar calls the Tingen Web Service, it passes very important components:
+                    <list type="definition">
+                        <item>
+                            <term>The OptionObject</term>
+                            <description>
+                                Contains all of the content of and metadata describing the calling<br />
+                                Avatar form.
+                            </description>
+                        </item>
+                        <item>
+                            <term>The Script Parameter</term>
+                            <description>Contains information about the requested action(s)</description>
+                        </item>
+                    </list>
+                </para>     
+                <para>
+                    When the Tingen Web Service receives a request from Avatar, the first thing it<br />
+                    does is determine if it is a <i>prototype</i> or <i>standard</i> request:<br />
+                    <list type="definition">
+                        <item>
+                            <term>Prototype requests</term>
+                            <description>
+                                Used to test new functionality. They start with <c>_p</c>, are handed off<br />
+                                to <c>Module.Prototype</c>, and potentially follow their own set of rules<br />
+                                and workflows.
+                            </description>
+                        </item>
+                        <item>
+                            <term>Standard requests</term>
+                            <description>
+                                Existing functionality, requests are handed off to the necessary <c>Module</c>,<br />
+                                and follow the standard Tingen Web Service rules and workflows.
+                            </description>
+                        </item>
+                    </list>
+                </para>           
                 <para>
                     The main functions of this method are:
                     <list type="bullet">
@@ -123,17 +160,11 @@
                     </list>
                 </para>
                 <para>
-                    When the Tingen Web Service receives a request from Avatar, the first thing it<br />
-                    does is determine if it is a <i>prototype</i> or <i>standard</i> request.<br />
-                    <br />
-                    <i>Prototype requests</i> are used to test new functionality. They start with <c>_p</c>, and<br />
-                    are handed off to <c>Module.Prototype.</c><br />
-                    <br />
-                    <i>Standard requests</i> follow the normal Avatar workflow, which is:
+                    The workflow for <i>standard</i> requests is:
                     <list type="number">
                         <item>Initialize a new Tingen Session</item>
                         <item>Start the Tingen Web Service</item>
-                        <item>Pass the <c>SentOptionObject</c> and <c>ScriptParameter</c> to Outpost31</item>
+                        <item>Pass the <c>SentOptionObject</c> and <c>ScriptParameter</c> to the Outpost31</item>
                         <item>Outpost31 processes the request and returns a finalized <c>OptionObject</c></item>
                         <item>Return the finalized <c>OptionObject</c> to Avatar</item>
                     </list>
