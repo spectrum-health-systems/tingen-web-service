@@ -41,6 +41,8 @@ namespace TingenWebService
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TngnVersion/*'/>
         public static string TngnWbsvVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
+        public static string TngnWbsvEnvironment { get; set; } = "UAT";
+
         /// <summary>Get the current version of Tingen.</summary>
         /// <returns>The current version number of Tingen.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/GetVersion/*'/>
@@ -73,7 +75,7 @@ namespace TingenWebService
             }
             else
             {
-                TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion);
+                TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
                 Outpost31.Core.Service.Spin.Up(tngnWbsvSession);
 
