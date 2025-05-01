@@ -15,14 +15,15 @@
 // Tingen Web Service documentation:
 //  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250430_code
-// u250430_documentation
+// u250501_code
+// u250501_documentation
 
-using System.IO;
 using System.Reflection;
 using System.Web.Services;
-using Outpost31.Core.Session;
+using Outpost31.Core.Service;
+using System.Web.UI;
 using ScriptLinkStandard.Objects;
+using Outpost31.Core.Session;
 
 namespace TingenWebService
 {
@@ -38,9 +39,12 @@ namespace TingenWebService
         public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The Tingen current version number.</summary>
-        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TngnVersion/*'/>
+        /// <remarks>The version number is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/TngnWbsvVersion/*'/>
         public static string TngnWbsvVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
+        /// <summary>The environment that the Tingen Web Service will interface with.</summary>
+        /// <remarks>This must be either LIVE or UAT.</remarks>
         public static string TngnWbsvEnvironment { get; set; } = "UAT";
 
         /// <summary>Get the current version of Tingen.</summary>
@@ -55,37 +59,25 @@ namespace TingenWebService
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
         {
-            /* Please see XML Documentation for important information about this method.
-             */        
-
-            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
+            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
             {
-                string TngnWbsvEnvironment = File.ReadAllText(@".\AppData\Runtime\TngnWbsv.Environment");
-
                 Outpost31.Core.Logger.LogEvent.Critical(TngnWbsvEnvironment, "Missing OptionObject and/or Script Parameter");
 
-                return sentOptObj.ToReturnOptionObject(0, MsgCriticalFailure());
-            }
-
-            if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
-            {
-                return Outpost31.Module.Prototype.Run.Code(sentOptObj, sentSlnkScriptParam);
+                // This really should just be a stop - can't return something that doesn't exist.
+                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.ErrorCodeMessages.TngnWbsvCriticalFailure());
             }
             else
             {
-                TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
 
-                Outpost31.Core.Service.Spin.Up(tngnWbsvSession);
+                Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                return sentOptObj.ToReturnOptionObject(0, ""); // THIS IS A PLACEHOLDER.
+                Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+
+                return tngnWbsvSession.ReturnOptObj;
             }
-        }
-
-        private static string MsgCriticalFailure()
-        {
-            return File.ReadAllText(@"C:\Tingen_Data\WebService\UAT\ErrorCodeMessages\TingenWebService.CriticalFailure");
         }
     }
 }
