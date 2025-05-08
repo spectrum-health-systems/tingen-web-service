@@ -72,7 +72,7 @@ namespace TingenWebService
 
                 if (string.IsNullOrWhiteSpace(sentScriptParam))
                 {
-                    LogEvent.Debuggler(TngnWbsvEnvironment, "p");
+                    LogEvent.Debuggler(TngnWbsvEnvironment, $"p='{sentScriptParam}'");
                 }
 
                 if (sentOptObj == null)
