@@ -65,9 +65,13 @@ namespace TingenWebService
         {
             if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
             {
+                var ss = sentOptObj.ToString();
+                var sp = sentScriptParam.ToString();
+
                 LogEvent.Critical(TngnWbsvEnvironment, "Missing OptionObject and/or Script Parameter");
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 2");
+                LogEvent.Debuggler(TngnWbsvEnvironment, ss);
+                LogEvent.Debuggler(TngnWbsvEnvironment, sp);
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
