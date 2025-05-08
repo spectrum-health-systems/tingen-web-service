@@ -3,29 +3,29 @@
   "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\standardrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\formaccess\\deny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\logger\\logcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\template\\errorcodemessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\standardrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\prototyperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\formaccess\\deny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\template\\errorcodemessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\service\\spin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\avatar\\scriptparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\appdata\\xmldoc\\core.runtime.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\session\\tngnwbsvsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -35,9 +35,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\runtime\\tngnwbsvruntimesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\appdata\\xmldoc\\core.service.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,7 +44,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Spin.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Service\\Spin.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Service\\Spin.cs",
@@ -76,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TingenWebService.asmx.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
@@ -115,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ScriptParameter.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
@@ -128,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Deny.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
@@ -141,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ErrorCodeMessages.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
@@ -167,60 +164,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PrototypeRequest.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
               "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T14:06:11.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StandardRequest.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
               "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwE4AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T14:06:11.168Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Core.Service.xml",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\AppData\\XmlDoc\\Core.Service.xml",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Service.xml",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\AppData\\XmlDoc\\Core.Service.xml",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Service.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-05-08T12:51:15.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Core.Runtime.xml",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\AppData\\XmlDoc\\Core.Runtime.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-05-08T12:52:47.076Z",
+              "DocumentIndex": 0,
+              "Title": "LogComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogComponent.cs \u2B24",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogComponent.cs \u2B24",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwFUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:47:27.611Z",
               "EditorCaption": ""
             }
           ]
