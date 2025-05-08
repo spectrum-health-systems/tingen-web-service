@@ -68,6 +68,7 @@ namespace TingenWebService
                 LogEvent.Critical(TngnWbsvEnvironment, "Missing OptionObject and/or Script Parameter");
 
                 // This really should just be a stop - can't return something that doesn't exist.
+
                 return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.ErrorCodeMessages.TngnWbsvCriticalFailure());
             }
             else
