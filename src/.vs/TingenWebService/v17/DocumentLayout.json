@@ -3,43 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\prototype\\code.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\standardrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\utility\\du\\dufile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\prototyperequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\utility\\du\\dudirectory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\module\\formaccess\\deny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\template\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\tingen-webservice\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\session\\tngnwbsvsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\template\\errorcodemessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\service\\spin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\prototype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\logger\\logevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\logger\\logcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\avatar\\scriptparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\avatar\\optionobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\session\\tngnwbsvsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\request\\standard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\Outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\shs\\outpost31\\src\\core\\runtime\\tngnwbsvruntimesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -52,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,184 +57,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OptionObjects.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\OptionObjects.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Avatar\\OptionObjects.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\OptionObjects.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Avatar\\OptionObjects.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:59:47.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ScriptParameter.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:01:19.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TngnWbsvConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:01:54.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LogComponent.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:02:29.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:02:40.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Prototype.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\Prototype.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\Prototype.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\Prototype.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\Prototype.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:02:52.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Standard.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\Standard.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\Standard.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\Standard.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\Standard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:02:54.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TngnWbsvRuntimeSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:03:38.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Spin.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Service\\Spin.cs",
               "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Service\\Spin.cs",
               "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Service\\Spin.cs",
               "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Service\\Spin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:03:47.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TngnWbsvSession.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:04:16.392Z",
+              "WhenOpened": "2025-05-08T12:51:12.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Details.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Template\\Details.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Template\\Details.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Template\\Details.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Template\\Details.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
+              "Title": "TingenWebService.asmx.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
+              "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Tingen-WebService\\src\\TingenWebService.asmx.cs",
+              "RelativeToolTip": "TingenWebService.asmx.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwEQAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:04:18.254Z",
+              "WhenOpened": "2025-05-08T12:57:53.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TngnWbsvSession.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Session\\TngnWbsvSession.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:03:44.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TngnWbsvRuntimeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Runtime\\TngnWbsvRuntimeSettings.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwE4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:10:26.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScriptParameter.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Avatar\\ScriptParameter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:20:05.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DuDirectory.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Utility\\Du\\DuDirectory.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Utility\\Du\\DuDirectory.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Utility\\Du\\DuDirectory.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Utility\\Du\\DuDirectory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Title": "Deny.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\FormAccess\\Deny.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:06:12.609Z",
+              "WhenOpened": "2025-05-08T13:25:13.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorCodeMessages.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Template\\ErrorCodeMessages.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:48:48.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TngnWbsvConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:05:22.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DuFile.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Utility\\Du\\DuFile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "PrototypeRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs \u2B24",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\PrototypeRequest.cs \u2B24",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:06:18.868Z",
+              "WhenOpened": "2025-05-08T14:06:11.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Code.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\Prototype\\Code.cs",
-              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Module\\Prototype\\Code.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Module\\Prototype\\Code.cs",
-              "RelativeToolTip": "..\\..\\Outpost31\\src\\Module\\Prototype\\Code.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Title": "StandardRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
+              "RelativeDocumentMoniker": "..\\..\\Outpost31\\src\\Core\\Request\\StandardRequest.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\SHS\\Outpost31\\src\\Core\\Request\\StandardRequest.cs \u2B24",
+              "RelativeToolTip": "..\\..\\Outpost31\\src\\Core\\Request\\StandardRequest.cs \u2B24",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwEQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:07:35.033Z",
+              "WhenOpened": "2025-05-08T14:06:11.168Z",
               "EditorCaption": ""
             }
           ]
