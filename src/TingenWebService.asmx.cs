@@ -24,6 +24,7 @@ using Outpost31.Core.Service;
 using System.Web.UI;
 using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
+using Outpost31.Core.Logger;
 
 namespace TingenWebService
 {
@@ -70,6 +71,8 @@ namespace TingenWebService
             }
             else
             {
+                LogEvent.Debuggler(TngnWbsvEnvironment, "Test fail");
+
                 TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
 
                 Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
