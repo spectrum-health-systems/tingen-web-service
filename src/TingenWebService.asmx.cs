@@ -77,21 +77,19 @@ namespace TingenWebService
             //}
             //else
             //{
-                File.WriteAllText("c:\\IT\\test.txt", "test");
-
-                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 1");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "CREATE EMPTY SESSION");
 
                 TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 2");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
 
                 Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 3");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "PARSE REQUEST");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 4");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "RETURN");
 
                 return tngnWbsvSession.ReturnOptObj;
             //}
