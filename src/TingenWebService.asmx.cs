@@ -69,11 +69,11 @@ namespace TingenWebService
                 var optObjExists         = sentOptObj != null ? "true" : "false";
                 var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentScriptParam) ? "true" : "false";
 
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.ErrorCodeMessages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
-                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.ErrorCodeMessages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
             }
             else
             {
