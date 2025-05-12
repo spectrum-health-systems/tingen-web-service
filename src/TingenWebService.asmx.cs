@@ -26,6 +26,7 @@ using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Logger;
 using System.IO;
+using System;
 
 namespace TingenWebService
 {
@@ -65,21 +66,13 @@ namespace TingenWebService
         {
             if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
             {
-     
+                var optionObjectExists = sentOptObj != null ? "true" : "false";
 
-                LogEvent.Critical(TngnWbsvEnvironment, "Missing OptionObject and/or Script Parameter");
+                var criticalErrorMsg = $"Missing OptionObject and/or Script Parameter{Environment.NewLine}" +
+                                       $"OptionObject is null: {optionObjectExists}{Environment.NewLine}" +
+                                       $"Script Parameter:'{sentScriptParam}'";
 
-
-                if (string.IsNullOrWhiteSpace(sentScriptParam))
-                {
-                    LogEvent.Debuggler(TngnWbsvEnvironment, $"p='{sentScriptParam}'");
-                }
-
-                if (sentOptObj == null)
-                {
-                    LogEvent.Debuggler(TngnWbsvEnvironment, "o");
-                }
-
+                LogEvent.Critical(TngnWbsvEnvironment, criticalErrorMsg);
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
