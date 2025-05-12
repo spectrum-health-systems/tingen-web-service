@@ -64,19 +64,19 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
         {
-            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
-            {
-                var optObjExists         = sentOptObj != null ? "true" : "false";
-                var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentScriptParam) ? "true" : "false";
+            //if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
+            //{
+            //    var optObjExists         = sentOptObj != null ? "true" : "false";
+            //    var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentScriptParam) ? "true" : "false";
 
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+            //    LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
 
-                // This really should just be a stop - can't return something that doesn't exist.
+            //    // This really should just be a stop - can't return something that doesn't exist.
 
-                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
-            }
-            else
-            {
+            //    return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+            //}
+            //else
+            //{
                 File.WriteAllText("c:\\IT\\test.txt", "test");
 
                 LogEvent.Debuggler(TngnWbsvEnvironment, "Test 1");
@@ -88,7 +88,7 @@ namespace TingenWebService
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
                 return tngnWbsvSession.ReturnOptObj;
-            }
+            //}
         }
     }
 }
