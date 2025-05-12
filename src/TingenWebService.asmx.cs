@@ -85,7 +85,7 @@ namespace TingenWebService
 
                 Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "PARSE REQUEST");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
