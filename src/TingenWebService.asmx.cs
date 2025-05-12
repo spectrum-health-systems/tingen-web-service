@@ -83,9 +83,15 @@ namespace TingenWebService
 
                 TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
 
+                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 2");
+
                 Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
+                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 3");
+
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+
+                LogEvent.Debuggler(TngnWbsvEnvironment, "Test 4");
 
                 return tngnWbsvSession.ReturnOptObj;
             //}
