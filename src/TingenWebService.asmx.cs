@@ -104,7 +104,7 @@ namespace TingenWebService
 
                 Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                //LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentSlnkScriptParam}");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentSlnkScriptParam}");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
