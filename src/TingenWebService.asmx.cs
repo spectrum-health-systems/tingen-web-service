@@ -15,18 +15,15 @@
 // Tingen Web Service documentation:
 //  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250501_code
+// u250513_code
 // u250501_documentation
 
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Service;
-using System.Web.UI;
 using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Logger;
-using System.IO;
-using System;
 
 namespace TingenWebService
 {
@@ -66,7 +63,17 @@ namespace TingenWebService
         {
             if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
             {
-                var optObjExists         = sentOptObj != null ? "true" : "false";
+                string optObjExists;
+
+                if (sentOptObj == null)
+                {
+                    optObjExists="false";
+                }
+                else
+                {
+                    optObjExists="true";
+                }
+
                 var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentScriptParam) ? "true" : "false";
 
                 LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
