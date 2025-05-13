@@ -78,13 +78,13 @@ namespace TingenWebService
 
             if (sentOptObj == null)
             {
-                File.WriteAllText(@"C:\IT\param.fail", sentScriptParam);
+                File.WriteAllText(@"C:\IT\optobj.fail", sentScriptParam);
 
                 //return sentOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                File.WriteAllText(@"C:\IT\param.success", sentScriptParam);
+                File.WriteAllText(@"C:\IT\optobj.success", sentScriptParam);
 
                 //return sentOptObj.ToReturnOptionObject(0, "");
             }
