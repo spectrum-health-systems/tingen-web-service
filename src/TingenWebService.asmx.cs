@@ -67,11 +67,11 @@ namespace TingenWebService
 
                 if (sentOptObj == null)
                 {
-                    optObjExists="false";
+                    optObjExists="false!";
                 }
                 else
                 {
-                    optObjExists="true";
+                    optObjExists="true!";
                 }
 
                 var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentScriptParam) ? "true" : "false";
