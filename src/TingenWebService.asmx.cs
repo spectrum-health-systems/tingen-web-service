@@ -64,8 +64,29 @@ namespace TingenWebService
         {
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                var optObjExists         = sentOptObj != null ? "true" : "false";
-                var sentScriptParmExists = !string.IsNullOrWhiteSpace(sentSlnkScriptParam) ? "true" : "false";
+                string optObjExists;
+
+                if (sentOptObj == null)
+                {
+                    optObjExists="false";
+                    
+                }
+                else
+                {
+                    optObjExists="true";
+                }
+
+                string sentScriptParmExists;
+
+                if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
+                {
+                    sentScriptParmExists=$"false:'{sentSlnkScriptParam}'";
+                    
+                }
+                else
+                {
+                    sentScriptParmExists=$"true: '{sentSlnkScriptParam}'";
+                }
 
                 LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
 
