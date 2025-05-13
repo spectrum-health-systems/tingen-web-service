@@ -24,6 +24,7 @@ using Outpost31.Core.Service;
 using ScriptLinkStandard.Objects;
 using Outpost31.Core.Session;
 using Outpost31.Core.Logger;
+using System.IO;
 
 namespace TingenWebService
 {
@@ -61,54 +62,101 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
         {
-            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
+            if (string.IsNullOrWhiteSpace(sentScriptParam))
             {
-                string optObjExists;
+                File.WriteAllText(@"C:\IT\param.fail", sentScriptParam);
 
-                if (sentOptObj == null)
-                {
-                    optObjExists="false!";
-                }
-                else
-                {
-                    optObjExists="true!";
-                }
-
-                string sentScriptParmExists;
-
-                if (string.IsNullOrWhiteSpace(sentScriptParam))
-                {
-                    sentScriptParmExists=$"false: '{sentScriptParam}'";                
-                }
-                else
-                {
-                    sentScriptParmExists=$"true: '{sentScriptParam}'";
-                }
-
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
-
-                // This really should just be a stop - can't return something that doesn't exist.
-
-                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+                //return sentOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                LogEvent.Debuggler(TngnWbsvEnvironment, "CREATE EMPTY SESSION");
+                File.WriteAllText(@"C:\IT\param.success", sentScriptParam);
 
-                TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
-
-                LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
-
-                Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
-
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
-
-                Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
-
-                LogEvent.Debuggler(TngnWbsvEnvironment, "RETURN");
-
-                return tngnWbsvSession.ReturnOptObj;
+                //return sentOptObj.ToReturnOptionObject(0, "");
             }
+
+
+            if (sentOptObj == null)
+            {
+                File.WriteAllText(@"C:\IT\param.fail", sentScriptParam);
+
+                //return sentOptObj.ToReturnOptionObject(0, "");
+            }
+            else
+            {
+                File.WriteAllText(@"C:\IT\param.success", sentScriptParam);
+
+                //return sentOptObj.ToReturnOptionObject(0, "");
+            }
+
+            return sentOptObj.ToReturnOptionObject(0, "");
+
+            //else
+            //{
+            //LogEvent.Debuggler(TngnWbsvEnvironment, "CREATE EMPTY SESSION");
+
+            //    TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
+
+            //    Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
+
+            //    Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, "RETURN");
+
+            //    return tngnWbsvSession.ReturnOptObj;
+            //}
+            //if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
+            //{
+            //    string optObjExists;
+
+            //    if (sentOptObj == null)
+            //    {
+            //        optObjExists="false!";
+            //    }
+            //    else
+            //    {
+            //        optObjExists="true!";
+            //    }
+
+            //    string sentScriptParmExists;
+
+            //    if (string.IsNullOrWhiteSpace(sentScriptParam))
+            //    {
+            //        sentScriptParmExists=$"false: '{sentScriptParam}'";                
+            //    }
+            //    else
+            //    {
+            //        sentScriptParmExists=$"true: '{sentScriptParam}'";
+            //    }
+
+            //    LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+
+            //    // This really should just be a stop - can't return something that doesn't exist.
+
+            //    return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+            //}
+            //else
+            //{
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, "CREATE EMPTY SESSION");
+
+            //    TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
+
+            //    Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
+
+            //    Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+
+            //    LogEvent.Debuggler(TngnWbsvEnvironment, "RETURN");
+
+            //    return tngnWbsvSession.ReturnOptObj;
+            //}
         }
     }
 }
