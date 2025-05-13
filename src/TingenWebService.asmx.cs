@@ -56,16 +56,16 @@ namespace TingenWebService
 
         /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
         /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
-        /// <param name="sentScriptParam">The Script Parameter that is sent from Avatar.</param>
+        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
             /* Please see XML Documentation for important information about this method.
              */
 
-            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
+            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
                 File.WriteAllText(@"C:\IT\something.fail", "");
 
@@ -76,7 +76,7 @@ namespace TingenWebService
                 return sentOptObj.ToReturnOptionObject(0, MsgCriticalFailure());
             }
 
-            if (sentScriptParam.ToLower().StartsWith("_p"))
+            if (sentSlnkScriptParam.ToLower().StartsWith("_p"))
             {
 
                 File.WriteAllText(@"C:\IT\something.success", "p");
@@ -85,7 +85,7 @@ namespace TingenWebService
             }
             else
             {
-                File.WriteAllText(@"C:\IT\something.success", sentScriptParam);
+                File.WriteAllText(@"C:\IT\something.success", sentSlnkScriptParam);
 
                 //TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
