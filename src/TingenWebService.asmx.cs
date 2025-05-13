@@ -85,7 +85,7 @@ namespace TingenWebService
             }
             else
             {
-                File.WriteAllText(@"C:\IT\something.success", "s");
+                File.WriteAllText(@"C:\IT\something.success", sentSlnkScriptParam);
 
                 //TngnWbsvSession tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
