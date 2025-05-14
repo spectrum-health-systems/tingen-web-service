@@ -15,7 +15,7 @@
 // Tingen Web Service documentation:
 //  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250513_code
+// u250514_code
 // u250501_documentation
 
 using System.Reflection;
@@ -64,35 +64,35 @@ namespace TingenWebService
         {
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                string optObjExists;
+                string optObjStatus;
 
                 if (sentOptObj == null)
                 {
-                    optObjExists="false";
-                    
+                    optObjStatus="The sent OptionObject does not exist.";
+
                 }
                 else
                 {
-                    optObjExists="true";
+                    optObjStatus="The sent OptionObject does exist.";
                 }
 
-                string sentScriptParmExists;
+                string sentScriptParmStatus;
 
                 if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
                 {
-                    sentScriptParmExists=$"false:'{sentSlnkScriptParam}'";
-                    
+                    sentScriptParmStatus=$"The sent Script Parameter ('{sentSlnkScriptParam}') does not exist.";
+
                 }
                 else
                 {
-                    sentScriptParmExists=$"true: '{sentSlnkScriptParam}'";
+                    sentScriptParmStatus=$"The sent Script Parameter ('{sentSlnkScriptParam}') does exist.";
                 }
 
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjStatus, sentScriptParmStatus));
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
-                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjExists, sentScriptParmExists));
+                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjStatus, sentScriptParmStatus));
             }
             else
             {
