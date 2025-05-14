@@ -56,15 +56,15 @@ namespace TingenWebService
 
         /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
         /// <param name="sentOptionObject">The OptionObject that is sent from Avatar.</param>
-        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
+        /// <param name="sentScriptParam">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentSlnkScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParam)
         {
-            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptionObject == null)
+            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptionObject == null)
             {
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptionObject, sentSlnkScriptParam));
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptionObject, sentScriptParam));
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
@@ -78,9 +78,9 @@ namespace TingenWebService
 
                 //LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
 
-                Spin.Up(tngnWbsvSession, sentOptionObject, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                Spin.Up(tngnWbsvSession, sentOptionObject, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentSlnkScriptParam}");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
