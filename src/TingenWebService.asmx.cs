@@ -80,7 +80,7 @@ namespace TingenWebService
 
                 LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
 
-                Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                //Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
                 LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{tngnWbsvSession.SentScriptParam}'");
 
