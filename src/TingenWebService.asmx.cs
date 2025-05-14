@@ -74,13 +74,13 @@ namespace TingenWebService
             {
                 LogEvent.Debuggler(TngnWbsvEnvironment, "[CREATE NEW SESSION]");
 
-                TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
+                var tngnWbsvSession = new TngnWbsvSession();
 
                 LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
 
                 Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{sentSlnkScriptParam}'");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{tngnWbsvSession.SentScriptParam}'");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
