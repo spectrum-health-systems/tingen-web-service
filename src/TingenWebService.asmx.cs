@@ -74,7 +74,9 @@ namespace TingenWebService
             {
                 LogEvent.Debuggler(TngnWbsvEnvironment, "[CREATE NEW SESSION]");
 
-                var tngnWbsvSession = new TngnWbsvSession();
+                //var tngnWbsvSession = new TngnWbsvSession();
+
+                var tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
                 LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
 
