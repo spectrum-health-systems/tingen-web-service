@@ -55,44 +55,20 @@ namespace TingenWebService
         public string GetVersion() => $"VERSION {TngnWbsvVersion}";
 
         /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
-        /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
-        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
+        /// <param name="sentOptionObject">The OptionObject that is sent from Avatar.</param>
+        /// <param name="sentScriptParameter">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParameter)
         {
-            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
+            if (string.IsNullOrWhiteSpace(sentScriptParameter) || sentOptionObject == null)
             {
-                string optObjStatus;
-
-                if (sentOptObj == null)
-                {
-                    optObjStatus="The sent OptionObject does not exist.";
-
-                }
-                else
-                {
-                    optObjStatus="The sent OptionObject does exist.";
-                }
-
-                string sentScriptParmStatus;
-
-                if (string.IsNullOrWhiteSpace(sentSlnkScriptParam))
-                {
-                    sentScriptParmStatus=$"The sent Script Parameter ('{sentSlnkScriptParam}') does not exist.";
-
-                }
-                else
-                {
-                    sentScriptParmStatus=$"The sent Script Parameter ('{sentSlnkScriptParam}') does exist.";
-                }
-
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjStatus, sentScriptParmStatus));
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptionObject, sentScriptParameter));
 
                 // This really should just be a stop - can't return something that doesn't exist.
 
-                return sentOptObj.ToReturnOptionObject(0, Outpost31.Core.Template.Messages.TngnWbsvCriticalFailureDetail(optObjStatus, sentScriptParmStatus));
+                return sentOptionObject.ToReturnOptionObject(0, "");
             }
             else
             {
@@ -102,9 +78,9 @@ namespace TingenWebService
 
                 //LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
 
-                Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                Spin.Up(tngnWbsvSession, sentOptionObject, sentScriptParameter, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentSlnkScriptParam}");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParameter}");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
