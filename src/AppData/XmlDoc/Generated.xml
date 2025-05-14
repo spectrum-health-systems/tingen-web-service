@@ -68,7 +68,7 @@
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
             <param name="sentOptionObject">The OptionObject that is sent from Avatar.</param>
-            <param name="sentScriptParameter">The Script Parameter that is sent from Avatar.</param>
+            <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
             <returns>The finalized OptionObject to myAvatar.</returns>
             <remarks>
                 <note title="About this method">
