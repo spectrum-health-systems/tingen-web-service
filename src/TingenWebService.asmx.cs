@@ -55,36 +55,36 @@ namespace TingenWebService
         public string GetVersion() => $"VERSION {TngnWbsvVersion}";
 
         /// <summary>The entry method for the Tingen Web Service that Avatar sends data to.</summary>
-        /// <param name="sentOptionObject">The OptionObject that is sent from Avatar.</param>
+        /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
         /// <param name="sentScriptParam">The Script Parameter that is sent from Avatar.</param>
         /// <returns>The finalized OptionObject to myAvatar.</returns>
         /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptionObject, string sentScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentScriptParam)
         {
-            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptionObject == null)
+            if (string.IsNullOrWhiteSpace(sentScriptParam) || sentOptObj == null)
             {
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptionObject, sentScriptParam));
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptObj, sentScriptParam));
 
-                // This really should just be a stop - can't return something that doesn't exist.
-
-                return sentOptionObject.ToReturnOptionObject(0, "");
+                /* This really should just be a stop - can't return something that doesn't exist.
+                 */
+                return sentOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                //LogEvent.Debuggler(TngnWbsvEnvironment, "CREATE EMPTY SESSION");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[CREATE NEW SESSION]");
 
                 TngnWbsvSession tngnWbsvSession = new TngnWbsvSession();
 
-                //LogEvent.Debuggler(TngnWbsvEnvironment, "SPIN UP");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
 
-                Spin.Up(tngnWbsvSession, sentOptionObject, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                Spin.Up(tngnWbsvSession, sentOptObj, sentScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"PARSE REQUEST: {sentScriptParam}");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{sentScriptParam}'");
 
                 Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
-                //LogEvent.Debuggler(TngnWbsvEnvironment, "RETURN");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[COMPLETE]");
 
                 return tngnWbsvSession.ReturnOptObj;
             }
