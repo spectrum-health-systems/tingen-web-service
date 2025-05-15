@@ -4,6 +4,14 @@
 ===========
 [NAMESPACE] TingenWebService
 ===========
+
+
+
+        /// <summary> that Avatar sends data to.</summary>
+        /// <param name="sentOptObj">The OptionObject that is sent from Avatar.</param>
+        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar.</param>
+        /// <returns>The finalized OptionObject to myAvatar.</returns>
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/RunScript/*'/>
 -->
 
 <TingenWebService>
@@ -18,39 +26,16 @@
 
         <!-- TingenWebService.asmx.cs description -->
         <ClassDescription>
-            <remarks>
-                <note title="About this class">
-                    This class doesn't do much actual work, and should remain fairly static.<br/>
-                    <br/>
-                    For the most part, it just hands information to <see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the<br/>
-                    heavy lifting is done.<br/>
-                    <br/>
-                    There are two methods in this class, both of which <i>are required</i><br/>
-                    by Avatar:
-                    <list type="bullet">
-                        <item><see cref="GetVersion()"/></item>
-                        <item><see cref="RunScript(OptionObject2015, string)"/></item>
-                    </list>
-                </note>
-                <para>
-                    While you're here, take a look at this stuff:
-                    <list type="bullet">
-                        <item>
-                            The <see href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen Documentation</see>
-                        </item>
-                        <item>
-                            The <see href="https://github.com/spectrum-health-systems/Tingen-Documentation/tree/main/docs">Tingen Web Service API Documentation</see>
-                        </item>
-                    </list>
-                </para>
-            </remarks>
-            <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
+            
         </ClassDescription>
 
-        <!-- TngnWbsvVersion-->
+        <!-- TngnWbsvVersion
+        
+            
+    /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="TingenWebService"]/ClassDescription/*'/>
+        -->
         <TngnWbsvVersion>
-            <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
-            <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TngnWbsv-Versioning.md">More information about versioning.</seealso>
+          
         </TngnWbsvVersion>
          
         <!-- TingenWebService.asmx.GetVersion() -->
