@@ -15,7 +15,7 @@
 // Tingen Web Service documentation:
 //  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250514_code
+// u250515_code
 // u250501_documentation
 
 using System.Reflection;
@@ -62,36 +62,38 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
         {
-            return sentOptObj.ToReturnOptionObject(0, "");
+            /* Uncomment the following line to completely disable the Tingen Web Service.
+             */
+            //return sentOptObj.ToReturnOptionObject(0, "");
 
-            //if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
-            //{
-            //    LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptObj, sentSlnkScriptParam));
+            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
+            {
+                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptObj, sentSlnkScriptParam));
 
-            //    /* This really should just be a stop - can't return something that doesn't exist.
-            //     */
-            //    return sentOptObj.ToReturnOptionObject(0, "");
-            //}
-            //else
-            //{
-            //    LogEvent.Debuggler(TngnWbsvEnvironment, "[CREATE NEW SESSION]");
+                /* This really should just be a stop - can't return something that doesn't exist.
+                 */
+                return sentOptObj.ToReturnOptionObject(0, "");
+            }
+            else
+            {
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[CREATE NEW SESSION]");
 
-            //    //var tngnWbsvSession = new TngnWbsvSession();
+                //var tngnWbsvSession = new TngnWbsvSession();
 
-            //    var tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                var tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-            //    LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
 
-            //    //Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                //Spin.Up(tngnWbsvSession, sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
 
-            //    LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{tngnWbsvSession.SentScriptParam}'");
+                LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{tngnWbsvSession.SentScriptParam}'");
 
-            //    Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+                Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
 
-            //    LogEvent.Debuggler(TngnWbsvEnvironment, "[COMPLETE]");
+                LogEvent.Debuggler(TngnWbsvEnvironment, "[COMPLETE]");
 
-            //    return tngnWbsvSession.ReturnOptObj;
-            //}
+                return tngnWbsvSession.ReturnOptObj;
+            }
         }
     }
 }
