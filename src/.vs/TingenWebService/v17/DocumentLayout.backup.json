@@ -7,16 +7,19 @@
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\logger\\logbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\logger\\logevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\logger\\logbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\template\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\appdata\\xmldoc\\core.configuration.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\utility\\du\\dujson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -51,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "TngnWbsvConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
@@ -64,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Outpost31",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Outpost31.csproj",
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Outpost31.csproj",
@@ -80,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DuJson.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
@@ -97,22 +100,22 @@
               "Title": "TingenWebService.asmx.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
-              "RelativeToolTip": "TingenWebService.asmx.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswEQAAABTAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs \u2B24",
+              "RelativeToolTip": "TingenWebService.asmx.cs \u2B24",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAIwIcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T17:33:29.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "LogBuilder.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAB2AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogBuilder.cs \u2B24",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogBuilder.cs \u2B24",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAYwDwAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T17:31:53.101Z",
               "EditorCaption": ""
@@ -123,11 +126,24 @@
               "Title": "LogEvent.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAB2AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogEvent.cs \u2B24",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogEvent.cs \u2B24",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwD4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T17:33:56.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Template\\Message.cs",
+              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Template\\Message.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Template\\Message.cs",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Template\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T17:45:22.524Z",
               "EditorCaption": ""
             }
           ]
@@ -144,7 +160,7 @@
               "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
               "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
               "RelativeToolTip": "..\\..\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
               "WhenOpened": "2025-05-19T17:32:13.636Z",
               "EditorCaption": ""
