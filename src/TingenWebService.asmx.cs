@@ -6,7 +6,7 @@
 //    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
 //    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
 //                                       Web Service
-//                        Development Release 25.5.0
+//                                    Release 25.5.0
 //
 // https://github.com/APrettyCoolProgram/Tingen-WebService
 // Copyright (c) A Pretty Cool Program. All rights reserved.
@@ -15,13 +15,14 @@
 // Tingen Web Service documentation:
 //  https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250515_code
-// u250515_documentation
+// u250519_code
+// u250519_documentation
 
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Logger;
 using Outpost31.Core.Session;
+using Outpost31.Core.Template;
 using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
@@ -61,14 +62,14 @@ namespace TingenWebService
 
         /// <summary>The current version of the Tingen Web Service.</summary>
         /// <remarks>The version number is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
-        /// <value>YY.MM.Patch(e.g., <c>25.02.1</c>)</value>
+        /// <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
         /// <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TngnWbsv-Versioning.md">More information about versions.</seealso>
-        public static string TngnWbsvVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string SvcVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-        /// <summary>The environment that the Tingen Web Service will interface with.</summary>
+        /// <summary>The Avatar environment that the Tingen Web Service will interface with.</summary>
         /// <remarks>This needs to be manually updated to "LIVE" when deploying to production.</remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
-        public static string TngnWbsvEnvironment { get; set; } = "UAT";
+        public static string AvtrEnv { get; set; } = "UAT";
 
         /// <summary>Get the current version of Tingen.</summary>
         /// <remarks>
@@ -85,12 +86,12 @@ namespace TingenWebService
         ///     </note>
         ///     <para>
         ///         For more information on the Tingen Web Service version<br/>
-        ///         number, please see the<see cref="TngnWbsvVersion">TngnVersion</see> property.
+        ///         number, please see the<see cref="wbsvVersion">TngnVersion</see> property.
         ///     </para>
         ///    </remarks>
         /// <returns>The current version number of Tingen.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {TngnWbsvVersion}";
+        public string GetVersion() => $"VERSION {SvcVersion}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
         /// <remarks>
@@ -117,29 +118,33 @@ namespace TingenWebService
         /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam)
+        public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam) /* TODO - fix */
         {
+            /* We can write a Primeval log here to verify that the web service is starting up
+             * correctly. This should be uncommented unless needed.
+             */
+            LogEvent.Primeval(AvtrEnv, "[TingenWebService.RunScript()]");
+
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                LogEvent.Critical(TngnWbsvEnvironment, Outpost31.Core.Template.Message.TngnWbsvCriticalMissingArguments(sentOptObj, sentSlnkScriptParam));
+                LogEvent.Critical(AvtrEnv, Message.ServiceMissingArguments(sentOptObj, sentSlnkScriptParam));
 
-                /* This really should just be a stop - can't return something that doesn't exist.
-                 */
+                /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return sentOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                var tngnWbsvSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, TngnWbsvVersion, TngnWbsvEnvironment);
+                var svcSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, SvcVersion, AvtrEnv);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "[SPIN UP]");
+                //LogEvent.Debuggler(AvtrEnv, "[SPIN UP]");
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, $"[PARSE REQUEST] '{tngnWbsvSession.SentScriptParam}'");
+                //LogEvent.Debuggler(AvtrEnv, $"[PARSE REQUEST] '{svcSession.SentScriptParam}'");
 
-                Outpost31.Core.Avatar.ScriptParameter.Request(tngnWbsvSession);
+                Outpost31.Core.Avatar.ScriptParameter.Request(svcSession);
 
-                LogEvent.Debuggler(TngnWbsvEnvironment, "[COMPLETE]");
+                // LogEvent.Debuggler(AvtrEnv, "[COMPLETE]");
 
-                return tngnWbsvSession.ReturnOptObj;
+                return svcSession.ReturnOptObj;
             }
         }
     }

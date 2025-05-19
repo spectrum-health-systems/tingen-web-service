@@ -34,14 +34,14 @@
             <summary>The executing Assembly name.</summary>
             <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
         </member>
-        <member name="P:TingenWebService.TingenWebService.TngnWbsvVersion">
+        <member name="P:TingenWebService.TingenWebService.SvcVersion">
             <summary>The current version of the Tingen Web Service.</summary>
             <remarks>The version number is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
-            <value>YY.MM.Patch(e.g., <c>25.02.1</c>)</value>
+            <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
             <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TngnWbsv-Versioning.md">More information about versions.</seealso>
         </member>
-        <member name="P:TingenWebService.TingenWebService.TngnWbsvEnvironment">
-            <summary>The environment that the Tingen Web Service will interface with.</summary>
+        <member name="P:TingenWebService.TingenWebService.AvtrEnv">
+            <summary>The Avatar environment that the Tingen Web Service will interface with.</summary>
             <remarks>This needs to be manually updated to "LIVE" when deploying to production.</remarks>
             <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         </member>
@@ -61,7 +61,7 @@
                 </note>
                 <para>
                     For more information on the Tingen Web Service version<br/>
-                    number, please see the<see cref="P:TingenWebService.TingenWebService.TngnWbsvVersion">TngnVersion</see> property.
+                    number, please see the<see cref="!:wbsvVersion">TngnVersion</see> property.
                 </para>
                </remarks>
             <returns>The current version number of Tingen.</returns>

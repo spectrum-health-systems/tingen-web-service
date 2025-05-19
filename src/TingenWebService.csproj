@@ -91,12 +91,12 @@
     <Folder Include="AppData\XmlDoc\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Outpost31\src\Outpost31.csproj">
+    <ProjectReference Include="..\..\outpost31\src\Outpost31.csproj">
       <Project>{b0dbedeb-4b64-4fb6-8ef6-0e3e3d2d63d9}</Project>
       <Name>Outpost31</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tingen-ThirdParty\ScriptLinkStandard\ScriptLinkStandard.csproj">
-      <Project>{8e27472e-2bba-44d5-bb42-85effd15a5ad}</Project>
+    <ProjectReference Include="..\..\tingen-third-party\ScriptLinkStandard\ScriptLinkStandard.csproj">
+      <Project>{dbd6fc96-5960-ed2d-5a9b-005483b233f3}</Project>
       <Name>ScriptLinkStandard</Name>
     </ProjectReference>
   </ItemGroup>
