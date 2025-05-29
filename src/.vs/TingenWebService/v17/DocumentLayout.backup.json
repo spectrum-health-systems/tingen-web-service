@@ -1,51 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7D4827-2AB3-4955-84E2-AE3836B96DDE}|..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj|C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\Content\\Welcome.aml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7D4827-2AB3-4955-84E2-AE3836B96DDE}|..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj|C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\ContentLayout.content||{7AAD2922-72A2-42C1-A077-85F5097A8FA7}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|shfb-tingen-web-service||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\appdata\\xmldoc\\core.configuration.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TingenWebService||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Outpost31||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\tingen-web-service\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\logger\\logbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\logger\\logevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\template\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\configuration\\tngnwbsvconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\utility\\du\\dujson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D7D4827-2AB3-4955-84E2-AE3836B96DDE}|..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj|C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|dd354863-2956-4b3b-b8ee-ffb3aaf30f82"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\tingen-web-service\\src\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -53,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,164 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TngnWbsvConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Configuration\\TngnWbsvConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:22:46.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Outpost31",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Outpost31.csproj",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Outpost31.csproj",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Outpost31.csproj",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Outpost31.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-19T17:24:58.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DuJson.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Utility\\Du\\DuJson.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:30:32.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TingenWebService.asmx.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
-              "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
-              "RelativeToolTip": "TingenWebService.asmx.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAIwIcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:33:29.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogBuilder.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogBuilder.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAYwDwAAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:31:53.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LogEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Logger\\LogEvent.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwD4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:33:56.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Template\\Message.cs",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Template\\Message.cs",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Template\\Message.cs",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Template\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T17:45:22.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "shfb-tingen-web-service",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
-              "RelativeDocumentMoniker": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
-              "RelativeToolTip": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-28T17:19:31.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TingenWebService",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.csproj",
-              "RelativeDocumentMoniker": "TingenWebService.csproj",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.csproj",
-              "RelativeToolTip": "TingenWebService.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-28T17:31:19.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ContentLayout.content",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\ContentLayout.content",
-              "RelativeDocumentMoniker": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\ContentLayout.content",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\ContentLayout.content \u2B24",
-              "RelativeToolTip": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\ContentLayout.content \u2B24",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-28T17:50:09.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Welcome.aml",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\Content\\Welcome.aml",
-              "RelativeDocumentMoniker": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\Content\\Welcome.aml",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\Content\\Welcome.aml \u2B24",
-              "RelativeToolTip": "..\\..\\tingen-documentation\\sandcastle\\shfb-tingen-web-service\\Content\\Welcome.aml \u2B24",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-28T17:50:16.365Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Core.Configuration.xml",
-              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
-              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
-              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
-              "RelativeToolTip": "..\\..\\outpost31\\src\\AppData\\XmlDoc\\Core.Configuration.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-05-19T17:32:13.636Z",
-              "EditorCaption": ""
             }
           ]
         }
