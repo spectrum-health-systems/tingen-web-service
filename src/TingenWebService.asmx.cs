@@ -13,10 +13,10 @@
 // Licensed under the Apache 2.0 license.
 //
 // Tingen Web Service documentation:
-//  https://github.com/spectrum-health-systems/Tingen-Documentation
+// https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250519_code
-// u250519_documentation
+// u250529_code
+// u250529_documentation
 
 using System.Reflection;
 using System.Web.Services;
@@ -29,24 +29,23 @@ namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///     <note title="About this class">
+    ///     <para>
     ///         This class doesn't do much actual work, and should remain fairly static.<br/>
     ///         <br/>
-    ///         For the most part, it just hands information to<see href="https://github.com/spectrum-health-systems/Outpost31">Outpost31</see>, where the<br/>
+    ///         For the most part, it just hands information to<see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the<br/>
     ///         heavy lifting is done.<br/>
     ///         <br/>
-    ///         There are two methods in this class, both of which <i>are required</i><br/>
-    ///         by Avatar:
+    ///         There are two methods in this class, both of which <i>are required</i>:
     ///         <list type="bullet">
     ///             <item><see cref="GetVersion()"/></item>
     ///             <item><see cref="RunScript(OptionObject2015, string)"/></item>
     ///         </list>
-    ///     </note>
+    ///     </para>
     ///     <para>
     ///         While you're here, take a look at this stuff:
     ///         <list type="bullet">
     ///             <item>The <see href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen Documentation</see></item>
-    ///             <item>The <see href="https://github.com/spectrum-health-systems/Tingen-Documentation/tree/main/docs">Tingen Web Service API Documentation</see></item>
+    ///             <item>The <see href="https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-tingen-web-service">Tingen Web Service API Documentation</see></item>
     ///         </list>
     ///     </para>
     /// </remarks>
@@ -63,42 +62,26 @@ namespace TingenWebService
         /// <summary>The current version of the Tingen Web Service.</summary>
         /// <remarks>The version number is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
         /// <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
-        /// <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TngnWbsv-Versioning.md">More information about versions.</seealso>
-        public static string SvcVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation/static/tingen-project-versioning"></seealso>
+        public static string WbsrvcVersion { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>The Avatar environment that the Tingen Web Service will interface with.</summary>
         /// <remarks>This needs to be manually updated to "LIVE" when deploying to production.</remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         public static string AvtrEnv { get; set; } = "UAT";
 
-        /// <summary>Get the current version of Tingen.</summary>
-        /// <remarks>
-        ///     <note title="About this method">
-        ///         <list type="bullet">
-        ///             <item>
-        ///                 This method is required by Avatar and <i>should not be modified</i>.
-        ///             </item>
-        ///             <item>
-        ///                 Trace Logs can't go here because the logging infrastructure<br/>
-        ///                 hasn't been initialized yet.
-        ///             </item>
-        ///         </list>
-        ///     </note>
-        ///     <para>
-        ///         For more information on the Tingen Web Service version<br/>
-        ///         number, please see the<see cref="wbsvVersion">TngnVersion</see> property.
-        ///     </para>
-        ///    </remarks>
-        /// <returns>The current version number of Tingen.</returns>
+        /// <summary>Get the current version of the Tingen Web Service.</summary>
+        /// <remarks>This method is required and <i>should not be modified</i>.</remarks>
+        /// <returns>The current <see cref="WbsrvcVersion"/>.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {SvcVersion}";
+        public string GetVersion() => $"VERSION {WbsrvcVersion}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
         /// <remarks>
         ///     <note title="About this method">
         ///         <list type="bullet">
         ///             <item>
-        ///                 This method is required by Avatar and <i>should not be modified</i>.
+        ///                 This method is required and <i>should not be modified</i>.
         ///             </item>
         ///             <item>Trace Logs can't go here because the logging infrastructure<br/>
         ///                   hasn't been initialized yet.
@@ -134,7 +117,7 @@ namespace TingenWebService
             }
             else
             {
-                var svcSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, SvcVersion, AvtrEnv);
+                var svcSession = TngnWbsvSession.New(sentOptObj, sentSlnkScriptParam, WbsrvcVersion, AvtrEnv);
 
                 //LogEvent.Debuggler(AvtrEnv, "[SPIN UP]");
 
