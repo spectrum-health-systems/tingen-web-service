@@ -13,7 +13,7 @@
                     For the most part, it just hands information to<see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the<br/>
                     heavy lifting is done.<br/>
                     <br/>
-                    There are two methods in this class, both of which <i>are required</i> by Avatar:
+                    There are two methods in this class, both of which <i>are required</i>:
                     <list type="bullet">
                         <item><see cref="M:TingenWebService.TingenWebService.GetVersion"/></item>
                         <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)"/></item>
@@ -46,7 +46,7 @@
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of the Tingen Web Service.</summary>
-            <remarks>This method is required by Avatar and <i>should not be modified</i>.</remarks>
+            <remarks>This method is required and <i>should not be modified</i>.</remarks>
             <returns>The current <see cref="P:TingenWebService.TingenWebService.WbsrvcVersion"/>.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
@@ -55,7 +55,7 @@
                 <note title="About this method">
                     <list type="bullet">
                         <item>
-                            This method is required by Avatar and <i>should not be modified</i>.
+                            This method is required and <i>should not be modified</i>.
                         </item>
                         <item>Trace Logs can't go here because the logging infrastructure<br/>
                               hasn't been initialized yet.
