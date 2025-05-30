@@ -11,12 +11,12 @@
 // https://github.com/APrettyCoolProgram/Tingen-WebService
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
-//
-// Tingen Web Service documentation:
+
+// Tingen documentation:
 // https://github.com/spectrum-health-systems/Tingen-Documentation
 
-// u250529_code
-// u250529_documentation
+// u250530_code
+// u250530_documentation
 
 using System.Reflection;
 using System.Web.Services;
