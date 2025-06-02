@@ -3,8 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\welcometooutpost31.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\blueprint\\optobjerrormessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\blueprint\\logmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0DBEDEB-4B64-4FB6-8EF6-0E3E3D2D63D9}|..\\..\\outpost31\\src\\Outpost31.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\outpost31\\src\\core\\blueprint\\logdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\tingen-web-service\\src\\tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|solutionrelative:tingenwebservice.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TingenWebService||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|SHFB{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|shfb-tingen-web-service||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|SHFB{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|shfb-outpost31||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26492DE8-417A-42BA-B895-5A878DE8A975}|..\\..\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj|C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|714e7d74-a81c-403b-91e9-d052f0438fc6"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D7D4827-2AB3-4955-84E2-AE3836B96DDE}|..\\..\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj|C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|714e7d74-a81c-403b-91e9-d052f0438fc6"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A3CB650-07A8-43A3-B20C-743FEB8C7A8F}|TingenWebService.csproj|c:\\users\\chris.banwarth\\devenv\\github\\spectrum-health-systems\\tingen-web-service\\src\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +44,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +60,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "TingenWebService.asmx.cs",
               "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
               "RelativeDocumentMoniker": "TingenWebService.asmx.cs",
               "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.asmx.cs",
               "RelativeToolTip": "TingenWebService.asmx.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAmwA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAIwHAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T15:37:39.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "shfb-outpost31",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj",
+              "RelativeDocumentMoniker": "..\\..\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj",
+              "RelativeToolTip": "..\\..\\tingen-documentation\\sfhb\\shfb-outpost31\\shfb-outpost31.shfbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-02T13:02:30.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "shfb-tingen-web-service",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
+              "RelativeDocumentMoniker": "..\\..\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
+              "RelativeToolTip": "..\\..\\tingen-documentation\\sfhb\\shfb-tingen-web-service\\shfb-tingen-web-service.shfbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-02T13:02:45.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TingenWebService",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.csproj",
+              "RelativeDocumentMoniker": "TingenWebService.csproj",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\tingen-web-service\\src\\TingenWebService.csproj",
+              "RelativeToolTip": "TingenWebService.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-02T13:03:13.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WelcomeToOutpost31.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\WelcomeToOutpost31.cs",
+              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\WelcomeToOutpost31.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\WelcomeToOutpost31.cs",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\WelcomeToOutpost31.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T13:05:25.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LogDetail.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\LogDetail.cs",
+              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Blueprint\\LogDetail.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\LogDetail.cs",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Blueprint\\LogDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:17:16.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogMessage.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\LogMessage.cs",
+              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Blueprint\\LogMessage.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\LogMessage.cs",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Blueprint\\LogMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:35:42.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OptObjErrorMessage.cs",
+              "DocumentMoniker": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\OptObjErrorMessage.cs",
+              "RelativeDocumentMoniker": "..\\..\\outpost31\\src\\Core\\Blueprint\\OptObjErrorMessage.cs",
+              "ToolTip": "C:\\Users\\Chris.Banwarth\\DevEnv\\GitHub\\spectrum-health-systems\\outpost31\\src\\Core\\Blueprint\\OptObjErrorMessage.cs",
+              "RelativeToolTip": "..\\..\\outpost31\\src\\Core\\Blueprint\\OptObjErrorMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:36:25.832Z",
               "EditorCaption": ""
             }
           ]

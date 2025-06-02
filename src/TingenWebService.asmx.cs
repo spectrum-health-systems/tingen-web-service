@@ -6,7 +6,7 @@
 //    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
 //    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
 //                                       Web Service
-//                                    Release 25.5.0
+//                                    Release 25.6.0
 //
 // https://github.com/APrettyCoolProgram/Tingen-WebService
 // Copyright (c) A Pretty Cool Program. All rights reserved.
@@ -22,7 +22,7 @@ using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Logger;
 using Outpost31.Core.Session;
-using Outpost31.Core.Template;
+using Outpost31.Core.Blueprint;
 using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
@@ -110,7 +110,7 @@ namespace TingenWebService
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                LogEvent.Critical(AvtrEnv, Message.ServiceMissingArguments(sentOptObj, sentSlnkScriptParam));
+                LogEvent.Critical(AvtrEnv, LogMessage.ServiceMissingArguments(sentOptObj, sentSlnkScriptParam));
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return sentOptObj.ToReturnOptionObject(0, "");
