@@ -4,6 +4,8 @@
 
   ![logo](/.github/image/logo/TingenWebService_logo_320x568.png)
 
+  ![Release 25.6](https://github.com/spectrum-health-systems/tingen/blob/main/.github/image/releases/release-25.6.png)
+
 </div>
 
 # The Tingen Web Service
