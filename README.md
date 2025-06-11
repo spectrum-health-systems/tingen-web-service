@@ -73,45 +73,27 @@ There are three types of Tingen releases:
 
 ## Development releases
 
-> WARNING!  
-> Development releases may be broken and not fully tested, and should not be used in production environments!
+> **Development releases may be broken and not fully tested, and *should not be used in production environments.***
 
-Tingen Web Service development is done using:
+Tingen Web Service development uses:
 
-* The [Tingen Web Service development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
-* The [Outpost31 development branch](https://github.com/spectrum-health-systems/outpost31/tree/development).
-
-<div align="center">
-		<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
-        <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
-			</td>
-		</tr>
-	</table>
-</div>
+* The Tingen Web Service [development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
+* The Outpost31 [development branch](https://github.com/spectrum-health-systems/outpost31/tree/development).
 
 ## Stable releases
 
-> WARNING!  
-> Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
+> **Using stable releases in production environments *is not recommended.***
 
-Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
+Once the development version of the Tingen Web Service has been tested and verified to be **stable**, they are merged with:
 
-<div align="center">
-	<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_194x254.png"></a>
-			</td>
-		</tr>
-	</table>
-</div>
+* The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
+* The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31).
 
 ## Community releases
 
-Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as the Tingen **Community Release**.
+> **Community releases are intended for use in production environments.**
+
+Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as a Tingen Web Service **Community Release**.
 
 <div align="center">
 	<table>
@@ -122,8 +104,6 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 		</tr>
 	</table>
 </div>
-
-
 
 # Tingen documentation
 
