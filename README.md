@@ -71,7 +71,7 @@ flowchart RL
 
 There are three types of Tingen releases:
 
-## Development releases
+## 1. Development releases
 
 > **Development releases may be broken and not fully tested, and *should not be used in production environments.***
 
@@ -80,7 +80,7 @@ Tingen Web Service development uses:
 * The Tingen Web Service [development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
 * The Outpost31 [development branch](https://github.com/spectrum-health-systems/outpost31/tree/development).
 
-## Stable releases
+## 2. Stable releases
 
 > **Using stable releases in production environments *is not recommended.***
 
@@ -89,7 +89,7 @@ Once the development version of the Tingen Web Service has been tested and verif
 * The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
 * The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31).
 
-## Community releases
+## 3. Community releases
 
 > **Community releases are intended for use in production environments.**
 
