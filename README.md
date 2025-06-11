@@ -26,7 +26,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 
 # Tingen development
 
-The Tingen web service is actually two components:
+The Tingen web service is actually *two* components:
 
 <div align="center">
 		<table>
@@ -76,7 +76,10 @@ There are three types of Tingen releases:
 > WARNING!  
 > Development releases may be broken and not fully tested, and should not be used in production environments!
 
-Tingen/Outpost31 **development** is done using both [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
+Tingen Web Service development is done using:
+
+* The [Tingen Web Service development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
+* The [Outpost31 development branch](https://github.com/spectrum-health-systems/outpost31/tree/development).
 
 <div align="center">
 		<table>
