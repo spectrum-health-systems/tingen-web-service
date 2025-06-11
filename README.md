@@ -73,28 +73,25 @@ There are three types of Tingen Web Service releases:
 
 ## 1. Development
 
-> **Development releases may be broken and not fully tested,  
-> and *should not be used in production environments.***
+> **Development releases may be broken and not fully tested, and *should not be used in production environments.***
 
 Tingen Web Service development uses:
 
 * The Tingen Web Service [development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
-* The Outpost31 [development branch](https://github.com/spectrum-health-systems/outpost31/tree/development).
+* The Outpost31 [development branch](https://github.com/spectrum-health-systems/outpost31/tree/development)
 
 ## 2. Stable
 
-> **Using stable releases in production environments  
-> *is not recommended.***
+> **Using stable releases in production environments *is not recommended.***
 
 Once the development version of the Tingen Web Service has been tested and verified to be **stable**, they are merged with:
 
 * The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
-* The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31).
+* The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31)
 
 ## 3. Community
 
-> **Community releases are intended for use in  
-> production environments.**
+> **Community releases are intended for use in production environments.**
 
 Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as a Tingen Web Service **Community Release**.
 
@@ -115,11 +112,3 @@ There's a *ton* of [documentation](https://github.com/spectrum-health-systems/ti
 * The [Tingen Web Service manual](https://github.com/spectrum-health-systems/tingen-documentation/tree/main/manuals/tngnsrvc)
 * API documentation for the [Tingen Web Service](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-tingen-web-service/) and [Outpost31](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-outpost31/)
 * The Tingen Web Service [CHANGLOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md)
-
-## Other documentation
-
-There are also:
-
-* [Changelogs](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Changelogs/CHANGELOGS.md)
-* [Roadmaps](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Roadmaps/ROADMAPS.md)
-
