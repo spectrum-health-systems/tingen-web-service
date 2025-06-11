@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  ![logo](/.github/image/logo/TingenWebService_logo_320x568.png)
+  ![logo](/.github/image/logo/tngnsrvc-320x568.png)
 
   ![Release 25.6](https://github.com/APrettyCoolProgram/aprettycoolprogram/blob/main/profile/pub/verel/r/r25.6.png))
 
@@ -35,7 +35,7 @@ The Tingen web service is actually two components:
 				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/image/logo/tngnsrvc-320x568.png"></a>
 			</td>
       <td>
-				<a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
+				<a HREF="https://github.com/spectrum-health-systems/outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/o31-194x254.png"></a>
 			</td>
 		</tr>
     <tr>
