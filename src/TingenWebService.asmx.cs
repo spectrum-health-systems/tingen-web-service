@@ -1,28 +1,31 @@
-﻿// The
-// ████████╗██╗███╗   ██╗ ██████╗ ███████╗███╗   ██╗
-// ╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝████╗  ██║
-//    ██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██╔██╗ ██║
-//    ██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║╚██╗██║
-//    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
-//    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
-//                                       Web Service
-//                                    Release 25.5.0
-//
-// https://github.com/APrettyCoolProgram/Tingen-WebService
-// Copyright (c) A Pretty Cool Program. All rights reserved.
-// Licensed under the Apache 2.0 license.
+﻿/* The
+ * ████████╗██╗███╗   ██╗ ██████╗ ███████╗███╗   ██╗
+ * ╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝████╗  ██║
+ *    ██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██╔██╗ ██║
+ *    ██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║╚██╗██║
+ *    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
+ *    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
+ *                                       Web Service
+ *                                    Release 25.6.0
+ *
+ * https://github.com/spectrum-health-systems/tingen-web-service
+ * Copyright (c) A Pretty Cool Program. All rights reserved.
+ * Licensed under the Apache 2.0 license.
+ */
 
-// Tingen documentation:
-// https://github.com/spectrum-health-systems/Tingen-Documentation
+/* Tingen documentation:
+ * https://github.com/spectrum-health-systems/tingen-documentation
+ */
 
-// u250530_code
-// u250530_documentation
+/* u250610_code
+ * u250610_documentation
+ */
 
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Logger;
 using Outpost31.Core.Session;
-using Outpost31.Core.Template;
+using Outpost31.Core.Blueprint;
 using ScriptLinkStandard.Objects;
 
 namespace TingenWebService
@@ -49,7 +52,7 @@ namespace TingenWebService
     ///         </list>
     ///     </para>
     /// </remarks>
-    /// <seealso href = "https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
+    /// <seealso href = "https://github.com/spectrum-health-systems/tingen-documentation">Tingen documentation</seealso>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -102,15 +105,15 @@ namespace TingenWebService
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam) /* TODO - fix */
-        {
-            /* We can write a Primeval log here to verify that the web service is starting up
-             * correctly. This should be uncommented unless needed.
-             */
-            LogEvent.Primeval(AvtrEnv, "[TingenWebService.RunScript()]");
+{
+    /* We can write a Primeval log here to verify that the web service is starting up
+     * correctly. This should be uncommented unless needed.
+     */
+    LogEvent.Primeval(AvtrEnv, "[TingenWebService.RunScript()]");
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
-                LogEvent.Critical(AvtrEnv, Message.ServiceMissingArguments(sentOptObj, sentSlnkScriptParam));
+                LogEvent.Critical(AvtrEnv, LogMessage.ServiceMissingArguments(sentOptObj, sentSlnkScriptParam));
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return sentOptObj.ToReturnOptionObject(0, "");

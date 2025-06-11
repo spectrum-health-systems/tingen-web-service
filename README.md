@@ -1,8 +1,10 @@
-<!-- u250130 -->
+<!-- u250611 -->
 
 <div align="center">
 
-  ![logo](/.github/image/logo/TingenWebService_logo_320x568.png)
+  ![logo](/.github/image/logo/tngnsrvc-320x568.png)
+
+  ![Release 25.6](https://github.com/APrettyCoolProgram/aprettycoolprogram/blob/main/profile/pub/verel/r/r25.6.png))
 
 </div>
 
@@ -20,7 +22,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * A solid foundation to build additional Avatar™ custom tools and utilities
 * Extremely customizable
 * Robust logging
-* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TingenFeatures.md)!
+* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/tngnsrvc-features.md)!
 
 # Tingen development
 
@@ -30,10 +32,10 @@ The Tingen web service is actually two components:
 		<table>
 		<tr>
 			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
+				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/image/logo/tngnsrvc-228x278.png"></a>
 			</td>
       <td>
-				<a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
+				<a HREF="https://github.com/spectrum-health-systems/outpost31"><img src="https://github.com/spectrum-health-systems/outpost31/blob/main/.github/image/logo/o31-194x254.png"></a>
 			</td>
 		</tr>
     <tr>
