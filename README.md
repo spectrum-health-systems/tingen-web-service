@@ -1,4 +1,4 @@
-<!-- u250130 -->
+<!-- u250611 -->
 
 <div align="center">
 
@@ -22,7 +22,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * A solid foundation to build additional Avatar™ custom tools and utilities
 * Extremely customizable
 * Robust logging
-* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/TingenFeatures.md)!
+* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Static/tngnsrvc-features.md)!
 
 # Tingen development
 
