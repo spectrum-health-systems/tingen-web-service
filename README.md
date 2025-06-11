@@ -26,13 +26,13 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 
 # Tingen development
 
-The Tingen web service is actually two components:
+The Tingen web service is actually *two* components:
 
 <div align="center">
 		<table>
 		<tr>
 			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/image/logo/tngnsrvc-228x278.png"></a>
+				<img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/image/logo/tngnsrvc-228x278.png"></a>
 			</td>
       <td>
 				<a HREF="https://github.com/spectrum-health-systems/outpost31"><img src="https://github.com/spectrum-health-systems/outpost31/blob/main/.github/image/logo/o31-194x254.png"></a>
@@ -69,46 +69,31 @@ flowchart RL
 
 # Tingen releases
 
-There are three types of Tingen releases:
+There are three types of Tingen Web Service releases:
 
-## Development releases
+## 1. Development
 
-> WARNING!  
-> Development releases may be broken and not fully tested, and should not be used in production environments!
+> **Development releases may be broken and not fully tested, and *should not be used in production environments.***
 
-Tingen/Outpost31 **development** is done using both [Tingen-Development](https://github.com/spectrum-health-systems/Tingen-Development) and [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
+Tingen Web Service development uses:
 
-<div align="center">
-		<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Development"><img src="https://github.com/spectrum-health-systems/Tingen-Development/blob/main/.github/image/logo/TingenDevelopment_logo_194x254.png"></a>
-        <a HREF="https://github.com/spectrum-health-systems/Outpost31"><img src="https://github.com/spectrum-health-systems/Outpost31/blob/main/.github/image/logo/Outpost31_logo_194x254.png"></a>
-			</td>
-		</tr>
-	</table>
-</div>
+* The Tingen Web Service [development branch](https://github.com/spectrum-health-systems/tingen-web-service/tree/development)
+* The Outpost31 [development branch](https://github.com/spectrum-health-systems/outpost31/tree/development)
 
-## Stable releases
+## 2. Stable
 
-> WARNING!  
-> Stable releases are not intended for production environments outside of Spectrum Health Systems. Use at your own risk!
+> **Using stable releases in production environments *is not recommended.***
 
-Once the development version of Tingen has been tested and verified to be **stable**, Tingen and Outpost31 are compiled into [Tingen](https://github.com/spectrum-health-systems/Tingen).
+Once the development version of the Tingen Web Service has been tested and verified to be **stable**, they are merged with:
 
-<div align="center">
-	<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen"><img src="https://github.com/spectrum-health-systems/Tingen/blob/main/.github/image/logo/Tingen_logo_194x254.png"></a>
-			</td>
-		</tr>
-	</table>
-</div>
+* The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
+* The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31)
 
-## Community releases
+## 3. Community
 
-Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as the Tingen **Community Release**.
+> **Community releases are intended for use in production environments.**
+
+Once a stable release has been in production at Spectrum Health Systems for a few months, it is released as a Tingen Web Service **Community Release**.
 
 <div align="center">
 	<table>
@@ -120,43 +105,10 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 	</table>
 </div>
 
+# Documentation
 
+There's a *ton* of [documentation](https://github.com/spectrum-health-systems/tingen-documentation) for the Tingen Web Service (and other Tingen projects), such as:
 
-# Tingen documentation
-
-There's a *ton* of documentation for Tingen.
-
-You should probably start here:
-
-<div align="center">
-	<table>
-		<tr>
-			<td>
-				<a HREF="https://github.com/spectrum-health-systems/Tingen-Documentation"><img src="https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/.github/image/logo/TingenDocumentation_logo_194x254.png"></a>
-			</td>
-		</tr>
-	</table>
-</div>
-
-## Other documentation
-
-There are also:
-
-* [Changelogs](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Changelogs/CHANGELOGS.md)
-* [Roadmaps](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/Roadmaps/ROADMAPS.md)
-
-
-
-There are three two types of branches in this repository:
-
-* **[main](https://github.com/spectrum-health-systems/Tingen/tree/main)**  
-  This is the latest stable release of Tingen. You can think of this as the Release Candidate for the Tingen [Community Release](https://github.com/spectrum-health-systems/Tingen-CommunityRelease).
-
-* **Tingen archive snapshots**  
-  When development starts on a new monthly version, the previous version is archived to a separate branch (e.g., `24.9.0-stable`).
-
-# Roadmaps and Changelogs
-
-You can also review the Tingen [Roadmap](https://github.com/orgs/spectrum-health-systems/projects/51/views/3) and [Changelog](https://github.com/orgs/spectrum-health-systems/projects/51/views/4?groupedBy%5BcolumnId%5D=141162315&filterQuery=status%3ACompleted).
-
-Remember, though, that the majority of the upcoming features/changes will be part of [Outpost31](https://github.com/spectrum-health-systems/Outpost31).
+* The [Tingen Web Service manual](https://github.com/spectrum-health-systems/tingen-documentation/tree/main/manuals/tngnsrvc)
+* API documentation for the [Tingen Web Service](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-tingen-web-service/) and [Outpost31](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-outpost31/)
+* The Tingen Web Service [CHANGLOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md)
