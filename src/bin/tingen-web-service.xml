@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TingenWebService</name>
+    </assembly>
+    <members>
+        <member name="T:TingenWebService.TingenWebService">
+            <summary>The entry class for the Tingen Web Service.</summary>
+            <remarks>
+                <para>
+                    This class doesn't do much actual work, and should remain fairly static.<br/>
+                    <br/>
+                    For the most part, it just hands information to<see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the<br/>
+                    heavy lifting is done.<br/>
+                    <br/>
+                    There are two methods in this class, both of which <i>are required</i>:
+                    <list type="bullet">
+                        <item><see cref="M:TingenWebService.TingenWebService.GetVersion"/></item>
+                        <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)"/></item>
+                    </list>
+                </para>
+                <para>
+                    While you're here, take a look at this stuff:
+                    <list type="bullet">
+                        <item>The <see href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen Documentation</see></item>
+                        <item>The <see href="https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-tingen-web-service">Tingen Web Service API Documentation</see></item>
+                    </list>
+                </para>
+            </remarks>
+            <seealso href = "https://github.com/spectrum-health-systems/tingen-documentation">Tingen documentation</seealso>
+        </member>
+        <member name="P:TingenWebService.TingenWebService.ExeAsm">
+            <summary>The executing Assembly name.</summary>
+            <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
+        </member>
+        <member name="P:TingenWebService.TingenWebService.WbsrvcVersion">
+            <summary>The current version of the Tingen Web Service.</summary>
+            <remarks>The version number is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
+            <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
+            <seealso href="https://spectrum-health-systems.github.io/tingen-documentation/static/tingen-project-versioning"></seealso>
+        </member>
+        <member name="P:TingenWebService.TingenWebService.AvtrEnv">
+            <summary>The Avatar environment that the Tingen Web Service will interface with.</summary>
+            <remarks>This needs to be manually updated to "LIVE" when deploying to production.</remarks>
+            <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
+        </member>
+        <member name="M:TingenWebService.TingenWebService.GetVersion">
+            <summary>Get the current version of the Tingen Web Service.</summary>
+            <remarks>This method is required and <i>should not be modified</i>.</remarks>
+            <returns>The current <see cref="P:TingenWebService.TingenWebService.WbsrvcVersion"/>.</returns>
+        </member>
+        <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
+            <summary>The entry point for the Tingen Web Service.</summary>
+            <remarks>
+                <note title="About this method">
+                    <list type="bullet">
+                        <item>
+                            This method is required and <i>should not be modified</i>.
+                        </item>
+                        <item>Trace Logs can't go here because the logging infrastructure<br/>
+                              hasn't been initialized yet.
+                        </item>
+                    </list>
+                </note>
+                <note type="security" title="Critical failure warning">
+                    If Avatar doesn't pass an <paramref name="sentOptObj"/> or <paramref name="sentSlnkScriptParam"/>, the Tingen Web Service will fail.<br/>
+                    <br/>
+                    Since this can be difficult to troubleshoot, a<c> Critical Failure Log</c> will be created.<br/>
+                    <br/>
+                    Generally the fix for a missing OptionObject and/or Script Parameter is to<br/>
+                    re-import the Tingen Web Service WSDL.
+                </note>
+            </remarks>
+            <param name="sentOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar, which contains all of the content and metadata of an Avatar form.</param>
+            <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
+            <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
+        </member>
+    </members>
+</doc>

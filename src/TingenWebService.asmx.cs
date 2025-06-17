@@ -106,10 +106,10 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 sentOptObj, string sentSlnkScriptParam) /* TODO - fix */
 {
-    /* We can write a Primeval log here to verify that the web service is starting up
-     * correctly. This should be uncommented unless needed.
-     */
-    LogEvent.Primeval(AvtrEnv, "[TingenWebService.RunScript()]");
+            /* We can write a Primeval log here to verify that the web service is starting up
+             * correctly. This should be uncommented unless needed.
+             */
+            LogEvent.Primeval(AvtrEnv, "[TingenWebService.RunScript()]");
 
             if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || sentOptObj == null)
             {
