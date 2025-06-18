@@ -22,7 +22,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * A solid foundation to build additional Avatar™ custom tools and utilities
 * Extremely customizable
 * Robust logging
-* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/static/tngnsrvc-features.md)!
+* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/static/tngnwsvc/features.md)!
 
 # Tingen development
 
