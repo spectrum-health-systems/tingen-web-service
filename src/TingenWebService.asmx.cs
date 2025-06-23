@@ -17,7 +17,7 @@
  * https://github.com/spectrum-health-systems/tingen-documentation-project
  */
 
-/* TingenWebService.asmx.cs
+/* TingenWebService.TingenWebService.asmx.cs
  * u250618_code
  * u250618_documentation
  */
