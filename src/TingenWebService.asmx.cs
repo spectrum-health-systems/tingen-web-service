@@ -18,8 +18,8 @@
  */
 
 /* TingenWebService.TingenWebService.asmx.cs
- * u250618_code
- * u250618_documentation
+ * u250624_code
+ * u250624_documentation
  */
 
 using System.Reflection;
@@ -51,7 +51,7 @@ namespace TingenWebService
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class TingenWebService : WebService
+    public class TingenWebService : System.Web.Services.WebService
     {
         /// <summary>The Executing Assembly name.</summary>
         /// <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
@@ -60,7 +60,7 @@ namespace TingenWebService
         /// <summary>The current version of the Tingen Web Service.</summary>
         /// <remarks>The <see cref= "https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/project/versioning.md">version</see> is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
         /// <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
-        public static string TngnWsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
@@ -72,9 +72,9 @@ namespace TingenWebService
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
         /// <remarks>This method is required and <i>should not be modified</i>.</remarks>
-        /// <returns>The current <see cref="TngnWsvcVer"/>.</returns>
+        /// <returns>The current <see cref="WsvcVer"/>.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {TngnWsvcVer}";
+        public string GetVersion() => $"VERSION {WsvcVer}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
         /// <remarks>
@@ -87,36 +87,35 @@ namespace TingenWebService
         ///               been initialized yet.
         ///         </item>
         ///         <item>
-        ///               If Avatar doesn't pass an <paramref name="OrigOptObj"/> or <paramref name="sentSlnkScriptParam"/>,<br/>
+        ///               If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>,<br/>
         ///               the Tingen Web Service will fail, and a <see cref= "Outpost31.Core.Logger.LogEvent.Critical(string, string)">Critical Failure Log</see> will be<br/>
         ///               created.
         ///               <br/>
         ///          </item>
         ///      </list>
         /// </remarks>
-        /// <param name="OrigOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
-        /// <param name="sentSlnkScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
+        /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
+        /// <param name="origScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 OrigOptObj, string sentSlnkScriptParam) /* TODO - fix */
-{
-            /* We can write a Primeval log here to verify that the web service is starting up
-             * correctly. This should be uncommented unless needed.
+        public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam) /* TODO - fix */
+        {
+            /* This should be uncommented unless needed.
              */
-            LogEvent.Primeval(AvtrSys, "[TingenWebService.RunScript()]");
+            LogEvent.Primeval(AvtrSys, "The TingenWebService has started.");
 
-            if (string.IsNullOrWhiteSpace(sentSlnkScriptParam) || OrigOptObj == null)
+            if (string.IsNullOrWhiteSpace(origScriptParam) || origOptObj == null)
             {
-                LogEvent.Critical(AvtrSys, LogMsg.WsvcMissingArgs(OrigOptObj, sentSlnkScriptParam));
+                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.BpWsvc.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
-                return OrigOptObj.ToReturnOptionObject(0, "");
+                return origOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                var wsvcSession = WsvcSession.New(OrigOptObj, sentSlnkScriptParam, TngnWsvcVer, AvtrSys);
+                var wsvcSession = WsvcSession.New(origOptObj, origScriptParam, WsvcVer, AvtrSys);
 
-                Outpost31.Core.Avatar.ScriptParameter.Request(wsvcSession);
+                Outpost31.Core.Avatar.AvtrParameter.Request(wsvcSession);
 
                 return wsvcSession.OptObj.Finalized;
             }
