@@ -18,8 +18,8 @@
  */
 
 /* TingenWebService.TingenWebService.asmx.cs
- * u250624_code
- * u250624_documentation
+ * u250625_code
+ * u250625_documentation
  */
 
 using System.Reflection;
@@ -106,7 +106,7 @@ namespace TingenWebService
 
             if (string.IsNullOrWhiteSpace(origScriptParam) || origOptObj == null)
             {
-                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.BpWsvc.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
+                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.WsvcErrorBprt.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return origOptObj.ToReturnOptionObject(0, "");
