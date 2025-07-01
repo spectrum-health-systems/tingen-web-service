@@ -1,23 +1,4 @@
-﻿/* The
- * ████████╗██╗███╗   ██╗ ██████╗ ███████╗███╗   ██╗
- * ╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝████╗  ██║
- *    ██║   ██║██╔██╗ ██║██║  ███╗█████╗  ██╔██╗ ██║
- *    ██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██║╚██╗██║
- *    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
- *    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
- *                                       Web Service
- *                                    Release 25.6.0
- *
- * https://github.com/spectrum-health-systems/tingen-web-service
- * Copyright (c) A Pretty Cool Program. All rights reserved.
- * Licensed under the Apache 2.0 license.
- */
-
-/* Tingen Documentation Project:
- * https://github.com/spectrum-health-systems/tingen-documentation-project
- */
-
-/* TingenWebService.TingenWebService.asmx.cs
+﻿/* TingenWebService.TingenWebService.asmx.cs
  * u250625_code
  * u250625_documentation
  */
