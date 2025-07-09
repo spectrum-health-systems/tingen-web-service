@@ -13,17 +13,17 @@ namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///     <para>
-    ///         This class doesn't do much actual work, and should remain fairly static. For the most part, it just
-    ///         hands information to <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>,
-    ///         where the heavy lifting is done.
-    ///         <br/>
-    ///         There are two methods in this class, both of which <i>are required</i>:
-    ///         <list type="bullet">
-    ///             <item><see cref="GetVersion()"/></item>
-    ///             <item><see cref="RunScript(OptionObject2015, string)"/></item>
-    ///         </list>
-    ///     </para>
+    ///   <para>
+    ///     This class doesn't do much actual work, and should remain fairly static. For the most part, it just
+    ///     hands information to <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>,
+    ///     where the heavy lifting is done.
+    ///     <br/>
+    ///     There are two methods in this class, both of which <i>are required</i>:
+    ///     <list type="bullet">
+    ///        <item><see cref="GetVersion()"/></item>
+    ///        <item><see cref="RunScript(OptionObject2015, string)"/></item>
+    ///     </list>
+    ///   </para>
     /// </remarks>
     /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service">Tingen Web Service API Documentation</seealso>
     /// <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
@@ -61,7 +61,7 @@ namespace TingenWebService
         ///         <item>
         ///             This method is required and <i>should not be modified</i>.
         ///         </item>
-        ///         <item><see cref= "LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see>
+        ///         <item><see cref="LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see>
         ///               can't go here because the logging infrastructure hasn't been initialized yet.
         ///         </item>
         ///         <item>
