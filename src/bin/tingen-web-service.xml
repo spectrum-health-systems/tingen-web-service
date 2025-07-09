@@ -4,50 +4,63 @@
         <name>TingenWebService</name>
     </assembly>
     <members>
-        <!-- Badly formed XML comment ignored for member "T:TingenWebService.TingenWebService" -->
+        <member name="T:TingenWebService.TingenWebService">
+            <summary>The entry class for the Tingen Web Service.</summary>
+            <remarks>
+                <para>
+                    This class doesn't do much actual work, and should remain fairly static. For the most part, it just
+                    hands information to <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>,
+                    where the heavy lifting is done.
+                    <br/>
+                    There are two methods in this class, both of which <i>are required</i>:
+                    <list type="bullet">
+                        <item><see cref="M:TingenWebService.TingenWebService.GetVersion"/></item>
+                        <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)"/></item>
+                    </list>
+                </para>
+            </remarks>
+            <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service">Tingen Web Service API Documentation</seealso>
+            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+        </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsm">
             <summary>The Executing Assembly name.</summary>
             <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.WsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
-            <remarks>The <see cref= "!:https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/project/versioning.md">version</see> is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
-            <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
         </member>
         <member name="P:TingenWebService.TingenWebService.AvtrSys">
             <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
             <remarks>
-                The Avatar <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/avatar/environment.md#system"> <i>System</i></see>
-                is different than an Avatar <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/avatar/environment.md#system-code"> <i>System Code</i></see>.<br/>
+                The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSys"><i>System</i></see> is different
+                than an Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSysCode"><i>System Code</i></see>.
             </remarks>
             <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of the Tingen Web Service.</summary>
             <remarks>This method is required and <i>should not be modified</i>.</remarks>
-            <returns>The current <see cref="P:TingenWebService.TingenWebService.WsvcVer"/>.</returns>
+            <returns>The current <see cref="P:TingenWebService.TingenWebService.WsvcVer">version</see> of the Tingen Web Service.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>The entry point for the Tingen Web Service.</summary>
             <remarks>
-                About this method:
                 <list type="bullet">
                     <item>
                         This method is required and <i>should not be modified</i>.
                     </item>
-                    <item><see cref= "M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">Trace Logs</see> can't go here because the logging infrastructure hasn't<br/>
-                          been initialized yet.
+                    <item><see cref= "M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">Trace Logs</see>
+                          can't go here because the logging infrastructure hasn't been initialized yet.
                     </item>
                     <item>
-                          If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>,<br/>
-                          the Tingen Web Service will fail, and a <see cref= "M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)">Critical Failure Log</see> will be<br/>
-                          created.
-                          <br/>
+                          If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>,
+                          the Tingen Web Service will fail, and a <see cref= "M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)">Critical Failure Log</see>
+                          will be created.
                      </item>
                  </list>
             </remarks>
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
-            <param name="origScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
+            <param name="origScriptParam">The <see cref="P:Outpost31.Core.Avatar.AvtrParameter.Original"/> that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         </member>
     </members>

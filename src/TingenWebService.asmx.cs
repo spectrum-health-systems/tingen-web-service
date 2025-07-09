@@ -1,11 +1,10 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250625_code
- * u250625_documentation
+ * u250709_code
+ * u250709_documentation
  */
 
 using System.Reflection;
 using System.Web.Services;
-using Outpost31.Core.Blueprint;
 using Outpost31.Core.Logger;
 using Outpost31.Core.Session;
 using ScriptLinkStandard.Objects;
@@ -15,10 +14,9 @@ namespace TingenWebService
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
     ///     <para>
-    ///         This class doesn't do much actual work, and should remain fairly static.<br/>
-    ///         <br/>
-    ///         For the most part, it just hands information to<see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the<br/>
-    ///         heavy lifting is done.<br/>
+    ///         This class doesn't do much actual work, and should remain fairly static. For the most part, it just
+    ///         hands information to <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>,
+    ///         where the heavy lifting is done.
     ///         <br/>
     ///         There are two methods in this class, both of which <i>are required</i>:
     ///         <list type="bullet">
@@ -27,56 +25,54 @@ namespace TingenWebService
     ///         </list>
     ///     </para>
     /// </remarks>
-    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service">Tingen Web Service API Documentation</see>
+    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service">Tingen Web Service API Documentation</seealso>
     /// <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    public class TingenWebService : System.Web.Services.WebService
+    public class TingenWebService : WebService
     {
         /// <summary>The Executing Assembly name.</summary>
         /// <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
-        public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
+        public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly()
+                                                            .GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
-        /// <remarks>The <see cref= "https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/project/versioning.md">version</see> is pulled from <i>Properties/AssemblyInfo.cs</i></remarks>
-        /// <value>YY.MM.Patch (e.g., <c>25.02.1</c>)</value>
-        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly()
+                                                             .GetName().Version.ToString();
 
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
-        ///     The Avatar <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/avatar/environment.md#system"> <i>System</i></see>
-        ///     is different than an Avatar <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/avatar/environment.md#system-code"> <i>System Code</i></see>.<br/>
+        ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSys"><i>System</i></see> is different
+        ///     than an Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSysCode"><i>System Code</i></see>.
         /// </remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         public static string AvtrSys { get; set; } = "UAT";
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
         /// <remarks>This method is required and <i>should not be modified</i>.</remarks>
-        /// <returns>The current <see cref="WsvcVer"/>.</returns>
+        /// <returns>The current <see cref="WsvcVer">version</see> of the Tingen Web Service.</returns>
         [WebMethod]
         public string GetVersion() => $"VERSION {WsvcVer}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
         /// <remarks>
-        ///     About this method:
         ///     <list type="bullet">
         ///         <item>
         ///             This method is required and <i>should not be modified</i>.
         ///         </item>
-        ///         <item><see cref= "LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see> can't go here because the logging infrastructure hasn't<br/>
-        ///               been initialized yet.
+        ///         <item><see cref= "LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see>
+        ///               can't go here because the logging infrastructure hasn't been initialized yet.
         ///         </item>
         ///         <item>
-        ///               If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>,<br/>
-        ///               the Tingen Web Service will fail, and a <see cref= "Outpost31.Core.Logger.LogEvent.Critical(string, string)">Critical Failure Log</see> will be<br/>
-        ///               created.
-        ///               <br/>
+        ///               If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>,
+        ///               the Tingen Web Service will fail, and a <see cref= "LogEvent.Critical(string, string)">Critical Failure Log</see>
+        ///               will be created.
         ///          </item>
         ///      </list>
         /// </remarks>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
-        /// <param name="origScriptParam">The Script Parameter that is sent from Avatar, which contains the request the Tingen Web Service needs to do work.</param>
+        /// <param name="origScriptParam">The <see cref="Outpost31.Core.Avatar.AvtrParameter.Original">original Script Parameter</see> that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam) /* TODO - fix */
