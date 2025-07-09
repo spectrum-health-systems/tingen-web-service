@@ -24,15 +24,15 @@ namespace TingenWebService
     ///       </list>
     ///     </para>
     /// </remarks>
-    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service">Tingen Web Service API Documentation</seealso>
     /// <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class TingenWebService : WebService
     {
-        /// <summary>The Executing Assembly name.</summary>
-        /// <remarks>A required component for writing log files, defined here so it can be used throughout the class.</remarks>
+        /// <summary>The executing assembly name.</summary>
+        /// <remarks>A required log component, defined here so it can be used throughout the class.</remarks>
         public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly()
                                                             .GetName().Name;
 
@@ -82,7 +82,7 @@ namespace TingenWebService
 
             if (string.IsNullOrWhiteSpace(origScriptParam) || origOptObj == null)
             {
-                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.WsvcErrorBprt.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
+                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return origOptObj.ToReturnOptionObject(0, "");
