@@ -33,12 +33,10 @@ namespace TingenWebService
     {
         /// <summary>The executing assembly name.</summary>
         /// <remarks>A required log component, defined here so it can be used throughout the class.</remarks>
-        public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly()
-                                                            .GetName().Name;
+        public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
-        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly()
-                                                             .GetName().Version.ToString();
+        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
