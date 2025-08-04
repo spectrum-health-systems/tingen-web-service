@@ -37,16 +37,31 @@
         </member>
         <member name="T:Outpost31.Core.Avatar.AvtrParameter">
             <summary>Logic for the Avatar script parameter.</summary>
-            <remarks>TBD</remarks>
-            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-            <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
+            <remarks>
+                The Avatar Script Parameter is a string that is sent from Avatar to the Tingen Web Service, and contains<br />
+                the information that the Tingen Web Service needs to do it's work.<br />
+                <br />
+                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Common.xml" path="Common/Class[@name=&quot;Parameter&quot;]/Description/*" /><br />
+                <br />
+                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Common.xml" path="Common/Class[@name=&quot;Parameter&quot;]/Example/*" /><br />
+                <br />
+                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Common.xml" path="Common/Class[@name=&quot;Parameter&quot;]/ListOf/*" />&gt;<br />
+                <br />
+                <MoreRemarks>
+                For more information, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </MoreRemarks>
+            </remarks>
         </member>
         <member name="P:Outpost31.Core.Avatar.AvtrParameter.Original">
             <summary>The original script parameter sent from Avatar.</summary>
         </member>
         <member name="M:Outpost31.Core.Avatar.AvtrParameter.Request(Outpost31.Core.Session.WsvcSession)">
             <summary>Processes a request based on the parameters provided in the specified session.</summary>
-            <remarks>TBD</remarks>
+            <remarks>
+                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Core.xml" path="Core/Class[@name=&quot;Avatar.AvtrParameter&quot;]/Description/*" /><br />
+                <br />
+                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Core.xml" path="Core/Class[@name=&quot;Avatar.AvtrParameter&quot;]/Example/*" /><br />
+            </remarks>
             <param name="wsvcSession">The session object containing the request parameters and runtime settings</param>
         </member>
         <member name="M:Outpost31.Core.Avatar.AvtrParameter.CheckExistence(System.String)">
@@ -57,10 +72,12 @@
         <member name="T:Outpost31.Core.Avatar.AvtrOptionObject">
             <summary>Logic for Avatar OptionObjects.</summary>
             <remarks>
-                An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> contains metadata of an Avatar form.
+                An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> contains metadata of an Avatar form.<br />
+                <br />
+                <MoreRemarks>
+                For more information, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </MoreRemarks>
             </remarks>
-            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-            <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
         </member>
         <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.Original">
             <summary>The original OptionObject sent from Avatar.</summary>
@@ -74,9 +91,14 @@
             <summary>The finalized OptionObject that is returned to Avatar.</summary>
             <remarks>This is the finalized <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see>, ready to be returned to Avatar.</remarks>
         </member>
-        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.ExeAsm">
+        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.ExeAsmName">
             <summary>The executing assembly name.</summary>
-            <remarks>A required log component, defined here so it can be used throughout the class.</remarks>
+            <remarks>
+                The name of the Executing Assembly is a required component of all log files, as it is used to identify
+                the class that is creating the log.<br />
+                <br />
+                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
+            </remarks>
         </member>
         <member name="M:Outpost31.Core.Avatar.AvtrOptionObject.Finalize(Outpost31.Core.Session.WsvcSession,System.Int32,System.String)">
             <summary>Finalize an OptionObject so it can be returned to Avatar.</summary>
@@ -585,12 +607,29 @@
             <remarks>This functionality was added as a standard request on 5-1-2025.</remarks>
         </member>
         <member name="T:Outpost31.ProjectInfo">
-            <summary>This class is only used for informational purposes.</summary>
+            <summary>Provides additional information about Outpost31.</summary>
             <remarks>
-                 Outpost31 is a class library that provides the back-end functionality for the Tingen Web Service.
-             </remarks>
-             <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-             <seealso href="https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-outpost31/">Outpost31 API Documentation</seealso>
+                <MoreRemarks>
+                <b>About Outpost31</b><br />
+                Outpost31 is a class library that provides the back-end functionality for the Tingen Web Service.
+            </MoreRemarks><br />
+                <br />
+                <MoreRemarks>
+                <b>Associated projects</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (front-end)<br />
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (back-end)<br />
+            </MoreRemarks><br />
+                <br />
+                <MoreRemarks>
+                <b>Documentation</b>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+            </MoreRemarks><br />
+            </remarks>
         </member>
     </members>
 </doc>

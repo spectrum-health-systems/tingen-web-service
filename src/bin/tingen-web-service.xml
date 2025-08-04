@@ -7,7 +7,8 @@
         <member name="T:TingenWebService.ProjectInfo">
             <summary>Provides additional information about the Tingen Web Service.</summary>
             <remarks>
-                 <remarks>
+                <para>
+                <!-- This section should be a copy of the Tingen Web Service repository README.md -->
                 <b>About the Tingen Web Service</b><br />
                 Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br />
                 leverage real-time analytics and clinical decision support to drive value-based care.<br />
@@ -18,18 +19,21 @@
                 <br />
                 Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br />
                 included in the official release, and provides a solid foundation for building additional functionality<br />
-                quickly and efficiently.
-            </remarks><br />
-                 <br />
-                 <remarks>
+                quickly and efficiently
+            </para><br />
+                <br />
+                <para>
+                <b>Associated projects</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (front-end)<br />
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (back-end)
+            </para><br />
+                <br />
+                <para>
                 <b>Documentation</b><br />
-                <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-                <br />
-                <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</seealso>
-                <br />
-                <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">API Documentation</seealso>
-                <br />
-            </remarks>
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+            </para><br />
             </remarks>
         </member>
         <member name="T:TingenWebService.TingenWebService">
@@ -39,20 +43,25 @@
                   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
                   <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
                   <br />
-                  There are two methods in this class, both of which <i>are required</i>:
+                  There are two methods in this class, both of which <i>are required</i> and <i>should not be modified</i>:
                   <list type="bullet">
                      <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
                      <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
                   </list>
                 </para>
-                <remarks>
+                <para>
                 For more information, please see <see cref="T:TingenWebService.ProjectInfo" />.
-            </remarks>
+            </para>
             </remarks>
         </member>
-        <member name="P:TingenWebService.TingenWebService.ExeAsm">
+        <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>The executing assembly name.</summary>
-            <remarks>A required log component, defined here so it can be used throughout the class.</remarks>
+            <remarks>
+                The name of the Executing Assembly is a required component of all log files, as it is used to identify
+                the class that is creating the log.<br />
+                <br />
+                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
+            </remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.WsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>

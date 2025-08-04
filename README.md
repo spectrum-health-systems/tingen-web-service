@@ -90,7 +90,7 @@ Once the development version of the Tingen Web Service has been tested and verif
 * The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
 * The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31)
 
-Even though stable releases are stable, you still shouldn't use them in production environments - use the [Community Release](https://github.com/spectrum-health-systems/tingen-community-release) instead.
+The stable version of the Tingen Web Service is just the source code - it hasn't been "built" for deployment. That's what the  [Community Release](https://github.com/spectrum-health-systems/tingen-community-release) is for.
 
 ## 3. Community
 
@@ -113,5 +113,5 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 There's a *ton* of [documentation](https://github.com/spectrum-health-systems/tingen-documentation) for the Tingen Web Service (and other Tingen projects), such as:
 
 * The [Tingen Web Service manual](https://github.com/spectrum-health-systems/tingen-documentation/tree/main/manuals/tngnsrvc)
-* API documentation for the [Tingen Web Service](https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service/html/82a31265-4fa5-4761-b2aa-a7ff62431767.htm) and [Outpost31](https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-outpost31/html/ffe49fad-6cb2-4f4b-a8af-9ba9a7d06fc1.htm)
+* [API documentation](https://spectrum-health-systems.github.io/tingen-documentation-project/api)
 * The Tingen Web Service [CHANGELOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md)
