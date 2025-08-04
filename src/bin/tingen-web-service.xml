@@ -6,7 +6,31 @@
     <members>
         <member name="T:TingenWebService.ProjectInfo">
             <summary>Provides additional information about the Tingen Web Service.</summary>
-            <remarks>See the <see cref="T:TingenWebService.ProjectInfo"/> class for more information.</remarks>
+            <remarks>
+                 <remarks>
+                <b>About the Tingen Web Service</b><br />
+                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br />
+                leverage real-time analytics and clinical decision support to drive value-based care.<br />
+                <br />
+                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br />
+                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br />
+                Avatar™ users.<br />
+                <br />
+                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br />
+                included in the official release, and provides a solid foundation for building additional functionality<br />
+                quickly and efficiently.
+            </remarks><br />
+                 <br />
+                 <remarks>
+                <b>Documentation</b><br />
+                <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+                <br />
+                <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</seealso>
+                <br />
+                <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">API Documentation</seealso>
+                <br />
+            </remarks>
+            </remarks>
         </member>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry class for the Tingen Web Service.</summary>
