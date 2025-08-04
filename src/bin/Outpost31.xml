@@ -584,5 +584,13 @@
             <summary>Deny access to the form for anyone using the DOC System Code.</summary>
             <remarks>This functionality was added as a standard request on 5-1-2025.</remarks>
         </member>
+        <member name="T:Outpost31.ProjectInfo">
+            <summary>This class is only used for informational purposes.</summary>
+            <remarks>
+                 Outpost31 is a class library that provides the back-end functionality for the Tingen Web Service.
+             </remarks>
+             <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+             <seealso href="https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-outpost31/">Outpost31 API Documentation</seealso>
+        </member>
     </members>
 </doc>

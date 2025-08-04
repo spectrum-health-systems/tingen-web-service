@@ -1,0 +1,50 @@
+﻿<!-- 
+    AppData\XMLDoc\TingenWebService.xml
+    This file used to provide additional XML documentation about the classes,
+    methods, and properties in the TingenWebService namespace.
+    
+    u250804
+-->
+
+<TingenWebService>
+    <Class name="Common">
+        <About>
+            <remarks>
+                ----------------------<br/>
+                The Tingen Web Service<br/>
+                ----------------------<br/>
+                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
+                leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+                <br/>
+                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
+                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+                Avatar™ users.<br/>
+                <br/>
+                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
+                included in the official release, and provides a solid foundation for building additional functionality<br/>
+                quickly and efficiently.
+            </remarks>
+        </About>
+        <Documentation>
+            <remarks>
+                Additional documentation:<br/>
+                <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+                <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
+            </remarks>
+        </Documentation>
+        <ProjectInfo>
+            <remarks>
+                For more information, please see <see cref="ProjectInfo"/>.
+            </remarks>
+        </ProjectInfo>
+    </Class>
+</TingenWebService>
+
+<!--
+
+<seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+<seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
+<seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+<seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
+
+-->

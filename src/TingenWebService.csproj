@@ -69,6 +69,7 @@
     <None Include="AppData\Runtime\TngnWbsv.Environment">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="AppData\XMLDoc\TingenWebService.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>

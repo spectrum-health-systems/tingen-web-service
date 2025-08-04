@@ -1,6 +1,6 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250709_code
- * u250709_documentation
+ * u250804_code
+ * u250804_documentation
  */
 
 using System.Reflection;
@@ -23,9 +23,8 @@ namespace TingenWebService
     ///          <item><see cref="RunScript(OptionObject2015, string)"/></item>
     ///       </list>
     ///     </para>
+    ///     <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ProjectInfo/*'/>
     /// </remarks>
-    /// <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
