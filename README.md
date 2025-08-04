@@ -90,6 +90,8 @@ Once the development version of the Tingen Web Service has been tested and verif
 * The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
 * The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31)
 
+Even though stable releases are stable, you still shouldn't use them in production environments - use the [Community Release](#3-community) instead.
+
 ## 3. Community
 
 > **Community releases are intended for use in production environments.**
