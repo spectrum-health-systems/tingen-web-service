@@ -4,7 +4,7 @@
 
   ![logo](/.github/image/logo/tngnsrvc-320x568.png)
 
-  ![Release](https://img.shields.io/badge/release-25.7-teal)&nbsp;&nbsp;
+  ![Release](https://img.shields.io/badge/release-25.8-teal)&nbsp;&nbsp;
   ![License](https://img.shields.io/badge/license-apache-blue)
 
 </div>

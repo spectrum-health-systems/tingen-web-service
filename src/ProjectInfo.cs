@@ -6,7 +6,7 @@
  *    ██║   ██║██║ ╚████║╚██████╔╝███████╗██║ ╚████║
  *    ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝
  *                                       Web Service
- *                                    Release 25.7.0
+ *                                    Release 25.8.0
  *
  * https://github.com/spectrum-health-systems/tingen-web-service
  * Copyright (c) A Pretty Cool Program. All rights reserved.
