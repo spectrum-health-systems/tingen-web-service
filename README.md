@@ -23,7 +23,7 @@ While Avatar™ is a robust platform, it isn't perfect. The good news is that yo
 * A solid foundation to build additional Avatar™ custom tools and utilities
 * Extremely customizable
 * Robust logging
-* ...and [more](https://github.com/spectrum-health-systems/Tingen-Documentation/blob/main/static/tngnwsvc/features.md)!
+* ...and more
 
 # Tingen development
 
@@ -90,7 +90,7 @@ Once the development version of the Tingen Web Service has been tested and verif
 * The Tingen Web Service [main branch](https://github.com/spectrum-health-systems/tingen-web-service) **&lArr; YOU ARE HERE**
 * The Outpost31 [main branch](https://github.com/spectrum-health-systems/outpost31)
 
-Even though stable releases are stable, you still shouldn't use them in production environments - use the [Community Release](#3-community) instead.
+Even though stable releases are stable, you still shouldn't use them in production environments - use the [Community Release](https://github.com/spectrum-health-systems/tingen-community-release) instead.
 
 ## 3. Community
 
@@ -113,5 +113,5 @@ Once a stable release has been in production at Spectrum Health Systems for a fe
 There's a *ton* of [documentation](https://github.com/spectrum-health-systems/tingen-documentation) for the Tingen Web Service (and other Tingen projects), such as:
 
 * The [Tingen Web Service manual](https://github.com/spectrum-health-systems/tingen-documentation/tree/main/manuals/tngnsrvc)
-* API documentation for the [Tingen Web Service](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-tingen-web-service/) and [Outpost31](https://spectrum-health-systems.github.io/tingen-documentation/api/shfb-outpost31/)
+* API documentation for the [Tingen Web Service](https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-tingen-web-service/html/82a31265-4fa5-4761-b2aa-a7ff62431767.htm) and [Outpost31](https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-outpost31/html/ffe49fad-6cb2-4f4b-a8af-9ba9a7d06fc1.htm)
 * The Tingen Web Service [CHANGELOG](CHANGELOG.md) and [ROADMAP](ROADMAP.md)
