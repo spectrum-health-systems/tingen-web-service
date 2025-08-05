@@ -84,6 +84,7 @@
   <ItemGroup>
     <Content Include="AppData\XMLDoc\README.md" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\do-not-commit-folder.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

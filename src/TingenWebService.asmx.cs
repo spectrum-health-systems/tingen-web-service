@@ -39,8 +39,8 @@ namespace TingenWebService
 
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
-        ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSys"><i>System</i></see> is different than an
-        ///     Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSysCode"><i>System Code</i></see>.
+        ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
+        ///     Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.
         /// </remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         public static string AvtrSys { get; set; } = "UAT";
