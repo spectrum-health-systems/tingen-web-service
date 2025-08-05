@@ -50,7 +50,7 @@
                   </list>
                 </para>
                 <para>
-                For more information, please see <see cref="T:TingenWebService.ProjectInfo" />.
+                For more information about the <b>Tingen Web Service</b>, please see <see cref="T:TingenWebService.ProjectInfo" />.
             </para>
             </remarks>
         </member>

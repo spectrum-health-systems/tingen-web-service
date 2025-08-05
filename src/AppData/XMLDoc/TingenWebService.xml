@@ -16,7 +16,7 @@
         <!-- <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/> -->
         <Callback>
             <para>
-                For more information, please see <see cref="ProjectInfo"/>.
+                For more information about the <b>Tingen Web Service</b>, please see <see cref="ProjectInfo"/>.
             </para>
         </Callback>
 
