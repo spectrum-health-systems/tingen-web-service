@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Outpost31</name>
+    </assembly>
+    <members>
+        <member name="T:Outpost31.Core.Avatar.AvtrSystem">
+            <summary>Logic for Avatar systems and system codes.</summary>
+            <remarks>
+                The Tingen Web Service refers to Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"> <i>System</i> </see> and Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"> <i>System <b>Code</b></i></see>.<br />
+                <br />
+                While both contain the word <i>System</i>, they are not the same! It is important to understand the difference between the two.<br />
+                <para>
+                For more information about <b>Outpost31</b>, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys">
+            <summary>The Avatar <i>System</i> that the Tingen Web Service will interface with.</summary>
+            <remarks>
+                Common Avatar <i>Systems</i> are <c>LIVE</c>, <c>UAT</c>, <c>SBOX</c>, <c>BUILD</c>.
+            </remarks>
+            <value>The Tingen Web Service works with the <c>LIVE</c> or <c>UAT</c> Avatar Systems.</value>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode">
+            <summary>The Avatar  <i>System <b>Code</b></i> used to login to Avatar.</summary>
+            <remarks>
+                The Avatar <i>System Code</i> determines (in part) what Avatar functionality a user has access to while they are logged into
+                an Avatar <i>System</i>.<br/>
+                <br/>
+                Organizations may have many different Avatar <i>System Codes</i>, but only a few Avatar <see cref="T:Outpost31.Core.Avatar.AvtrSystem"> <i>Systems</i></see>.<br/>
+                <br/>
+                In addition, the Avatar System Code may be similar or the same as the Avatar System.
+            </remarks>
+        </member>
+        <member name="T:Outpost31.Core.Avatar.AvtrParameter">
+            <summary>Logic for the Avatar script parameter.</summary>
+            <remarks>
+                 The Script Parameter sent from Avatar contains all of the information that the Tingen Web Service needs to do work.<br />
+                <para>
+                The script parameter comprised of the following components:<br />
+                <list type="bullet">
+                    <item>The requested <c>Module</c> (the <i>namespace</i>)</item>
+                    <item>The requested <c>Command</c> (the <i>class</i>)</item>
+                    <item>The requested <c>Request</c> (the <i>method</i>)</item>
+                    <item>The requested <c>Option</c></item>
+                </list>
+                In addition:
+                <list type="bullet">
+                    <item>The maximum length of a script parameter is 50 characters</item>
+                    <item>Components are separated by a "<c>.</c>"</item>
+                    <item>Prototype parameters start with "<c>_p</c>"</item>
+                </list>
+                Examples:
+                <list type="bullet">
+                    <item><c>Admin.Status.Current</c></item>
+                    <item><c>FormAccess.Deny.SysCodeDoc</c></item>
+                    <item><c>_pRequest.Under.Development</c></item>
+                </list>
+             </para><br />
+                <para>     
+                Script parameters must one of the <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/valid-parameters.md"> current valid parameters.</see>
+            </para>
+                <para>
+                For more information about <b>Outpost31</b>, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrParameter.Original">
+            <summary>The original <see cref="T:Outpost31.Core.Avatar.AvtrParameter">script parameter</see> sent from Avatar.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Avatar.AvtrParameter.Request(Outpost31.Core.Session.WsvcSession)">
+            <summary>Parse a script parameter passed from Avatar.</summary>
+            <remarks>
+                <para>     
+                Script parameters must one of the <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/valid-parameters.md"> current valid parameters.</see>
+            </para>
+            </remarks>
+            <param name="wsvcSession">The Tingen Web Service <see cref="T:Outpost31.Core.Session.WsvcSession">session</see> object containing the request parameters and runtime settings</param>
+        </member>
+        <member name="M:Outpost31.Core.Avatar.AvtrParameter.CheckExistence(System.String)">
+            <summary>Validates whether the provided <see cref="T:Outpost31.Core.Avatar.AvtrParameter">script parameter</see> is null, empty, or consists only of white-space characters.</summary>
+            <param name="origParam">The script parameter to validate.</param>
+            <returns>A message indicating whether the provided script parameter exists or does not exist.</returns>
+        </member>
+        <member name="T:Outpost31.Core.Avatar.AvtrOptionObject">
+            <summary>Logic for Avatar <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObjects</see>.</summary>
+            <remarks>
+                An OptionObject contains metadata of an Avatar form.<br />
+                <br />
+                <para>
+                For more information about <b>Outpost31</b>, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.Original">
+            <summary>The original <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> sent from Avatar.</summary>
+            <remarks>This OptionObject is <i>never</i> modified during a Tingen Web Service session.</remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.Worker">
+            <summary>The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> where work is done.</summary>
+            <remarks>This OptionObject is <i>potentially</i> modified during a Tingen Web Service session.</remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.Finalized">
+            <summary>The finalized <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> that is returned to Avatar.</summary>
+            <remarks>This is the finalized OptionObject, ready to be returned to Avatar.</remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.ExeAsmName">
+            <summary>The executing assembly name.</summary>
+            <remarks>
+                The name of the Executing Assembly is a required component of all log files, as it is used to identify
+                the class that is creating the log.<br />
+                <br />
+                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
+            </remarks>
+        </member>
+        <member name="M:Outpost31.Core.Avatar.AvtrOptionObject.ToReturn(Outpost31.Core.Session.WsvcSession,System.Int32,System.String)">
+            <summary>Finalize an <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> so it can be returned to Avatar.</summary>
+            <remarks>
+                An OptionObject must be finalized before being returned to Avatar.<br />
+                <br />
+                This method finalizes an OptionObject by:
+                <list type="bullet">
+                    <item>Ensuring that all required components of the OptionObject are valid</item>
+                    <item>Assigning an <i>error code</i> to the OptionObject</item>
+                    <item>Assigning an <i>error message</i> to the OptionObject</item>
+                </list>
+                <para>
+                <b>Error codes</b>
+                <list type="bullet">
+                    <item>
+                        <term>0</term>
+                        <description>No action taken</description>
+                    </item>
+                    <item>
+                        <term>1</term>
+                        <description>Returns an Error Message with an "Ok" button, and stops further processing of scripts.</description>
+                    </item>
+                    <item>
+                        <term>2</term>
+                        <description>Returns an Error Message with "OK" and "Cancel" buttons, and stops further scripts the user clicks "Cancel"</description>
+                    </item>
+                    <item>
+                        <term>3</term>
+                        <description>Returns an Error Message with "Ok" button</description>
+                    </item>
+                    <item>
+                        <term>4</term>
+                        <description> Returns an Error Message with "Yes" and "No" buttons and stops further scripts the user clicks "No"</description>
+                    </item>
+                    <item>
+                        <term>5</term>
+                        <description>Returns a URL to be opened in a new browser</description>
+                    </item>
+                    <item>
+                        <term>6</term>
+                        <description>Returns a form to be opened in Avatar</description>
+                    </item>
+                </list>
+            </para><para>
+                <b>Common error codes</b>
+                <list type="bullet">
+                    <item>
+                        <term>1</term>
+                        <description>
+                            Typically used when you want to display some information to the user, and prevent them from taking an action.<br />
+                            <br />
+                            For example, you want to let the user know that a field contains invalid data, they cannot proceed until they correct it.
+                        </description>
+                    </item>
+                    <item>
+                        <term>3</term>
+                        <description>
+                            Typically used when you would like to notify the user of something, but it is not critical to their current task.<br />
+                            <br />
+                            For example, you want to wish the users a happy birthday!.
+                        </description>
+                    </item>
+                    <item>
+                        <term>4</term>
+                        <description>
+                            A combination of the above two, where you want to display a message to the user, but also allow them to take an action.<br />
+                            <br />
+                            For example, you want to let the user know that there is a potential misspelling in their text, but they can choose to ignore it and proceed anyway.
+                        </description>
+                    </item>
+                </list>
+            </para>
+            </remarks>
+            <param name="wsvcSession">The Tingen Web Service <see cref="T:Outpost31.Core.Session.WsvcSession">session</see> instance.</param>
+            <param name="errorCode">The OptionObject error code.</param>
+            <param name="errorMessage">The OptionObject error message to display to the user.</param>
+        </member>
+        <member name="M:Outpost31.Core.Avatar.AvtrOptionObject.CheckExistence(ScriptLinkStandard.Objects.OptionObject2015)">
+            <summary> Validates whether the provided <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> instance exists.</summary>
+            <param name="origOptObj">The OptionObject instance to validate.</param>
+            <returns>A string indicating the existence of the OptionObject instance.</returns>
+        </member>
+        <member name="T:Outpost31.Core.Blueprint.LogTemplate">
+            <summary>Blueprints for log details.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Blueprint.LogTemplate.RuntimeConfig(Outpost31.Core.Runtime.RuntimeConfig)">
+            <summary>The summary of the Tingen Web Service configuration at runtime.</summary>
+            <return>A summary of the Tingen Web Service configuration at runtime.</return>
+        </member>
+        <member name="T:Outpost31.Core.Blueprint.ErrorContent">
+            <summary>Blueprints for Tingen Web Service error messages.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Blueprint.ErrorContent.ModuleFormAccessDeniedGeneral">
+            <summary>The Access Denied error code message.</summary>
+            <returns>The Access Denied error code message.</returns>
+        </member>
+        <member name="T:Outpost31.Core.Logger.LogBuilder">
+            <summary>Generates various log components.</summary>
+            <remarks>
+                <note title="About this class">
+                    There are three types of logs enerated by this class:
+                    <list type="bullet">
+                        <item><see cref="M:Outpost31.Core.Logger.LogBuilder.BasicLog(System.String,System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogBuilder.DetailedLog(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogBuilder.TraceLog(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                    </list>
+                </note>
+            </remarks>
+            <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.BasicLog(System.String,System.String,System.String)">
+            <summary>Generates a basic log.</summary>
+            <remarks>
+                <para>
+                    This method creates the following types of logs:
+                    <list type="bullet">
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debuggler(System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Primeval(System.String,System.String)"/></item>
+                    </list>
+                </para>
+            </remarks>
+            <param name="logType">The type of log to generate.</param>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logMsg">The log message, which defaults to an empty string if not provided.</param>
+            <returns>A dictionary containing the log path and content.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.DetailedLog(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>Generates a detailed log.</summary>
+            <remarks>
+                <para>
+                    This method creates the following types of logs:
+                    <list type="bullet">
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debug(System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                    </list>
+                </para>
+            </remarks>
+            <param name="logType">The type of log to generate.</param>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="exeAsm">The name of the assembly generating the log entry.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <param name="logMsg">The log message, which defaults to an empty string if not provided.</param>
+            <returns>A dictionary containing the log path and content.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.TraceLog(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>Generates a Trace Log.</summary>
+            <remarks>This method is typically used to create and retrieve detailed log entries for
+            diagnostic or monitoring purposes. The returned dictionary provides both the storage location and the
+            content of the log entry for further processing or display.</remarks>
+            <param name="logType">The type of log to generate.</param>
+            <param name="traceLevel">The <see cref="!:Configuration.WsvcConfiguration.TraceLevel"/> of the log</param>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="exeAsm">The name of the assembly generating the log entry.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <param name="logMsg">The log message, which defaults to an empty string if not provided.</param>
+            <returns>A dictionary containing the log path and content.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.BasePath(System.String,System.String)">
+            <summary>Generates the base path for a log.</summary>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logType">The type of log to generate.</param>
+            <returns>The base path for the log.</returns>
+            <value>Example: "C:\Tingen_Data\WebService\UAT\Logs\Debug"</value>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.FullPath(System.String,System.String)">
+            <summary>Generates the full path for a log.</summary>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logType">The type of log to generate.</param>
+            <returns>The full path for the log.</returns>
+            <value>Example: "C:\Tingen_Data\WebService\UAT\Logs\Debug\250519123322.debug"</value>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.BasicHeader(System.String)">
+            <summary>Generates a basic log header.</summary>
+            <param name="logType">The type of log to generate.</param>
+            <returns>A string containing a basic log header.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.DetailedHeader(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>Generates a detailed log header.</summary>
+            <param name="logType">The type of log to generate.</param>
+            <param name="exeAsm">The name of the assembly generating the log entry.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <returns>A string containing a detailed log header.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.BasicContent(System.String,System.String)">
+            <summary>Generates content for a basic log.</summary>
+            <param name="logType">The type of log to generate.</param>
+            <param name="logMsg">The log message, which defaults to an empty string if not provided.</param>
+            <returns>A string that contains basic log content.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.DetailedContent(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>Generates content for a detailed log.</summary>
+            <param name="logType">The type of log to generate.</param>
+            <param name="avtrEnv">The environment or context in which the log is generated.</param>
+            <param name="asmName">The name of the assembly where the log originates.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <param name="logMsg">The log message, which defaults to an empty string if not provided.</param>
+            <returns>A string that contains basic log content.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogBuilder.GetFromClassName(System.String)">
+            <summary>Extracts the class name from a given file path.</summary>
+            <remarks>
+                <para>
+                The full file path of the class is passed to this method, but we<br/>
+                just need the class name.
+                </para>
+            </remarks>
+            <param name="fromPath">The path from which to extract the class name.</param>
+            <returns>The name of the class.</returns>
+        </member>
+        <member name="T:Outpost31.Core.Logger.LogEvent">
+            <summary>Methods for logging various types of events.</summary>
+            <remarks>
+                <note title="About this class">
+                    The following types of logs are supported:
+                    <list type="bullet">
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debug(System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debuggler(System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Primeval(System.String,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                    </list>
+                </note>
+            </remarks>
+            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation/blob/main/static/tngnwsvc/logging.md">Logging documentation</seealso>
+            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)">
+            <summary>Critical logs indicate a significant failure with the Tingen Web Service.</summary>
+            <param name="avtrEnvironment">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logMessage">The log message to write.</param>
+            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation/blob/main/static/tngnwsvc/logging.md#critical-logs">Critical log documentation</seealso>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogEvent.Debug(System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>Debug logs are used when developing the Tingen Web Service.</summary>
+            <remarks>
+                <para>
+                    Debug logs should be commented out in production code, or removed<br/>
+                    if they are not needed.<br/>
+                </para>
+                <para>
+                    Syntax:
+                    <code>
+                        TODO: Add syntax here.
+                    </code>
+                </para>
+            </remarks>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="exeAsm">The name of the assembly generating the log entry.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <param name="logMsg">The log message, which defaults to "Debug log." if not specified.</param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogEvent.Debuggler(System.String,System.String)">
+            <summary>Debuggler logs are temporary logs used when you want to debug something specific.</summary>
+            <remarks>
+                <para>
+                    Debug logs should removed before deploying to production.<br/>
+                    <br/>
+                    Since debuggler logs may be written very quickly, there is a 1000ms delay<br/>
+                    before committing to file.
+                </para>
+                <para>
+                   Syntax:
+                    <code>
+                        LogEvent.Debuggler(wbsvEnvironment, "Your message here.");
+                    </code>
+                </para>
+            </remarks>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logMsg">The log message, which defaults to "Debuggler log." if not specified.</param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogEvent.Primeval(System.String,System.String)">
+            <summary>Primeval logs are used when the advanced logging infrastructure isn't available.</summary>
+            <remarks>
+                <para>
+                    Primeval logs should removed before deploying to production.<br/>
+                    <br/>
+                    Since primeval logs may be written very quickly, there is a 1000ms delay<br/>
+                    before committing data.
+                </para>
+                <para>
+                   Syntax:
+                    <code>
+                        LogEvent.Primeval(wbsvEnvironment, "Your message here.");
+                    </code>
+                </para>
+            </remarks>
+            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="logMsg">The log message, which defaults to "Primeval log." if not specified.</param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>Trace Logs are used for debugging and tracking the flow of the application.</summary>
+            <remarks>
+                <para>
+                    Trace logs work a little differently than other logs. They are assigned a "<c>TraceLevel</c>" between 0 and 9,<br/>
+                    which is defined in <c>Tingen_Data\WebService\%avtrEnv%\Config\Runtime\TngnWbsv.config</c>:
+                    <list type="bullet">
+                        <item>0 - None</item>
+                        <item>1 - Methods</item>
+                        <item>2 - Conditional statements</item>
+                        <item>9 - All</item>
+                    </list>
+                </para>
+                <para>
+                    Each TraceLevel is cumulative, so if you set the level to "5", it will also include all logs<br/>
+                    from TraceLevels 1-4. Care should be taken to not set the level too high in production, since<br/>
+                    it can impact performance and generate a large amount of log files.<br/>
+                    <br/>
+                    As long as the web service is functioning as expected, the TraceLevel should be set to "0"<br/>
+                    <br/>
+                    Since the TraceLevel handles what Trace Logs are written, Trace Log statements should not be<br/>
+                    commented out of production code.<br/>
+                </para>
+                <para>
+                    Syntax:
+                    <code>
+                        TODO: Add syntax here.
+                    </code>
+                </para>
+            </remarks>
+            <param name="traceLevel">The Trace Log level.</param>
+            <param name="avtrEnv">The Avatar environment that interfaces with the Tingen Web Service.</param>
+            <param name="exeAsm">The name of the assembly generating the trace.</param>
+            <param name="fromPath">The full path of the file being logged.</param>
+            <param name="fromMethod">The name of the method being logged.</param>
+            <param name="fromLine">The line number being logged.</param>
+            <param name="logMsg">The message to include in the trace log. Defaults to "No message." if not specified.</param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogWriter.WriteLogToFile(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>Writes log content to a local file.</summary>
+            <param name="logComponent">A dictionary containing the file path and log content.  The key <c>"FullPath"</c> specifies the full path to
+            the file,  and the key <c>"LogContent"</c> specifies the content to be written.</param>
+        </member>
+        <member name="T:Outpost31.Core.Request.PrototypeRequest">
+            <summary>Handles prototype requests.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.PrototypeRequest.Parse(Outpost31.Core.Session.WsvcSession)">
+            <summary>Parse the request and call the appropriate module.</summary>
+        </member>
+        <member name="T:Outpost31.Core.Request.StandardRequest">
+            <summary>Handles standard requests.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.StandardRequest.Parse(Outpost31.Core.Session.WsvcSession)">
+            <summary>Parse the request and call the appropriate module.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.StandardRequest.Admin(Outpost31.Core.Session.WsvcSession)">
+            <summary>Admin requests.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.StandardRequest.FormAccess(Outpost31.Core.Session.WsvcSession)">
+            <summary>Form access requests.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.StandardRequest.FormAccessFromList(Outpost31.Core.Session.WsvcSession)">
+            <summary>Form access from a list.</summary>
+        </member>
+        <member name="T:Outpost31.Core.Runtime.RuntimeConfig">
+            <summary>Runtime configuration logic.</summary>
+            <remarks>TBD.</remarks>
+            <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.WsvcVer">
+            <summary>The current version of the Tingen Web Service.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.WsvcBuild">
+            <summary>The current build number of the Tingen Web Service.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.AvtrSys">
+            <summary>The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"/>  System that the Tingen Web Service will interface with.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.WsvcMode">
+            <summary>The Tingen Web Service mode.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.WsvcDataPath">
+            <summary>The Tingen Web Service data path.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.WsvcHostName">
+            <summary>The name of the machine running the Tingen Web Service.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.CurrentDate">
+            <summary>The current date in YYMMDD format.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Runtime.RuntimeConfig.CurrentTime">
+            <summary>The current time in HHMMSS format.</summary>
+        </member>
+        <member name="T:Outpost31.Core.Session.WsvcSession">
+             <summary>Session logic for the Tingen Web Service.</summary>
+             <remarks>TBD</remarks>
+            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
+        </member>
+        <member name="P:Outpost31.Core.Session.WsvcSession.OptObj">
+            <summary>Gets or sets the optional object associated with the avatar.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Session.WsvcSession.ScriptParam">
+            <summary>The ScriptLink Script Parameter sent from Avatar.</summary>
+        </member>
+        <member name="P:Outpost31.Core.Session.WsvcSession.AvtrSysInfo">
+            <summary>The Avatar System Code that this instance of the Tingen Web Service will interface with.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Session.WsvcSession.New(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">
+            <summary>Creates and initializes a new TngnWbsvSession object</summary>
+            <param name="origOptObj">The OptionObject that is sent from Avatar.</param>
+            <param name="origScriptParam">The Script Parameter that is sent from Avatar.</param>
+            <param name="wsvcVer">The current version of the Tingen Web Service.</param>
+            <returns>A new Tingen Web Service session object.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Utility.Du.DuDirectory.VerifyParent(System.String)">
+            <summary>Verify a parent directory of a file exists.</summary>
+            <param name="fullPath">The full path of a file.</param>
+        </member>
+        <member name="T:Outpost31.Core.Utility.Du.DuFile">
+            <summary>Logic related to files input/output.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Utility.Du.DuFile.ReadLocal(System.String)">
+            <summary>Returns the contents or status of a file. </summary>
+            <param name="filePath">The path to the file.</param>
+            <remarks>
+                <para>
+                    If the file exists <i>and has content</i>, that content is returned.<br/>
+                    <br/>
+                    If the file <i>does not exist</i>, or exists <i>but is empty</i>, an error message is returned.
+                </para>
+            </remarks>
+            <returns>The content or status of the file.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Utility.Du.DuFile.ReadAndVerifyLocal(System.String,System.Collections.Generic.List{System.String})">
+            <summary>Returns the contents (if valid) or status of a file. </summary>
+            <param name="filePath">The path to the file.</param>
+            <param name="validContent">A list of valid content.</param>
+            <remarks>
+                <para>
+                    GetContent() returns the contents or status of the file.<br/>
+                    <br/>
+                    If the file contains data, that data is checked against the list of valid content.
+                </para>
+            </remarks>
+            <returns>The verified content or status of the file.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Utility.Du.DuJson.ExportToLocalFile``1(``0,System.String,System.Boolean)">
+            <summary>Export JSON data to an external file.</summary>
+            <typeparam name="JsonObject">The JSON object type.</typeparam>
+            <param name="jsonObject">The JSON object.</param>
+            <param name="filePath">The export file path.</param>
+            <param name="formatJson">Determines if the JSON data is formatted.</param>
+            <remarks>
+                <para>
+                    <example>
+                        To export a nicely-formatted JSON object:
+                        <code>
+                            TheObject theObject = new TheObject();
+                            DuJson.ExportToLocalFile&lt;TheObject&gt;(theObject, "/Path/To/Export/File");
+                        </code>
+                    </example>
+                    <example>
+                        To export an unformatted JSON object:
+                        <code>
+                            TheObject theObject = new TheObject();
+                            DuJson.ExportToLocalFile&lt;TheObject&gt;(theObject, "/Path/To/Export/File", false);
+                        </code>
+                    </example>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:Outpost31.Core.Utility.Du.DuJson.ImportFromLocalFile``1(System.String)">
+            <summary>Import JSON data from an external file. [250108]</summary>
+            <typeparam name="JsonObject">The JSON object type.</typeparam>
+            <param name="filePath">The import file path.</param>
+            <remarks>
+                <para>
+                    <example>
+                        To import a JSON object from a local file:
+                        <code>
+                            TheObject theObject = DuJson.ImportFromLocalFile&lt;TheObject&gt;("/Path/To/Import/File");
+                        </code>
+                    </example>
+                </para>
+            </remarks>
+            <returns>The contents of the file as a JSON object.</returns>
+        </member>
+        <member name="M:Outpost31.Module.Admin.Parse.Request(Outpost31.Core.Session.WsvcSession)">
+            <summary>Admin requests.</summary>
+        </member>
+        <member name="M:Outpost31.Module.FormAccess.Deny.SysCodeDoc(Outpost31.Core.Session.WsvcSession)">
+            <summary>Deny access to the form if the System Code is "DOC".</summary>
+        </member>
+        <member name="M:Outpost31.Module.FormAccess.Deny.SysCodeDocHoc(Outpost31.Core.Session.WsvcSession)">
+            <summary>Deny access to the form if the System Code is "DOC" or starts with "HOC".</summary>
+        </member>
+        <member name="M:Outpost31.Module.FormAccess.Deny.SysCodeFromList(Outpost31.Core.Session.WsvcSession,System.Collections.Generic.List{System.String})">
+            <summary>Deny access to the form if the System Code is a member of a list.</summary>
+        </member>
+        <member name="T:Outpost31.Module.Prototype.Code">
+            <summary>Prototype code</summary>
+        </member>
+        <member name="M:Outpost31.Module.Prototype.Code.FormAccessDocSysCodeDeny(Outpost31.Core.Session.WsvcSession)">
+            <summary>Deny access to the form for anyone using the DOC System Code.</summary>
+            <remarks>This functionality was added as a standard request on 5-1-2025.</remarks>
+        </member>
+        <member name="T:Outpost31.ProjectInfo">
+            <summary>Provides additional information about Outpost31.</summary>
+            <remarks>
+                <para>
+                <b>About Outpost31</b><br />
+                Outpost31 is a class library that provides the back-end functionality for the <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see>.
+            </para><br />
+                <para>
+                <b>Associated projects</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (front-end)<br />
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (back-end)<br />
+            </para><br />
+                <para>
+                <b>Documentation</b>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
+                <br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+            </para><br />
+            </remarks>
+        </member>
+    </members>
+</doc>
