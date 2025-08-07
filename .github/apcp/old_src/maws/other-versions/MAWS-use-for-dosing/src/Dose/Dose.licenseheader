@@ -1,8 +1,0 @@
-﻿extensions: designer.cs generated.cs
-extensions: .cs
-/* PROJECT: %Project% (https://github.com/aprettycoolprogram/%Project%)
- *    FILE: %Namespace%.%FileName%
- * UPDATED: %CurrentMonth%-%CurrentDay%-%CurrentYear%-%CurrentTime%
- * LICENSE: Apache v2 (https://apache.org/licenses/LICENSE-2.0)
- *          Copyright 2022 A Pretty Cool Program All rights reserved
- */

@@ -1,3 +1,0 @@
-# Contributors
-
-Nothing here yet.
