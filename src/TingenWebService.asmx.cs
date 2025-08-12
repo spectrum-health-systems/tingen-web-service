@@ -1,6 +1,6 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250709_code
- * u250709_documentation
+ * u250804_code
+ * u250804_documentation
  */
 
 using System.Reflection;
@@ -17,31 +17,32 @@ namespace TingenWebService
     ///       This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
     ///       <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
     ///       <br/>
-    ///       There are two methods in this class, both of which <i>are required</i>:
+    ///       There are two methods in this class, both of which <i>are required</i> and <i>should not be modified</i>:
     ///       <list type="bullet">
     ///          <item><see cref="GetVersion()"/></item>
     ///          <item><see cref="RunScript(OptionObject2015, string)"/></item>
     ///       </list>
     ///     </para>
+    ///     <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/>
     /// </remarks>
-    /// <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
-    /// <seealso href="https://spectrum-health-systems.github.io/tingen-documentation-project/api">Tingen API Documentation</seealso>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class TingenWebService : WebService
     {
         /// <summary>The executing assembly name.</summary>
-        /// <remarks>A required log component, defined here so it can be used throughout the class.</remarks>
-        public static string ExeAsm { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
+        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/>
+        public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
         public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
+
+        // TODO note here about how this needs to be set to UAT or LIVE based on the deployment.
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
-        ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSys"><i>System</i></see> is different than an
-        ///     Avatar <see cref="Outpost31.Core.Avatar.AvtrSystemInfo.AvtrSysCode"><i>System Code</i></see>.
+        ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
+        ///     Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.
         /// </remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         public static string AvtrSys { get; set; } = "UAT";
@@ -86,7 +87,7 @@ namespace TingenWebService
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
-            {
+            {          
                 var wsvcSession = WsvcSession.New(origOptObj, origScriptParam, WsvcVer, AvtrSys);
 
                 Outpost31.Core.Avatar.AvtrParameter.Request(wsvcSession);

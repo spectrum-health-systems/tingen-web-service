@@ -1,0 +1,21 @@
+﻿<!--
+    Comment file for the Abatab.Core.Framework.
+    Last updated: 230328.1104
+
+    Syntax:
+
+        /// <include file='docs/doc/xml/inc/Abatab.Core.Framework.xmldoc' path='XMLDoc/Class[@name="ClassName"]/MethodName/*' />
+-->
+
+<XMLDoc>
+	<Class name="Verify">
+        <DirectoriesExist>
+            <summary>Verifies that a list of directories exist.</summary>
+            <remarks>
+                <list type="bullet">
+                    <item>Needs to be a List<string></item>
+                </list>
+            </remarks>
+        </DirectoriesExist>   
+    </Class>
+</XMLDoc>

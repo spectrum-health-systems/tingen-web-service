@@ -1,0 +1,84 @@
+﻿<!--
+    External XML documentation for the TingenWebService namespace.
+
+    u250804
+-->
+
+<TingenWebService>
+
+    <!--
+    There are two components of this class:
+      * Callback - Used in all Tingen Web Service classes to point to TingenWebService.ProjectInfo.cs.
+      * About    - Used in ProjectInfo.cs to provide up-to-date information about the Tingen Web Service project.
+    -->
+    <Class name ="ProjectInfo">
+
+        <!-- <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/> -->
+        <Callback>
+            <para>
+                For more information about the <b>Tingen Web Service</b>, please see <see cref="ProjectInfo"/>.
+            </para>
+        </Callback>
+
+        <!-- <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/> -->
+        <About>
+            <para>
+                <!-- This section should be a copy of the Tingen Web Service repository README.md -->
+                <b>About the Tingen Web Service</b><br/>
+                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
+                leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+                <br/>
+                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
+                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+                Avatar™ users.<br/>
+                <br/>
+                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
+                included in the official release, and provides a solid foundation for building additional functionality<br/>
+                quickly and efficiently
+            </para>
+        </About>
+
+    </Class>
+
+    <!--
+    There are two components of this class:
+      * ProjectRepositories     - A list of Tingen-related repositories.
+      * AdditionalDocumentation - A list of Tingen-related documentation.
+      * ExeAsmName              - The name of the Executing Assembly
+
+      Please note: This class should match the Common class in Outpost31.xml
+    -->
+    <Class name="Common">
+
+        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/> -->
+        <ExeAsmName>
+            <remarks>
+                The name of the Executing Assembly is a required component of all log files, as it is used to identify
+                the class that is creating the log.<br/>
+                <br/>
+                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br/>
+            </remarks>
+        </ExeAsmName>
+
+        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/> -->
+        <ProjectRepositories>
+            <para>
+                <b>Associated projects</b><br/>
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (front-end)<br/>
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (back-end)
+            </para>
+        </ProjectRepositories>
+
+        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/>-->
+        <AdditionalDocumentation>
+            <para>
+                <b>Documentation</b><br/>
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br/>
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br/>
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+            </para>
+        </AdditionalDocumentation>
+
+    </Class>
+
+</TingenWebService>

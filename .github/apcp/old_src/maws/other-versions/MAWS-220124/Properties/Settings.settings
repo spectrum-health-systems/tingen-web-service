@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MAWS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MawsMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">disabled</Value>
+    </Setting>
+    <Setting Name="LogMode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">all</Value>
+    </Setting>
+    <Setting Name="MawsRootDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\MAWS_Staging</Value>
+    </Setting>
+    <Setting Name="FallbackAvatarUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">_MAWS</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

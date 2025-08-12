@@ -1,0 +1,41 @@
+## .gitignore for Abatab
+## b230222.1123
+
+## There are a few directories/resources that are generally part of a standard
+## repository .gitignore file that Abatab needs:
+##
+##  log/  These are currently not committed to the repository because there are
+##  logs/ source code files with similar names, and I want to avoid issues.
+
+#[Ll]og/
+#[Ll]ogs/
+
+## User-specific
+*.rsuser
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.userprefs
+*.vs/
+
+## Build results.
+[Bb]in/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Oo]bj/
+
+## MacOS specific
+*DS_Store
+
+## Data/sourcecode that is used during development, but should not be committed
+## to the repository should go here.
+*.non-committal/

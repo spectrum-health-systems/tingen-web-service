@@ -1,0 +1,7 @@
+Website: Up
+Web Service: Running
+Last accessed: MM/DD/YYYY HH:MMam
+Errors: 2
+Warnings: 3
+Logs: 14MB
+Freespace: 100GB

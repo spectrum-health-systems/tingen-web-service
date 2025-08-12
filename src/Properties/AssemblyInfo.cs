@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TingenWebService")]
-[assembly: AssemblyDescription("The entry point for the Tingen web service")]
+[assembly: AssemblyDescription("A custom web service for Netsmart's Avatar EHR")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("A Pretty Cool Program")]
 [assembly: AssemblyProduct("TingenWebService")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("25.7.0.0")]
-[assembly: AssemblyFileVersion("25.7.0.0")]
+[assembly: AssemblyVersion("25.8.0.0")]
+[assembly: AssemblyFileVersion("25.8.0.0")]
