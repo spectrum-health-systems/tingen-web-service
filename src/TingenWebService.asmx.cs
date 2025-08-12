@@ -37,6 +37,8 @@ namespace TingenWebService
         /// <summary>The current version of the Tingen Web Service.</summary>
         public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
+
+        // TODO note here about how this needs to be set to UAT or LIVE based on the deployment.
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
         ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
@@ -85,7 +87,7 @@ namespace TingenWebService
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
-            {
+            {          
                 var wsvcSession = WsvcSession.New(origOptObj, origScriptParam, WsvcVer, AvtrSys);
 
                 Outpost31.Core.Avatar.AvtrParameter.Request(wsvcSession);
