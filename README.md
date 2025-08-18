@@ -33,10 +33,10 @@ The Tingen web service is actually *two* components:
 		<table>
 		<tr>
 			<td>
-				<img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/image/logo/tngnsrvc-228x278.png"></a>
+				<img src="https://github.com/spectrum-health-systems/tingen-web-service/raw/development/.github/img/logo/TngnWsvc-194x254.png"></a>
 			</td>
       <td>
-				<a HREF="https://github.com/spectrum-health-systems/outpost31"><img src="https://github.com/spectrum-health-systems/outpost31/blob/main/.github/image/logo/o31-194x254.png"></a>
+				<a HREF="https://github.com/spectrum-health-systems/outpost31"><img src="https://github.com/spectrum-health-systems/outpost31/blob/main/.github/img/logo/TngnOpto-194x254.png"></a>
 			</td>
 		</tr>
     <tr>
