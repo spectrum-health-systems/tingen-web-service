@@ -13,14 +13,14 @@
     -->
     <Class name ="ProjectInfo">
 
-        <!-- <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/> -->
+        <!-- <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/> -->
         <Callback>
             <para>
                 For more information about the <b>Tingen Web Service</b>, please see <see cref="ProjectInfo"/>.
             </para>
         </Callback>
 
-        <!-- <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/> -->
+        <!-- <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/> -->
         <About>
             <para>
                 <!-- This section should be a copy of the Tingen Web Service repository README.md -->
@@ -50,7 +50,7 @@
     -->
     <Class name="Common">
 
-        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/> -->
+        <!--<include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/> -->
         <ExeAsmName>
             <remarks>
                 The name of the Executing Assembly is a required component of all log files, as it is used to identify
@@ -60,7 +60,7 @@
             </remarks>
         </ExeAsmName>
 
-        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/> -->
+        <!--<include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/> -->
         <ProjectRepositories>
             <para>
                 <b>Associated projects</b><br/>
@@ -69,7 +69,7 @@
             </para>
         </ProjectRepositories>
 
-        <!--<include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/>-->
+        <!--<include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/>-->
         <AdditionalDocumentation>
             <para>
                 <b>Documentation</b><br/>

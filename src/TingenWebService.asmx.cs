@@ -1,6 +1,6 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250804_code
- * u250804_documentation
+ * u250821_code
+ * u250821_documentation
  */
 
 using System.Reflection;
@@ -23,7 +23,7 @@ namespace TingenWebService
     ///          <item><see cref="RunScript(OptionObject2015, string)"/></item>
     ///       </list>
     ///     </para>
-    ///     <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/>
+    ///     <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="ProjectInfo"]/Callback/*'/>
     /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -31,7 +31,7 @@ namespace TingenWebService
     public class TingenWebService : WebService
     {
         /// <summary>The executing assembly name.</summary>
-        /// <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/>
+        /// <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/ExeAsmName/*'/>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
@@ -75,7 +75,7 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam) /* TODO - fix */
         {
-            /* This should be uncommented unless needed.
+            /* This primeval log is only for development, and should be commented-out in production.
              */
             LogEvent.Primeval(AvtrSys, "The TingenWebService has started.");
 
@@ -87,7 +87,7 @@ namespace TingenWebService
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
-            {          
+            {
                 var wsvcSession = WsvcSession.New(origOptObj, origScriptParam, WsvcVer, AvtrSys);
 
                 Outpost31.Core.Avatar.AvtrParameter.Request(wsvcSession);

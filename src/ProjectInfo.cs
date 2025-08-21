@@ -14,11 +14,11 @@ namespace TingenWebService
 {
     ///<summary>Provides additional information about the Tingen Web Service.</summary>
     ///<remarks>
-    ///    <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/><br/>
+    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/><br/>
     ///    <br/>
-    ///    <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/><br/>
+    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/><br/>
     ///    <br/>
-    ///    <include file='AppData/XmlDoc/TingenWebService.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/><br/>
+    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/><br/>
     ///</remarks>
     internal class ProjectInfo
     {
