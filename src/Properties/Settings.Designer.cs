@@ -31,5 +31,14 @@ namespace TingenWebService.Properties {
                 return ((string)(this["AvtrSys"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        public string Mode {
+            get {
+                return ((string)(this["Mode"]));
+            }
+        }
     }
 }

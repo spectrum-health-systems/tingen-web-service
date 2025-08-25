@@ -6,13 +6,13 @@
 /*******************************************************************************
  * IMPORTANT!
  *
- * Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
+ * Before deploying the Tingen Web Service, please verify that avtrSys is set
+ * correctly!
  * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
  ******************************************************************************/
 
 using System.Reflection;
 using System.Web.Services;
-using Outpost31.Module.Development;
 using ScriptLinkStandard.Objects;
 using TingenWebService.Properties;
 
@@ -44,9 +44,11 @@ namespace TingenWebService
         public string GetVersion() => $"VERSION {TngnWsvcVer}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
-        /// <remarks><include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/RunScript/*'/></remarks>
+        /// <remarks>
+        ///     <include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/RunScript/*'/>
+        /// </remarks>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
-        /// <param name="origScriptParam">The original <see cref="Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
+        /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam)
@@ -54,22 +56,18 @@ namespace TingenWebService
             /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
              * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
              */
-            string avtrSys = Settings.Default.AvtrSys;
-
-            /* Development only!
-             */
-            DevelopmentOnly(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
+            string avtrSys      = Settings.Default.AvtrSys;
+            string tngnWsvcMode = Outpost31.TngnWsvc.TngnWsvcMode.SetMode(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.Mode);
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
                 //-//LogEvent.Critical(avtrSys, ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
 
                 /* DN01 */
-                //-//return origOptObj.ToReturnOptionObject(0, "");
 
                 return origOptObj.ToReturnOptionObject(0, "");
             }
-            else
+            else if (tngnWsvcMode == "enabled")
             {
                 //-//var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
 
@@ -79,16 +77,10 @@ namespace TingenWebService
 
                 return origOptObj.ToReturnOptionObject(0, "");
             }
-        }
-
-        internal static void DevelopmentOnly(OptionObject2015 origOptObj, string origScriptParam, string TngnWsvcVer, string avtrSys)
-        {
-            /* Regression testing */
-            Gamut.FromStart(TngnWsvcVer, avtrSys);
-            /* Resets */
-            //Outpost31.Module.Development.Rebuild.ErrorTemplate(avtrSys);
-
-
+            else
+            {
+                return origOptObj.ToReturnOptionObject(0, "");
+            }
         }
     }
 }
