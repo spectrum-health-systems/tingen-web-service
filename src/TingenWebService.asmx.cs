@@ -6,6 +6,7 @@
 using System.Reflection;
 using System.Web.Services;
 using Outpost31.Core.Logger;
+using Outpost31.Core.Runtime;
 using Outpost31.Core.Session;
 using ScriptLinkStandard.Objects;
 
@@ -35,23 +36,24 @@ namespace TingenWebService
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
-        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string TngnWsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-
-        // TODO note here about how this needs to be set to UAT or LIVE based on the deployment.
         /// <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
         /// <remarks>
         ///     The Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
         ///     Avatar <see cref="Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.
+        ///     <br/>
+        ///     This is the only thing that is hard-coded in the Tingen Web Service, and needs to be set to the Avatar
+        ///     System that this specific instance of the Tingen Web Service will interface with.
         /// </remarks>
         /// <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         public static string AvtrSys { get; set; } = "UAT";
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
         /// <remarks>This method is required and <i>should not be modified</i>.</remarks>
-        /// <returns>The current <see cref="WsvcVer">version</see> of the Tingen Web Service.</returns>
+        /// <returns>The current <see cref="TngnWsvcVer">version</see> of the Tingen Web Service.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {WsvcVer}";
+        public string GetVersion() => $"VERSION {TngnWsvcVer}";
 
         /// <summary>The entry point for the Tingen Web Service.</summary>
         /// <remarks>
@@ -73,27 +75,33 @@ namespace TingenWebService
         /// <param name="origScriptParam">The <see cref="Outpost31.Core.Avatar.AvtrParameter.Original">original Script Parameter</see> that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
-        public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam) /* TODO - fix */
+        public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam)
         {
-            /* This primeval log is only for development, and should be commented-out in production.
-             */
-            LogEvent.Primeval(AvtrSys, "The TingenWebService has started.");
+            /* Only for development! */
+            DevelopmentOnly(TngnWsvcVer, AvtrSys);
 
             if (string.IsNullOrWhiteSpace(origScriptParam) || origOptObj == null)
             {
-                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam));
+                LogEvent.Critical(AvtrSys, Outpost31.Core.Blueprint.ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
 
                 /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                var wsvcSession = WsvcSession.New(origOptObj, origScriptParam, WsvcVer, AvtrSys);
+                var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, AvtrSys);
 
-                Outpost31.Core.Avatar.AvtrParameter.Request(wsvcSession);
+                Outpost31.Core.Avatar.AvtrParameter.Request(tngnWsvcSession);
 
-                return wsvcSession.OptObj.Finalized;
+                return tngnWsvcSession.OptObj.Finalized;
             }
+        }
+
+        internal static void DevelopmentOnly(string tngnWsvcVer, string avtrSys)
+        {
+            // This method is only for development, and should be removed before deploying to production.
+            LogEvent.Primeval(AvtrSys, $"The TingenWebService has started");
+            RuntimeConfiguration.VerifyExists(avtrSys);
         }
     }
 }

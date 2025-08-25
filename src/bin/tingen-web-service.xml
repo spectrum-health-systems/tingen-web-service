@@ -63,7 +63,7 @@
                 This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
             </remarks>
         </member>
-        <member name="P:TingenWebService.TingenWebService.WsvcVer">
+        <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
         </member>
         <member name="P:TingenWebService.TingenWebService.AvtrSys">
@@ -71,13 +71,16 @@
             <remarks>
                 The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
                 Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.
+                <br/>
+                This is the only thing that is hard-coded in the Tingen Web Service, and needs to be set to the Avatar
+                System that this specific instance of the Tingen Web Service will interface with.
             </remarks>
             <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of the Tingen Web Service.</summary>
             <remarks>This method is required and <i>should not be modified</i>.</remarks>
-            <returns>The current <see cref="P:TingenWebService.TingenWebService.WsvcVer">version</see> of the Tingen Web Service.</returns>
+            <returns>The current <see cref="P:TingenWebService.TingenWebService.TngnWsvcVer">version</see> of the Tingen Web Service.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>The entry point for the Tingen Web Service.</summary>
@@ -92,7 +95,7 @@
                     </item>
                     <item>
                         If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>, the Tingen Web
-                        Service will fail, and a <see cref= "M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String)">Critical Failure Log</see> will be created.
+                        Service will fail, and a <see cref= "!:LogEvent.Critical(string, string)">Critical Failure Log</see> will be created.
                     </item>
                  </list>
             </remarks>

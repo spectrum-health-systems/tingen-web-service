@@ -84,8 +84,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Full release to NSWS.pubxml" />
     <None Include="Properties\PublishProfiles\Publish to do-not-commit.pubxml" />
-    <None Include="Properties\PublishProfiles\Publish to NSWS-01.pubxml" />
+    <None Include="Properties\PublishProfiles\Standing release to NSWS.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
