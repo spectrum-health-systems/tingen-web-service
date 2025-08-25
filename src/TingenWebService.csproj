@@ -65,9 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\Runtime.TngnWsvc\README.md" />
-    <Content Include="AppData\XMLDoc\Asmx.xml" />
-    <Content Include="AppData\XMLDoc\ProjectInfo.xml" />
+    <Content Include="AppData\XmlDoc\Asmx.xml" />
+    <Content Include="AppData\XmlDoc\ProjectInfo.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -85,10 +84,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\XMLDoc\README.md" />
-    <Content Include="AppData\Runtime.TngnWsvc\TngnWsvc.environment">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="AppData\XmlDoc\README.md" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Full release to NSWS.pubxml" />
     <None Include="Properties\PublishProfiles\Publish to do-not-commit.pubxml" />

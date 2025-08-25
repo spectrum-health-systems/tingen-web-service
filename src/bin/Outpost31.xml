@@ -646,6 +646,9 @@
         <member name="M:Outpost31.Module.Admin.Parse.Request(Outpost31.Core.Session.TngnWsvcSession)">
             <summary>Admin requests.</summary>
         </member>
+        <member name="M:Outpost31.Module.Development.Gamut.FromTngnWsvc(System.String,System.String)">
+            <summary>Development only.</summary>
+        </member>
         <member name="M:Outpost31.Module.FormAccess.Deny.SysCodeDoc(Outpost31.Core.Session.TngnWsvcSession)">
             <summary>Deny access to the form if the System Code is "DOC".</summary>
         </member>

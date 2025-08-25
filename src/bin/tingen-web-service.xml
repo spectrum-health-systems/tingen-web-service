@@ -56,14 +56,12 @@
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>The executing assembly name.</summary>
-            <remarks>
-                <para>
+            <remarks><para>
                 The name of the Executing Assembly is a required component of all log files, as it is used to identify
                 the class that is creating the log.<br />
                 <br />
                 This is defined at the start of each class, so it can be used at any time that a log needs to be created.
-            </para>
-            </remarks>
+            </para></remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
@@ -93,21 +91,6 @@
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
             <param name="origScriptParam">The original <see cref="P:Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> representing the result of the Script Parameter request.</returns>
-        </member>
-        <member name="M:TingenWebService.TingenWebService.DevelopmentOnly(System.String,System.String)">
-            <summary>
-            Executes development-specific operations for verifying runtime configurations and logging events.
-            </summary>
-            <remarks>This method is intended for development purposes only and should not be included in
-            production deployments. It performs logging and runtime configuration verification for the specified
-            system.</remarks>
-            <param name="tngnWsvcVer">The version of the Tingen Web Service being used.</param>
-            <param name="avtrSys"><para>
-                The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
-                Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.<br />
-                <br />
-
-            </para></param>
         </member>
     </members>
 </doc>

@@ -1,31 +1,31 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250821_code
- * u250821_documentation
+ * u250825_code
+ * u250825_documentation
  */
 
-/* ##############
- *   IMPORTANT!
- * ##############
+/*******************************************************************************
+ * IMPORTANT!
  *
  * Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
  * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
- */
+ ******************************************************************************/
 
 using System.Reflection;
-using System.Web;
 using System.Web.Services;
 using Outpost31.Core.Logger;
-using Outpost31.Core.Runtime;
 using Outpost31.Core.Session;
+using Outpost31.Core.Blueprint;
+using Outpost31.Module.Development;
 using ScriptLinkStandard.Objects;
 using TingenWebService.Properties;
+using Outpost31.Module.Admin;
 
 namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///     <include file='AppData/XMLDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/ClassDescription/*'/>
-    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Callback/*'/>
+    ///     <include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/ClassDescription/*'/>
+    ///     <include file='AppData/XmlDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Callback/*'/>
     /// </remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -33,9 +33,7 @@ namespace TingenWebService
     public class TingenWebService : WebService
     {
         /// <summary>The executing assembly name.</summary>
-        /// <remarks>
-        ///     <include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/ExeAsmName/*'/>
-        /// </remarks>
+        /// <remarks><include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/ExeAsmName/*'/></remarks>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
@@ -60,15 +58,15 @@ namespace TingenWebService
              */
             string avtrSys = Settings.Default.AvtrSys;
 
-            /* Only for development!
+            /* Development only!
              */
-            DevelopmentOnly(TngnWsvcVer, avtrSys);
+            DevelopmentOnly(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
 
-            if (string.IsNullOrWhiteSpace(origScriptParam) || origOptObj == null)
+            if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                LogEvent.Critical(avtrSys, Outpost31.Core.Blueprint.ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
+                LogEvent.Critical(avtrSys, ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
 
-                /* TODO - Since the OptionObject may not exist, we should figure out a way to exit the application without returning a null object. */
+                /* DN01 */
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
@@ -81,18 +79,19 @@ namespace TingenWebService
             }
         }
 
-        /// <summary>
-        /// Executes development-specific operations for verifying runtime configurations and logging events.
-        /// </summary>
-        /// <remarks>This method is intended for development purposes only and should not be included in
-        /// production deployments. It performs logging and runtime configuration verification for the specified
-        /// system.</remarks>
-        /// <param name="tngnWsvcVer">The version of the Tingen Web Service being used.</param>
-        /// <param name="avtrSys"><include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/AvtrSys/*'/></param>
-        internal static void DevelopmentOnly(string tngnWsvcVer, string avtrSys)
+        internal static void DevelopmentOnly(OptionObject2015 origOptObj, string origScriptParam, string TngnWsvcVer, string avtrSys)
         {
-            LogEvent.Primeval(avtrSys, $"The TingenWebService has started");
-            RuntimeConfiguration.VerifyExists(avtrSys);
+            /* Regression testing */
+            Gamut.FromTngnWsvc(TngnWsvcVer, avtrSys);
+            /* Resets */
+            Outpost31.Module.Development.Reset.ErrorTemplate(avtrSys);
+
+
         }
     }
 }
+
+/* DN01
+ * If the OptionObject wasn't sent from Avatar, it can't be "finalized" and returned. We need to figure out how to
+ * handle this.
+ */
