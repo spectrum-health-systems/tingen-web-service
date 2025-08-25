@@ -7,21 +7,24 @@
  * Licensed under the Apache 2.0 license.
  */
 
-// u250804_code
-// u250804_documentation
+// u250825
 
 namespace TingenWebService
 {
     ///<summary>Provides additional information about the Tingen Web Service.</summary>
     ///<remarks>
-    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="ProjectInfo"]/About/*'/><br/>
-    ///    <br/>
-    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/ProjectRepositories/*'/><br/>
-    ///    <br/>
-    ///    <include file='AppData/XMLDoc/TngnWsvc.xml' path='TingenWebService/Class[@name="Common"]/AdditionalDocumentation/*'/><br/>
+    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/About/*'/>
+    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Resources/*'/>
+    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Documentation/*'/>
     ///</remarks>
     internal class ProjectInfo
     {
-        // This class does not contain and executable code.
+        /* This class is only used for informational purposes, and does not contain executable code.
+         */
+
+        /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
+         * 
+         * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
+         */
     }
 }

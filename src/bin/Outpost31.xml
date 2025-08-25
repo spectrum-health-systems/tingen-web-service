@@ -107,12 +107,7 @@
         </member>
         <member name="P:Outpost31.Core.Avatar.AvtrOptionObject.ExeAsmName">
             <summary>The executing assembly name.</summary>
-            <remarks>
-                The name of the Executing Assembly is a required component of all log files, as it is used to identify
-                the class that is creating the log.<br />
-                <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
-            </remarks>
+            <!-- No matching elements were found for the following include tag --><include file="AppData/XMLDoc/Common.xml" path="Common/Class[@name=&quot;Variable&quot;]/ExeAsmName/*" />
         </member>
         <member name="M:Outpost31.Core.Avatar.AvtrOptionObject.ToReturn(Outpost31.Core.Session.TngnWsvcSession,System.Int32,System.String)">
             <summary>Finalize an <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> so it can be returned to Avatar.</summary>
@@ -216,13 +211,16 @@
                 <note title="About this class">
                     There are three types of logs enerated by this class:
                     <list type="bullet">
-                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.BasicLog(System.String,System.String,System.String)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.DetailedLog(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.TraceLog(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.BasicLog(System.String,System.String,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.DetailedLog(System.String,System.String,System.String,System.String,System.String,System.Int32,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogContentBuilder.TraceLog(System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)" /></item>
                     </list>
                 </note>
+                <br />
+                <para>
+                For more information about <b>Outpost31</b>, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </para>  
             </remarks>
-            <seealso href="https://github.com/spectrum-health-systems/Tingen-Documentation">Tingen documentation</seealso>
         </member>
         <member name="M:Outpost31.Core.Logger.LogContentBuilder.BasicLog(System.String,System.String,System.String)">
             <summary>Generates a basic log.</summary>
@@ -337,18 +335,20 @@
                 <note title="About this class">
                     The following types of logs are supported:
                     <list type="bullet">
-                        <item><see cref="!:Critical(string, string)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debug(System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debuggler(System.String,System.String)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Primeval(System.String,System.String)"/></item>
-                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)"/></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debug(System.String,System.String,System.String,System.String,System.Int32,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Debuggler(System.String,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Primeval(System.String,System.String)" /></item>
+                        <item><see cref="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)" /></item>
                     </list>
                 </note>
+                <br />
+                <para>
+                For more information about <b>Outpost31</b>, please see <see cref="T:Outpost31.ProjectInfo" />.
+            </para>   
             </remarks>
-            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation/blob/main/static/tngnwsvc/logging.md">Logging documentation</seealso>
-            <seealso href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</seealso>
         </member>
-        <member name="M:Outpost31.Core.Logger.LogEvent.AppCritical(System.String,System.String,System.String)">
+        <member name="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String)">
             <summary>Critical logs indicate a significant failure with the Tingen Web Service.</summary>
             <param name="avtrSys">The Avatar environment that the Tingen Web Service has interfaced with.</param>
             <param name="logMsg">The log message to write.</param>
@@ -410,7 +410,7 @@
                     </code>
                 </para>
             </remarks>
-            <param name="avtrEnv">The Avatar environment that the Tingen Web Service has interfaced with.</param>
+            <param name="avtrSys">The Avatar environment that the Tingen Web Service has interfaced with.</param>
             <param name="logMsg">The log message, which defaults to "Primeval log." if not specified.</param>
         </member>
         <member name="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">

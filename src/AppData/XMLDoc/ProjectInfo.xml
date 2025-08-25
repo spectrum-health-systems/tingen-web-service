@@ -1,0 +1,54 @@
+﻿<!--
+    External XML documentation for the TingenWebService ProjectInfo file.
+    u250825
+-->
+
+<TngnWsvc>
+
+    <Class name="ProjectInfo">
+
+        <Callback> <!-- <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Callback/*'/> -->
+            <para>
+                For more information about the <b>Tingen Web Service</b>, please see <see cref="ProjectInfo"/>.
+            </para>
+        </Callback>
+
+        <About> <!-- <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/About/*'/> -->
+            <para>
+                <b>About the Tingen Web Service</b><br/>
+                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
+                leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+                <br/>
+                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
+                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+                Avatar™ users.<br/>
+                <br/>
+                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
+                included in the official release, and provides a solid foundation for building additional functionality<br/>
+                quickly and efficiently
+            </para>
+        </About>
+
+        <Resources> <!-- <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Resources/*'/> -->
+            <para>
+                <b>Project resources</b><br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (web service front-end)<br/>
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (web service back-end)
+            </para>       
+        </Resources>
+
+        <Documentation> <!-- <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Documentation/*'/> -->
+            <para>
+                <b>Project documentation</b>
+                <br/>
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see>
+                <br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
+                <br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+            </para>
+        </Documentation>
+
+    </Class>
+
+</TngnWsvc>

@@ -7,8 +7,7 @@
         <member name="T:TingenWebService.ProjectInfo">
             <summary>Provides additional information about the Tingen Web Service.</summary>
             <remarks>
-                <para>
-                <!-- This section should be a copy of the Tingen Web Service repository README.md -->
+                 <para>
                 <b>About the Tingen Web Service</b><br />
                 Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br />
                 leverage real-time analytics and clinical decision support to drive value-based care.<br />
@@ -20,35 +19,36 @@
                 Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br />
                 included in the official release, and provides a solid foundation for building additional functionality<br />
                 quickly and efficiently
-            </para><br />
+            </para>
+                 <para>
+                <b>Project resources</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (web service front-end)<br />
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (web service back-end)
+            </para>
+                 <para>
+                <b>Project documentation</b>
                 <br />
-                <para>
-                <b>Associated projects</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (front-end)<br />
-                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (back-end)
-            </para><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see>
                 <br />
-                <para>
-                <b>Documentation</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
+                <br />
                 <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
-            </para><br />
+            </para>
             </remarks>
         </member>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry class for the Tingen Web Service.</summary>
             <remarks>
                 <para>
-                  This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
-                  <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
-                  <br />
-                  There are two methods in this class, both of which <i>are required</i> and <i>should not be modified</i>:
-                  <list type="bullet">
-                     <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
-                     <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
-                  </list>
-                </para>
+                This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
+                <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
+                <br />
+                There are two methods in this class, both of which <i>are required</i> and <i>should not be modified</i>:
+                <list type="bullet">
+                    <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
+                    <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
+                </list>
+            </para>
                 <para>
                 For more information about the <b>Tingen Web Service</b>, please see <see cref="T:TingenWebService.ProjectInfo" />.
             </para>
@@ -57,25 +57,16 @@
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>The executing assembly name.</summary>
             <remarks>
+                <para>
                 The name of the Executing Assembly is a required component of all log files, as it is used to identify
                 the class that is creating the log.<br />
                 <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.<br />
+                This is defined at the start of each class, so it can be used at any time that a log needs to be created.
+            </para>
             </remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
-        </member>
-        <member name="P:TingenWebService.TingenWebService.AvtrSys">
-            <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
-            <remarks>
-                The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
-                Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.
-                <br/>
-                This is the only thing that is hard-coded in the Tingen Web Service, and needs to be set to the Avatar
-                System that this specific instance of the Tingen Web Service will interface with.
-            </remarks>
-            <value><c>UAT</c> (testing) or <c>LIVE</c>(production)</value>
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of the Tingen Web Service.</summary>
@@ -84,7 +75,7 @@
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>The entry point for the Tingen Web Service.</summary>
-            <remarks>
+            <remarks><para>
                 <list type="bullet">
                     <item>
                         This method is required and <i>should not be modified</i>.
@@ -94,14 +85,29 @@
                         can't go here because the logging infrastructure hasn't been initialized yet.
                     </item>
                     <item>
-                        If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>, the Tingen Web
-                        Service will fail, and a <see cref= "!:LogEvent.Critical(string, string)">Critical Failure Log</see> will be created.
+                        If Avatar doesn't pass an <paramref name="origOptObj" /> or <paramref name="origScriptParam" />, the Tingen Web
+                        Service will fail, and a <see cref="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String)">Critical log</see> will be created.
                     </item>
-                 </list>
-            </remarks>
-            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
-            <param name="origScriptParam">The <see cref="P:Outpost31.Core.Avatar.AvtrParameter.Original">original Script Parameter</see> that is sent from Avatar.</param>
-            <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
+                </list>       
+            </para></remarks>
+            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
+            <param name="origScriptParam">The original <see cref="P:Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
+            <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> representing the result of the Script Parameter request.</returns>
+        </member>
+        <member name="M:TingenWebService.TingenWebService.DevelopmentOnly(System.String,System.String)">
+            <summary>
+            Executes development-specific operations for verifying runtime configurations and logging events.
+            </summary>
+            <remarks>This method is intended for development purposes only and should not be included in
+            production deployments. It performs logging and runtime configuration verification for the specified
+            system.</remarks>
+            <param name="tngnWsvcVer">The version of the Tingen Web Service being used.</param>
+            <param name="avtrSys"><para>
+                The Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSys"><i>System</i></see> is different than an
+                Avatar <see cref="P:Outpost31.Core.Avatar.AvtrSystem.AvtrSysCode"><i>System Code</i></see>.<br />
+                <br />
+
+            </para></param>
         </member>
     </members>
 </doc>

@@ -1,0 +1,43 @@
+﻿<!--
+    External XML documentation for TingenWebService.TingenWebService.asmx.cs.
+    u250825
+-->
+
+<TngnWsvc>
+
+    <Class name="Asmx">
+
+        <ClassDescription>
+            <para>
+                This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
+                <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
+                <br/>
+                There are two methods in this class, both of which <i>are required</i> and <i>should not be modified</i>:
+                <list type="bullet">
+                    <item><see cref="GetVersion()"/></item>
+                    <item><see cref="RunScript(OptionObject2015, string)"/></item>
+                </list>
+            </para>
+        </ClassDescription>
+
+        <RunScript>
+            <para>
+                <list type="bullet">
+                    <item>
+                        This method is required and <i>should not be modified</i>.
+                    </item>
+                    <item>
+                        <see cref="LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see>
+                        can't go here because the logging infrastructure hasn't been initialized yet.
+                    </item>
+                    <item>
+                        If Avatar doesn't pass an <paramref name="origOptObj"/> or <paramref name="origScriptParam"/>, the Tingen Web
+                        Service will fail, and a <see cref="LogEvent.Critical(string, string, string)">Critical log</see> will be created.
+                    </item>
+                </list>       
+            </para>
+        </RunScript>
+            
+    </Class>
+
+</TngnWsvc>
