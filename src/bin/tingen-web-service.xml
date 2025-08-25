@@ -56,12 +56,14 @@
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>The executing assembly name.</summary>
-            <remarks><para>
+            <remarks>
+                <para>
                 The name of the Executing Assembly is a required component of all log files, as it is used to identify
                 the class that is creating the log.<br />
                 <br />
                 This is defined at the start of each class, so it can be used at any time that a log needs to be created.
-            </para></remarks>
+            </para>
+            </remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
@@ -79,17 +81,17 @@
                         This method is required and <i>should not be modified</i>.
                     </item>
                     <item>
-                        <see cref="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">Trace Logs</see>
+                        <see cref="!:LogEvent.Trace(int, string, string, string, string, int, string)">Trace Logs</see>
                         can't go here because the logging infrastructure hasn't been initialized yet.
                     </item>
                     <item>
                         If Avatar doesn't pass an <paramref name="origOptObj" /> or <paramref name="origScriptParam" />, the Tingen Web
-                        Service will fail, and a <see cref="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String)">Critical log</see> will be created.
+                        Service will fail, and a <see cref="!:LogEvent.Critical(string, string, string)">Critical log</see> will be created.
                     </item>
                 </list>       
             </para></remarks>
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
-            <param name="origScriptParam">The original <see cref="P:Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
+            <param name="origScriptParam">The original <see cref="!:Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> representing the result of the Script Parameter request.</returns>
         </member>
     </members>

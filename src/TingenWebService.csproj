@@ -84,7 +84,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\XmlDoc\README.md" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\Full release to NSWS.pubxml" />
     <None Include="Properties\PublishProfiles\Publish to do-not-commit.pubxml" />

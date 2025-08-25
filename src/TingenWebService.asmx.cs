@@ -12,13 +12,9 @@
 
 using System.Reflection;
 using System.Web.Services;
-using Outpost31.Core.Logger;
-using Outpost31.Core.Session;
-using Outpost31.Core.Blueprint;
 using Outpost31.Module.Development;
 using ScriptLinkStandard.Objects;
 using TingenWebService.Properties;
-using Outpost31.Module.Admin;
 
 namespace TingenWebService
 {
@@ -33,7 +29,9 @@ namespace TingenWebService
     public class TingenWebService : WebService
     {
         /// <summary>The executing assembly name.</summary>
-        /// <remarks><include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/ExeAsmName/*'/></remarks>
+        /// <remarks>
+        ///     <include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/ExeAsmName/*'/>
+        /// </remarks>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
@@ -64,27 +62,31 @@ namespace TingenWebService
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                LogEvent.Critical(avtrSys, ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
+                //-//LogEvent.Critical(avtrSys, ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
 
                 /* DN01 */
+                //-//return origOptObj.ToReturnOptionObject(0, "");
+
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
+                //-//var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
 
-                Outpost31.Core.Avatar.AvtrParameter.Request(tngnWsvcSession);
+                //-//Outpost31.Core.Avatar.AvtrParameter.Request(tngnWsvcSession);
 
-                return tngnWsvcSession.OptObj.Finalized;
+                //-//return tngnWsvcSession.OptObj.Finalized;
+
+                return origOptObj.ToReturnOptionObject(0, "");
             }
         }
 
         internal static void DevelopmentOnly(OptionObject2015 origOptObj, string origScriptParam, string TngnWsvcVer, string avtrSys)
         {
             /* Regression testing */
-            Gamut.FromTngnWsvc(TngnWsvcVer, avtrSys);
+            Gamut.FromStart(TngnWsvcVer, avtrSys);
             /* Resets */
-            Outpost31.Module.Development.Reset.ErrorTemplate(avtrSys);
+            //Outpost31.Module.Development.Rebuild.ErrorTemplate(avtrSys);
 
 
         }
