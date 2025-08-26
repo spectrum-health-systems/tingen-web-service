@@ -1,3 +1,0 @@
-# Acknowledgements
-
-Nothing here yet.

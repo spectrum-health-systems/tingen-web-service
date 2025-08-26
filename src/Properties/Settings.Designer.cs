@@ -34,7 +34,7 @@ namespace TingenWebService.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("enabled")]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
         public string Mode {
             get {
                 return ((string)(this["Mode"]));
