@@ -14,8 +14,8 @@ namespace TingenWebService
     ///<summary>Provides additional information about the Tingen Web Service.</summary>
     ///<remarks>
     ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/About/*'/>
-    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Resources/*'/>
-    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Documentation/*'/>
+    ///     <include file='AppData/XMLDoc/SolutionInfo.xml' path='TngnWsvc/Class[@name="SolutionInfo"]/Resources/*'/>
+    ///     <include file='AppData/XMLDoc/SolutionInfo.xml' path='TngnWsvc/Class[@name="SolutionInfo"]/Documentation/*'/>
     ///</remarks>
     internal class ProjectInfo
     {

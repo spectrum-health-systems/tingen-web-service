@@ -57,7 +57,7 @@ namespace TingenWebService
              * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
              */
             string avtrSys      = Settings.Default.AvtrSys;
-            string tngnWsvcMode = Outpost31.TngnWsvc.TngnWsvcMode.SetMode(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.Mode);
+            string tngnWsvcMode = Outpost31.TngnWsvc.TngnWsvcMode.SetMode(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.Mode);    
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {

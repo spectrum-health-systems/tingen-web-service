@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="AppData\XmlDoc\Asmx.xml" />
     <Content Include="AppData\XmlDoc\ProjectInfo.xml" />
+    <Content Include="AppData\XmlDoc\SolutionInfo.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>

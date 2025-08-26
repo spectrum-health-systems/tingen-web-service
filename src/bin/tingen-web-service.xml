@@ -21,17 +21,14 @@
                 quickly and efficiently
             </para>
                  <para>
-                <b>Project resources</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see> (web service front-end)<br />
-                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see> (web service back-end)
+                <b>Project repositories</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see><br />
+                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see>
             </para>
                  <para>
-                <b>Project documentation</b>
-                <br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see>
-                <br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
-                <br />
+                <b>Project documentation</b><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br />
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br />
                 <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
             </para>
             </remarks>
@@ -50,7 +47,7 @@
                 </list>
             </para>
                 <para>
-                For more information about the <b>Tingen Web Service</b>, please see <see cref="T:TingenWebService.ProjectInfo" />.
+                For more information about the Tingen Web Service, please see <see cref="T:TingenWebService.ProjectInfo">Tingen Web Service <b>ProjectInfo</b></see>.
             </para>
             </remarks>
         </member>
@@ -75,7 +72,8 @@
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>The entry point for the Tingen Web Service.</summary>
-            <remarks><para>
+            <remarks>
+                <para>
                 <list type="bullet">
                     <item>
                         This method is required and <i>should not be modified</i>.
@@ -89,9 +87,10 @@
                         Service will fail, and a <see cref="!:LogEvent.Critical(string, string, string)">Critical log</see> will be created.
                     </item>
                 </list>       
-            </para></remarks>
+            </para>
+            </remarks>
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
-            <param name="origScriptParam">The original <see cref="!:Outpost31.Core.Avatar.AvtrParameter.Original">Script Parameter</see> that is sent from Avatar.</param>
+            <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> representing the result of the Script Parameter request.</returns>
         </member>
     </members>
