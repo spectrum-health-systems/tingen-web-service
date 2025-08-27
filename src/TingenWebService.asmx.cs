@@ -1,6 +1,6 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250826_code
- * u250826_documentation
+ * u250827_code
+ * u250827_documentation
  */
 
 /*******************************************************************************
@@ -40,8 +40,7 @@ namespace TingenWebService
         public static string TngnWsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
-        /// <remarks>This method is required and <i>should not be modified</i>.</remarks>
-        /// <returns>The current <see cref="TngnWsvcVer">version</see> of the Tingen Web Service.</returns>
+        /// <returns>The current <see cref="TngnWsvcVer"/> of the Tingen Web Service.</returns>
         [WebMethod]
         public string GetVersion() => $"VERSION {TngnWsvcVer}";
 
@@ -55,7 +54,7 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam)
         {
-            /* For debugging only
+            /* For debugging only!
              */
             //WriteStartLog();
 
@@ -90,6 +89,7 @@ namespace TingenWebService
             }
         }
 
+        /// <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
         internal static void WriteStartLog()
         {
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\AppData\Log\Tingen Web Service.started", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");

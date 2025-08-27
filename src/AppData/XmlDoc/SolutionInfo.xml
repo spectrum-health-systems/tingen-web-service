@@ -1,11 +1,4 @@
-﻿<!--
-    This file contains the common external XML documentation for the following projects:
-
-    - TingenWebService
-    - Outpost31
--->
-
-<TngnWsvc>
+﻿<TngnWsvc>
 
     <Class name="SolutionInfo">
 

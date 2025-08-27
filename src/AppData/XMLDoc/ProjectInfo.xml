@@ -1,9 +1,4 @@
-﻿<!--
-    This file contains the common external XML documentation for the Tingen Web Service project.
-    u250826
--->
-
-<TngnWsvc>
+﻿<TngnWsvc>
 
     <Class name="ProjectInfo">
 
@@ -15,11 +10,11 @@
                 For more information about the Tingen Web Service, please see <see cref="ProjectInfo">Tingen Web Service <b>ProjectInfo</b></see>.
             </para>
         </Callback>
-        
+
         <!--
             <include file='AppData/XmlDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/About/*'/>
         -->
-        <About> 
+        <About>
             <para>
                 <b>About the Tingen Web Service</b><br/>
                 Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
@@ -31,7 +26,7 @@
                 <br/>
                 Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
                 included in the official release, and provides a solid foundation for building additional functionality<br/>
-                quickly and efficiently
+                quickly and efficiently.
             </para>
         </About>
 
