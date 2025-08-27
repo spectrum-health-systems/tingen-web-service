@@ -1,6 +1,6 @@
 ﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250825_code
- * u250825_documentation
+ * u250826_code
+ * u250826_documentation
  */
 
 /*******************************************************************************
@@ -11,6 +11,8 @@
  * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
  ******************************************************************************/
 
+using System;
+using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using ScriptLinkStandard.Objects;
@@ -53,11 +55,16 @@ namespace TingenWebService
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam)
         {
+            /* For debugging only
+             */
+            //WriteStartLog();
+
             /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
              * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
              */
-            string avtrSys      = Settings.Default.AvtrSys;
-            string tngnWsvcMode = Outpost31.TngnWsvc.TngnWsvcMode.SetMode(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.Mode);    
+            string avtrSys = Settings.Default.AvtrSys;
+
+            Outpost31.Core.Admin.AdminMode.Run(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.AdminMode);
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
@@ -67,7 +74,7 @@ namespace TingenWebService
 
                 return origOptObj.ToReturnOptionObject(0, "");
             }
-            else if (tngnWsvcMode == "enabled")
+            else if (Settings.Default.TngnWsvcMode == "enabled")
             {
                 //-//var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
 
@@ -81,6 +88,11 @@ namespace TingenWebService
             {
                 return origOptObj.ToReturnOptionObject(0, "");
             }
+        }
+
+        internal static void WriteStartLog()
+        {
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\AppData\Log\Tingen Web Service.started", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
         }
     }
 }

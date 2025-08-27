@@ -35,9 +35,18 @@ namespace TingenWebService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
-        public string Mode {
+        public string TngnWsvcMode {
             get {
-                return ((string)(this["Mode"]));
+                return ((string)(this["TngnWsvcMode"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
+        public string AdminMode {
+            get {
+                return ((string)(this["AdminMode"]));
             }
         }
     }
