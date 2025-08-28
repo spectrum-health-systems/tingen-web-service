@@ -27,8 +27,8 @@ namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands<br/>
-    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done<br/>
+    ///   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands
+    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done
     ///   <br/>
     ///   For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.
     /// </remarks>
@@ -39,7 +39,7 @@ namespace TingenWebService
     {
         /// <summary>The executing assembly name.</summary>
         /// <remarks>
-        ///   This is a required component of most log files, and is defined at the start of each class, so it can be<br/>
+        ///   This is a required component of most log files, and is defined at the start of each class, so it can be
         ///   used at any time that a log needs to be created.
         /// </remarks>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
@@ -78,7 +78,7 @@ namespace TingenWebService
             {
                 Outpost31.Core.Logger.LogAppEvent.Critical(avtrSys, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
 
-                return origOptObj.ToReturnOptionObject(0, ""); // 
+                return origOptObj.ToReturnOptionObject(0, ""); //
             }
             else if (Settings.Default.TngnWsvcMode == "enabled")
             {

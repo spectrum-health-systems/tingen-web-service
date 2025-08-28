@@ -15,15 +15,15 @@ namespace TingenWebService
     ///<remarks>
     ///  <para>
     ///    <b>About the Tingen Web Service</b><br/>
-    ///    Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
-    ///    leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+    ///    Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that
+    ///    leverage real-time analytics and clinical decision support to drive value-based care.
     ///    <br/>
-    ///    While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
-    ///    functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+    ///    While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™
+    ///    functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other
     ///    Avatar™ users.<br/>
     ///    <br/>
-    ///    Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
-    ///    included in the official release, and provides a solid foundation for building additional functionality<br/>
+    ///    Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't
+    ///    included in the official release, and provides a solid foundation for building additional functionality
     ///    quickly and efficiently.
     ///  </para>
     ///  <para>
