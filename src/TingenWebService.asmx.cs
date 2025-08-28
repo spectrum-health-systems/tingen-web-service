@@ -28,20 +28,16 @@ namespace TingenWebService
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
     ///   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands
-    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done
+    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done.<br/>
     ///   <br/>
     ///   For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.
     /// </remarks>
-[WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class TingenWebService : WebService
     {
-        /// <summary>The executing assembly name.</summary>
-        /// <remarks>
-        ///   This is a required component of most log files, and is defined at the start of each class, so it can be
-        ///   used at any time that a log needs to be created.
-        /// </remarks>
+        /// <summary>A required log file component.</summary>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
