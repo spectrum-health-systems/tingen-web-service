@@ -1,13 +1,13 @@
-﻿/* Tingen Web Service
- * A custom web service for Netsmart's Avatar EHR.
- * Release 25.8
- *
- * https://github.com/spectrum-health-systems/tingen-web-service
- * Copyright (c) A Pretty Cool Program. All rights reserved.
- * Licensed under the Apache 2.0 license.
- */
-
+﻿// =============================================================================
+// The Tingen Web Service
+// A custom web service for Netsmart's Avatar EHR.
+// https://github.com/spectrum-health-systems/tingen-web-service
+// Copyright (c) A Pretty Cool Program. All rights reserved.
+// Licensed under the Apache 2.0 license.
+// -----------------------------------------------------------------------------
+// Release 25.8
 // u250828
+// =============================================================================
 
 namespace TingenWebService
 {
@@ -41,11 +41,6 @@ namespace TingenWebService
     internal class ProjectInfo
     {
         /* This class is only used for informational purposes, and does not contain executable code.
-         */
-
-        /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
-         * 
-         * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
          */
     }
 }

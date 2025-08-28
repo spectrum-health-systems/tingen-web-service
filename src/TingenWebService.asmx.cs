@@ -1,7 +1,7 @@
 ﻿// =============================================================================
-// Outpost31.Core.Avatar.AvtrEnvironment.cs
-// Logic for Avatar environment components.
-// https://github.com/spectrum-health-systems/outpost31
+// TingenWebService.asmx.cs
+// The Tingen Web Service for Netsmart's Avatar EHR.
+// https://github.com/spectrum-health-systems/tingen-web-service
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 // -----------------------------------------------------------------------------
@@ -13,8 +13,7 @@
 // IMPORTANT!
 //
 // Before deploying the Tingen Web Service, please verify that avtrSys is set
-// correctly!
-// https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-outpost31/html/57b0d803-e620-c3ce-b6d6-03c1f8153ea3.htm
+// correctly! Please see the Manual for more information.
 // *****************************************************************************
 
 using System;
