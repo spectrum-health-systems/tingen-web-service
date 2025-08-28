@@ -1,6 +1,5 @@
 ﻿// =============================================================================
 // TingenWebService.asmx.cs
-// The Tingen Web Service for Netsmart's Avatar EHR.
 // https://github.com/spectrum-health-systems/tingen-web-service
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
@@ -9,26 +8,19 @@
 // u250828_documentation
 // =============================================================================
 
-// *****************************************************************************
-// IMPORTANT!
-//
-// Before deploying the Tingen Web Service, please verify that avtrSys is set
-// correctly! Please see the Manual for more information.
-// *****************************************************************************
-
 using System;
 using System.IO;
 using System.Reflection;
 using System.Web.Services;
 using ScriptLinkStandard.Objects;
 using TingenWebService.Properties;
+using Outpost31.Core.Admin;
 
 namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands
-    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done.<br/>
+    ///   The heavy lifting is done by <see cref="Outpost31.ProjectInfo"> Outpost31</see>.<br/>
     ///   <br/>
     ///   For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.
     /// </remarks>
@@ -41,15 +33,14 @@ namespace TingenWebService
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
-        public static string TngnWsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string WsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
-        /// <returns>The current <see cref="TngnWsvcVer"/> of the Tingen Web Service.</returns>
+        /// <returns>The current <see cref="WsvcVer"/> of the Tingen Web Service.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {TngnWsvcVer}";
+        public string GetVersion() => $"VERSION {WsvcVer}";
 
-        /// <summary>The entry method for the Tingen Web Service.</summary>
-        /// <remarks>This method determines what the Tingen Web Service will do, if anything.</remarks>
+        /// <summary>Determines what the Tingen Web Service will do, if anything.</summary>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
         /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
@@ -58,54 +49,61 @@ namespace TingenWebService
         {
             /* For debugging only!
              */
-            //WriteStartLog();
+            WriteStartLog("Start");
 
-            /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly! Please see the Manual
-             * for more information.
-             */
-            string avtrSys = Settings.Default.AvtrSys;
+            string avatarSystem = Settings.Default.AvatarSystem;
 
             /* There are additional Administrative functions that can be performed by the Tingen Web Service. Please see
              * the Manual for more information.
              */
-            Outpost31.Core.Admin.AdminMode.Run(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.AdminMode);
+            AdminMode.Parse(origOptObj, origScriptParam, WsvcVer, avatarSystem, Settings.Default.AdminMode);
 
+            Outpost31.Core.Logger.LogAppEvent.Critical(avatarSystem, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
+
+            // TODO - Move this to a Parse() method?
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                Outpost31.Core.Logger.LogAppEvent.Critical(avtrSys, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
+                WriteStartLog("Start1");
 
-                return origOptObj.ToReturnOptionObject(0, ""); //
+                Outpost31.Core.Logger.LogAppEvent.Critical(avatarSystem, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
+
+                return origOptObj.ToReturnOptionObject(0, "");
             }
-            else if (Settings.Default.TngnWsvcMode == "enabled")
+            else if (Settings.Default.WsvcMode == "enabled")
             {
                 //-//var tngnWsvcSession = TngnWsvcSession.New(origOptObj, origScriptParam, TngnWsvcVer, avtrSys);
 
                 //-//Outpost31.Core.Avatar.AvtrParameter.Request(tngnWsvcSession);
 
                 //-//return tngnWsvcSession.OptObj.Finalized;
-
+                WriteStartLog("Start2");
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
+                WriteStartLog("Start3");
                 return origOptObj.ToReturnOptionObject(0, "");
             }
         }
 
         /// <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
-        internal static void WriteStartLog()
+        internal static void WriteStartLog(string time)
         {
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\AppData\Log\Tingen Web Service.started", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Tingen Web Service.{time}", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
         }
 
+        /// <summary>Build a message for the critical error.</summary>
+        /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
+        /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
+        /// <returns>A message for the critical error log.</returns>
         internal static string LogMsg(OptionObject2015 origOptObj, string origScriptParam)
         {
+            var t = $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
+
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Tingen.tt", t);
+        
+        WriteStartLog("Start5");
             return $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
         }
     }
 }
-
-/* DN01
- * If the OptionObject wasn't sent from Avatar, it can't be "finalized" and returned. We need to figure out how to
- * handle this.
- */

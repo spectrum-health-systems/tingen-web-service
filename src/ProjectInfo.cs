@@ -1,6 +1,5 @@
 ﻿// =============================================================================
 // The Tingen Web Service
-// A custom web service for Netsmart's Avatar EHR.
 // https://github.com/spectrum-health-systems/tingen-web-service
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.

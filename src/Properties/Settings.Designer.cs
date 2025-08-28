@@ -26,18 +26,18 @@ namespace TingenWebService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("UAT")]
-        public string AvtrSys {
+        public string AvatarSystem {
             get {
-                return ((string)(this["AvtrSys"]));
+                return ((string)(this["AvatarSystem"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("disabled")]
-        public string TngnWsvcMode {
+        public string WsvcMode {
             get {
-                return ((string)(this["TngnWsvcMode"]));
+                return ((string)(this["WsvcMode"]));
             }
         }
         
