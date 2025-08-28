@@ -7,15 +7,36 @@
  * Licensed under the Apache 2.0 license.
  */
 
-// u250825
+// u250828
 
 namespace TingenWebService
 {
     ///<summary>Provides additional information about the Tingen Web Service.</summary>
     ///<remarks>
-    ///     <include file='AppData/XMLDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/About/*'/>
-    ///     <include file='AppData/XMLDoc/SolutionInfo.xml' path='TngnWsvc/Class[@name="SolutionInfo"]/Resources/*'/>
-    ///     <include file='AppData/XMLDoc/SolutionInfo.xml' path='TngnWsvc/Class[@name="SolutionInfo"]/Documentation/*'/>
+    ///  <para>
+    ///    <b>About the Tingen Web Service</b><br/>
+    ///    Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
+    ///    leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+    ///    <br/>
+    ///    While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
+    ///    functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+    ///    Avatar™ users.<br/>
+    ///    <br/>
+    ///    Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
+    ///    included in the official release, and provides a solid foundation for building additional functionality<br/>
+    ///    quickly and efficiently.
+    ///  </para>
+    ///  <para>
+    ///    <b>Project repositories</b><br/>
+    ///    <see href = "https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see><br/>
+    ///    <see href = "https://github.com/spectrum-health-systems/outpost31">Outpost32</see>
+    ///  </para>
+    ///  <para>
+    ///    <b>Project documentation</b><br/>
+    ///    <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br/>
+    ///    <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br/>
+    ///    <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+    ///  </para>
     ///</remarks>
     internal class ProjectInfo
     {

@@ -65,9 +65,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppData\XmlDoc\Asmx.xml" />
-    <Content Include="AppData\XmlDoc\ProjectInfo.xml" />
-    <Content Include="AppData\XmlDoc\SolutionInfo.xml" />
     <Content Include="TingenWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -100,7 +97,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AppData\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\outpost31\src\Outpost31.csproj">
       <Project>{b0dbedeb-4b64-4fb6-8ef6-0e3e3d2d63d9}</Project>

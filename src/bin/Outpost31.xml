@@ -5,39 +5,73 @@
     </assembly>
     <members>
         <member name="T:Outpost31.Core.Avatar.AvtrEnvironment">
-            <summary>Represents the components of an Avatar Environment.</summary>
+            <summary>Logic for Avatar environment components.</summary>
             <remarks>
-                <para>
-                The Avatar Environment represents the <see cref="!:AvtrSys"><i>System</i></see> and Avatar <see cref="!:AvtrSysCode"><i>System <b>Code</b></i></see>.<br />
-                <br />
-                While both contain the word <i>System</i>, they are not the same! It is important to understand the difference between the two.<br />
-                <include file="AppData/XmlDoc/ProjectInfo.xml" path="ProjectInfo/Class[@name=&quot;Project&quot;]/Callback/*" />
-            </para>
-                <para>
-                For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo">Outpost31 <b>ProjectInfo</b></see>.
-            </para>
+              An Avatar environment consists of two components: the <see cref="P:Outpost31.Core.Avatar.AvtrEnvironment.AvtrSys">Avatar System</see> and <see cref="P:Outpost31.Core.Avatar.AvtrEnvironment.AvtrSysCode">Avatar System Code</see>.<br/>
+              <br/>
+              While both contain the word <i>system</i>, they are not the same! It is important to understand the difference between the two.<br/>
+              <br/>
+              For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.
             </remarks>
         </member>
-        <member name="P:Outpost31.Core.Admin.Deploy.ExeAsmName">
+        <member name="P:Outpost31.Core.Avatar.AvtrEnvironment.AvtrSys">
+            <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
+            <remarks>
+              It is <b><i>very important</i></b> that <c>AvtrSys</c> is set correctly, otherwise lots of bad things can <i>and will</i> happen!<br />
+              <br />
+              Common Avatar Systems are: <c>UAT</c>, <c>LIVE</c>, <c>SBOX</c>, and<c> BUILD</c>. However, the Tingen Web Service is only<br />
+              able to interface with the <b><c>UAT</c></b> and <b><c> LIVE</c></b> Avatar Systems.<br />
+              <br />
+              <Manual>
+                <note title="How-To">
+                    <h3>Modify the AvtrSys setting</h3>
+                    <list type="number">
+                        <item>Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.</item>
+                        <item>Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.</item>
+                        <item>Change the value of the <c>AvtrSys</c> setting to the desired value.</item>
+                        <item>Save the changes to the <c>Web.Config</c> file.</item>
+                    </list>
+                    For example, to set the Avatar System to `LIVE`:
+                    <code>
+                        &lt;setting name="AvtrSys" serializeAs="String"&gt;
+                            &lt;value&gt;LIVE&lt;/value&gt;
+                        &lt;/setting&gt;
+                    </code>
+                    Changes to the<c> AvtrSys</c> setting will be applied the next time the Tingen Web Service is executed.<br />      
+                </note>
+            </Manual>
+            </remarks>
+            <value>The default value is <c>UAT</c>.</value>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvtrEnvironment.AvtrSysCode">
+            <summary>The Avatar System Code used to login to Avatar.</summary>
+            <remarks>
+                The Avatar <i>System Code</i> determines (in part) what Avatar functionality a user has access to while they are logged into
+                an Avatar <i>System</i>.<br/>
+                <br/>
+                Organizations may have many different Avatar <i>System Codes</i>, but only a few Avatar <see cref="P:Outpost31.Core.Avatar.AvtrEnvironment.AvtrSys"/>.<br/>
+                <br/>
+                And just to make things confusing, sometimes an Avatar System Code may be similar or the same as an Avatar System.
+            </remarks>
+        </member>
+        <member name="P:Outpost31.Core.Admin.Deployment.ExeAsmName">
             <summary>The executing assembly name.</summary>
             <remarks>
                 <!-- Failed to insert some or all of included XML --><include file="/AppData/XmlDoc/Common.xml" path="TngnOpto/Class[@name=&quot;Common&quot;]/ExeAsmName/*" />
             </remarks>
         </member>
-        <member name="M:Outpost31.Core.Admin.Deploy.RefreshAppData(System.String)">
+        <member name="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">
             <summary>Refresh all AppData data/resources.</summary>
             <param name="avtrSys"></param>
         </member>
-        <member name="M:Outpost31.Core.Admin.Deploy.CopyDirectory(System.String,System.String)">
+        <member name="M:Outpost31.Core.Admin.Deployment.CopyDirectory(System.String,System.String)">
             TODO move to a utility class
         </member>
         <member name="T:Outpost31.Core.Admin.Testing">
             <summary>Provides testing and debugging operations.</summary>
             <remarks>
                 <para>
-                The Tingen Web Service Web.config file has a setting named <c>AdminMode</c>, which can be used to perform
-                several processes, including testing various components of the Tingen Web Service.
-                <include file="AppData/XmlDoc/ProjectInfo.xml" path="ProjectInfo/Class[@name=&quot;Project&quot;]/Callback/*" />
+                Testing.cs description
             </para>
             </remarks>
         </member>
@@ -45,10 +79,7 @@
             <summary>The executing assembly name.</summary>
             <remarks>
                 <para>
-                The name of the Executing Assembly is a required component of most log files, as it is used to identify
-                the project that is creating the log.<br />
-                <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.
+
             </para>
             </remarks>
         </member>
@@ -56,19 +87,23 @@
             <summary>Runs regression tests.</summary>
             <remarks>
                 <para>
-                Regression tests various components of the Tingen Web Service.<br />
-                <br />
-                AdminMode = <c>RegressionTest</c>
+                Regression() description.
             </para>
             </remarks>
+            <param name="origOptObj" />
+            <param name="origScriptParam" />
+            <param name="tngnWsvcVer" />
+            <param name="avtrSys" />
         </member>
-        <member name="M:Outpost31.Core.Admin.Testing.AppLogs(System.String,System.Int32)">
+        <member name="M:Outpost31.Core.Admin.Testing.GenerateAppLogs(System.String,System.Int32)">
             <summary>Generates various application logs.</summary>
-            <remarks>This method performs various logging operations, including critical, debug, error,
-            and trace logs,  to verify the functionality and behavior of the application's logging system. It is
-            intended for  internal use during regression testing or diagnostics.</remarks>
+            <remarks>
+                <para>
+                GenerateAppLogs() description.
+            </para>
+            </remarks>
             <param name="avtrSys">The identifier for the avatar system or application context in which the logging operations are performed.</param>
-            <param name="msec"></param>
+            <param name="msec" />
         </member>
         <member name="T:Outpost31.Core.Admin.AdminMode">
             <summary>Tingen Web Service mode logic.</summary>
@@ -78,7 +113,7 @@
                 several different administrative processes<br />
                 <br />
                 For more information on AdminMode and it's settings, please see the Tingen Web Service
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>        
+                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see>
             </para>
                 <para>
                 For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo">Outpost31 <b>ProjectInfo</b></see>.
@@ -89,12 +124,17 @@
             <summary>The executing assembly name.</summary>
             <remarks>
                 <para>
-                The name of the Executing Assembly is a required component of most log files, as it is used to identify
-                the project that is creating the log.<br />
-                <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.
+
             </para>
             </remarks>
+        </member>
+        <member name="M:Outpost31.Core.Admin.AdminMode.Run(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String,System.String)">
+            <summary>Run one of the AdminModes.</summary>
+            <param name="origOptObj"></param>
+            <param name="origScriptParam"></param>
+            <param name="tngnWsvcVer"></param>
+            <param name="avtrSys"></param>
+            <param name="adminMode"></param>
         </member>
         <member name="T:Outpost31.Core.Logger.LogAppEvent">
             <summary>Logs an event.</summary>
@@ -111,17 +151,14 @@
             <summary>The executing assembly name.</summary>
             <remarks>
                 <para>
-                The name of the Executing Assembly is a required component of most log files, as it is used to identify
-                the project that is creating the log.<br />
-                <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.
+
             </para>
             </remarks>
         </member>
         <member name="M:Outpost31.Core.Logger.LogAppEvent.Critical(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>Generate a critical log.</summary>
             <remarks>
-            
+            This is public because TngnWsvc may need to call it.
             </remarks>
             <param name="avtrSys"></param>
             <param name="exeAsmName"></param>
@@ -147,7 +184,7 @@
             <param name="avtrSys">The sys</param>
             <param name="logBody">The log message, which defaults to "Primeval log." if not specified.</param>
         </member>
-        <member name="P:Outpost31.Module.Admin.Develop.ExeAsmName">
+        <member name="P:Outpost31.Module.Admin.Development.ExeAsmName">
             <summary>The executing assembly name.</summary>
             <remarks>
                 <!-- Failed to insert some or all of included XML --><include file="/AppData/XmlDoc/Common.xml" path="TngnOpto/Class[@name=&quot;Common&quot;]/ExeAsmName/*" />
@@ -160,17 +197,8 @@
                 <b>About Outpost31</b><br />
                 Outpost 31 is the back-end/logic for the Tingen Web Service.
             </para>
-                <para>
-                <b>Project repositories</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see><br />
-                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see>
-            </para>
-                <para>
-                <b>Project documentation</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
-            </para>
+                <!-- Failed to insert some or all of included XML --><include file="../../tingen-web-service/src/AppData/XmlDoc/SolutionInfo.xml" path="TngnWsvc/Class[@name=&quot;SolutionInfo&quot;]/Resources/*" />
+                <!-- Failed to insert some or all of included XML --><include file="../../tingen-web-service/src/AppData/XmlDoc/SolutionInfo.xml" path="TngnWsvc/Class[@name=&quot;SolutionInfo&quot;]/Documentation/*" />
             </remarks>
         </member>
     </members>

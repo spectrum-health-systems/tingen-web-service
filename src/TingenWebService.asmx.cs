@@ -1,15 +1,21 @@
-﻿/* TingenWebService.TingenWebService.asmx.cs
- * u250827_code
- * u250827_documentation
- */
+﻿// =============================================================================
+// Outpost31.Core.Avatar.AvtrEnvironment.cs
+// Logic for Avatar environment components.
+// https://github.com/spectrum-health-systems/outpost31
+// Copyright (c) A Pretty Cool Program. All rights reserved.
+// Licensed under the Apache 2.0 license.
+// -----------------------------------------------------------------------------
+// u250828_code
+// u250828_documentation
+// =============================================================================
 
-/*******************************************************************************
- * IMPORTANT!
- *
- * Before deploying the Tingen Web Service, please verify that avtrSys is set
- * correctly!
- * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
- ******************************************************************************/
+// *****************************************************************************
+// IMPORTANT!
+//
+// Before deploying the Tingen Web Service, please verify that avtrSys is set
+// correctly!
+// https://spectrum-health-systems.github.io/tingen-documentation-project/api/shfb-outpost31/html/57b0d803-e620-c3ce-b6d6-03c1f8153ea3.htm
+// *****************************************************************************
 
 using System;
 using System.IO;
@@ -22,17 +28,20 @@ namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
     /// <remarks>
-    ///     <include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/ClassDescription/*'/>
-    ///     <include file='AppData/XmlDoc/ProjectInfo.xml' path='TngnWsvc/Class[@name="ProjectInfo"]/Callback/*'/>
+    ///   This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands<br/>
+    ///   information to <see cref="Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done<br/>
+    ///   <br/>
+    ///   For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.
     /// </remarks>
-    [WebService(Namespace = "http://tempuri.org/")]
+[WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     public class TingenWebService : WebService
     {
         /// <summary>The executing assembly name.</summary>
         /// <remarks>
-        ///     <include file='../../outpost31/src/AppData/XmlDoc/Common.xml' path='TngnOpto/Class[@name="Common"]/ExeAsmName/*'/>
+        ///   This is a required component of most log files, and is defined at the start of each class, so it can be<br/>
+        ///   used at any time that a log needs to be created.
         /// </remarks>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
@@ -44,10 +53,8 @@ namespace TingenWebService
         [WebMethod]
         public string GetVersion() => $"VERSION {TngnWsvcVer}";
 
-        /// <summary>The entry point for the Tingen Web Service.</summary>
-        /// <remarks>
-        ///     <include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="Asmx"]/RunScript/*'/>
-        /// </remarks>
+        /// <summary>The entry method for the Tingen Web Service.</summary>
+        /// <remarks>This method determines what the Tingen Web Service will do, if anything.</remarks>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
         /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
@@ -58,20 +65,21 @@ namespace TingenWebService
              */
             //WriteStartLog();
 
-            /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly!
-             * https://github.com/spectrum-health-systems/tingen-documentation-project/blob/main/static/setting-avtrsys.md
+            /* Before deploying the Tingen Web Service, please verify that AvtrSys is set correctly! Please see the Manual
+             * for more information.
              */
             string avtrSys = Settings.Default.AvtrSys;
 
+            /* There are additional Administrative functions that can be performed by the Tingen Web Service. Please see
+             * the Manual for more information.
+             */
             Outpost31.Core.Admin.AdminMode.Run(origOptObj, origScriptParam, TngnWsvcVer, avtrSys, Settings.Default.AdminMode);
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                //-//LogEvent.Critical(avtrSys, ErrorContent.WsvcCriticalMissingArgs(origOptObj, origScriptParam), "Avatar data missing");
+                Outpost31.Core.Logger.LogAppEvent.Critical(avtrSys, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
 
-                /* DN01 */
-
-                return origOptObj.ToReturnOptionObject(0, "");
+                return origOptObj.ToReturnOptionObject(0, ""); // 
             }
             else if (Settings.Default.TngnWsvcMode == "enabled")
             {
@@ -93,6 +101,11 @@ namespace TingenWebService
         internal static void WriteStartLog()
         {
             File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\AppData\Log\Tingen Web Service.started", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
+        }
+
+        internal static string LogMsg(OptionObject2015 origOptObj, string origScriptParam)
+        {
+            return $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
         }
     }
 }

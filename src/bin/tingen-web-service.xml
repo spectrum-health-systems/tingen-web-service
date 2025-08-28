@@ -7,59 +7,46 @@
         <member name="T:TingenWebService.ProjectInfo">
             <summary>Provides additional information about the Tingen Web Service.</summary>
             <remarks>
-                 <para>
-                <b>About the Tingen Web Service</b><br />
-                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br />
-                leverage real-time analytics and clinical decision support to drive value-based care.<br />
-                <br />
-                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br />
-                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br />
-                Avatar™ users.<br />
-                <br />
-                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br />
-                included in the official release, and provides a solid foundation for building additional functionality<br />
+              <para>
+                <b>About the Tingen Web Service</b><br/>
+                Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that<br/>
+                leverage real-time analytics and clinical decision support to drive value-based care.<br/>
+                <br/>
+                While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™<br/>
+                functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other<br/>
+                Avatar™ users.<br/>
+                <br/>
+                Tingen is one such custom web service which includes various tools and utilities for Avatar™ that aren't<br/>
+                included in the official release, and provides a solid foundation for building additional functionality<br/>
                 quickly and efficiently.
-            </para>
-                 <para>
-                <b>Project repositories</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see><br />
-                <see href="https://github.com/spectrum-health-systems/outpost31">Outpost32</see>
-            </para>
-                 <para>
-                <b>Project documentation</b><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br />
-                <see href="https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
-            </para>
+              </para>
+              <para>
+                <b>Project repositories</b><br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-web-service">Tingen Web Service</see><br/>
+                <see href = "https://github.com/spectrum-health-systems/outpost31">Outpost32</see>
+              </para>
+              <para>
+                <b>Project documentation</b><br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project">Tingen Documentation Project</see><br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/manuals/tngnsrvc">Tingen Web Service Manual</see><br/>
+                <see href = "https://github.com/spectrum-health-systems/tingen-documentation-project/tree/main/development">Development Documentation</see>
+              </para>
             </remarks>
         </member>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry class for the Tingen Web Service.</summary>
             <remarks>
-                <para>
-                This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands information to
-                <see href="https://github.com/spectrum-health-systems/outpost31"> Outpost31</see>, where the heavy lifting is done.
-                <br />
-                There are two methods in this class which <i>are required</i> and <i>should not be modified</i>:
-                <list type="bullet">
-                    <item><see cref="M:TingenWebService.TingenWebService.GetVersion" /></item>
-                    <item><see cref="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)" /></item>
-                </list>
-            </para>
-                <para>
-                For more information about the Tingen Web Service, please see <see cref="T:TingenWebService.ProjectInfo">Tingen Web Service <b>ProjectInfo</b></see>.
-            </para>
+              This class doesn't do much actual work, and should remain fairly static. For the most part, it just hands<br/>
+              information to <see cref="T:Outpost31.ProjectInfo"> Outpost31</see>, where the heavy lifting is done<br/>
+              <br/>
+              For more information about the Tingen Web Service, please see the <see cref="T:TingenWebService.ProjectInfo"/> file.
             </remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>The executing assembly name.</summary>
             <remarks>
-                <para>
-                The name of the Executing Assembly is a required component of most log files, as it is used to identify
-                the project that is creating the log.<br />
-                <br />
-                This is defined at the start of each class, so it can be used at any time that a log needs to be created.
-            </para>
+              This is a required component of most log files, and is defined at the start of each class, so it can be<br/>
+              used at any time that a log needs to be created.
             </remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
@@ -70,28 +57,11 @@
             <returns>The current <see cref="P:TingenWebService.TingenWebService.TngnWsvcVer"/> of the Tingen Web Service.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
-            <summary>The entry point for the Tingen Web Service.</summary>
-            <remarks>
-                <para>
-                <list type="bullet">
-                    <item>
-                        If Avatar doesn't pass an <paramref name="origOptObj" /> or <paramref name="origScriptParam" />, the Tingen Web
-                        Service will fail, and a critical log will be created.
-                    </item>
-                    <item>
-                        If the TngnWsvcMode must be set to <c>enabled</c>, <c>disabled</c>, or <c>passthrough</c>. Any other mode will
-                        behave as <c>disabled</c>.
-                    </item>
-                    <item>
-                        There is a special "AdminMode" that can be set in the Web.Config file, but this is only for administrative/development
-                        tasks. Additional information about this mode can be found in the Tingen Web Service Manual.
-                    </item>
-                </list>
-            </para>
-            </remarks>
-            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
+            <summary>The entry method for the Tingen Web Service.</summary>
+            <remarks>This method determines what the Tingen Web Service will do, if anything.</remarks>
+            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
             <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
-            <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> representing the result of the Script Parameter request.</returns>
+            <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.WriteStartLog">
             <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
