@@ -26,23 +26,15 @@
                 <note type="todo" title="How-To">
                     <h3>Modify the AvtrSys setting</h3>
                     <list type="number">
-                        <item>
-                            Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.
-                        </item>
-                        <item>
-                            Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.
-                        </item>
-                        <item>
-                            Change the value of the <c>AvtrSys</c> setting to the desired value.
-                        </item>
-                        <item>
-                            Save the changes to the <c>Web.Config</c> file.
-                        </item>
+                        <item>Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.</item>
+                        <item>Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.</item>
+                        <item>Change the value of the <c>AvtrSys</c> setting to the desired value.</item>
+                        <item>Save the changes to the <c>Web.Config</c> file.</item>
                     </list>
                     For example, to set the Avatar System to `LIVE`:
                     <code>
                         &lt;setting name="AvtrSys" serializeAs="String"&gt;
-                        &lt;value&gt;LIVE&lt;/value&gt;
+                            &lt;value&gt;LIVE&lt;/value&gt;
                         &lt;/setting&gt;
                     </code>
                     Changes to the <c>AvtrSys</c> setting will be applied the next time the Tingen Web Service is executed.<br />
@@ -64,12 +56,18 @@
         </member>
         <member name="T:Outpost31.Core.Admin.Deployment">
             <summary>Logic for deployment processes.</summary>
-            <remarks>
-              For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.
-            </remarks>
+            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
         </member>
         <member name="P:Outpost31.Core.Admin.Deployment.ExeAsmName">
             <summary>A required log file component.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Admin.Deployment.Deploy(System.String)">
+            <summary>Deploy the Tingen Web Service framework.</summary>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
+        </member>
+        <member name="M:Outpost31.Core.Admin.Deployment.CreateFolderFramework(System.String)">
+            <summary>Create the Tingen Web Service folder framework.</summary>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
         </member>
         <member name="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">
             <summary>Refresh application data that is required by the Tingen Web Service.</summary>
@@ -80,38 +78,26 @@
         </member>
         <member name="T:Outpost31.Core.Admin.Testing">
             <summary>Provides testing and debugging operations.</summary>
-            <remarks>
-                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Core.Admin.xml" path="Core.Admin/Class[@name=&quot;Testing&quot;]/ClassDescription/*" />
-            </remarks>
+            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
         </member>
         <member name="P:Outpost31.Core.Admin.Testing.ExeAsmName">
             <summary>A required log file component.</summary>
         </member>
         <member name="M:Outpost31.Core.Admin.Testing.Regression(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">
             <summary>Runs regression tests.</summary>
-            <remarks>
-                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Core.Admin.xml" path="Core.Admin/Class[@name=&quot;Testing&quot;]/Regression/*" />
-            </remarks>
-            <param name="sentOptionObject">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
+            <param name="sentOptionObject">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
             <param name="sentScriptParameter">The original Script Parameter that is sent from Avatar.</param>
             <param name="wsvcVer">The current version of the Tingen Web Service.</param>
-            <param name="avatarSystem">The <see cref="!:AvatarEnvironment.AvatarSystem" />Avatar system that the Tingen Web Service will interface with.</param>
+            <param name="avatarSystem">The <see cref="!:AvatarEnvironment.AvatarSystem"/>Avatar system that the Tingen Web Service will interface with.</param>
         </member>
         <member name="M:Outpost31.Core.Admin.Testing.GenerateAppLogs(System.String,System.Int32)">
             <summary>Generates various application logs.</summary>
-            <remarks>
-                <!-- No matching elements were found for the following include tag --><include file="AppData/XmlDoc/Core.Admin.xml" path="Core.Admin/Class[@name=&quot;Testing&quot;]/GenerateAppLogs/*" />
-            </remarks>
             <param name="avatarSystem">The identifier for the avatar system or application context in which the logging operations are performed.</param>
             <param name="msec">Pause, in milliseconds.</param>
         </member>
         <member name="T:Outpost31.Core.Admin.AdminMode">
             <summary>Logic for administrative mode options.</summary>
-            <remarks>
-              For more information on AdminMode and it's settings, please see the Tingen Web Service Manual.<br/>
-              <br/>
-              For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.
-            </remarks>
+            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file. </remarks>
         </member>
         <member name="P:Outpost31.Core.Admin.AdminMode.ExeAsmName">
             <summary>A required log file component.</summary>
@@ -121,29 +107,18 @@
             <remarks> <note title="Administrative mode options">
                 The following administrative modes are available:
                 <list type="bullet">
-                    <item>
-                        <see cref="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">RefreshAppData</see>
-                    </item>
-                    <item>
-                        <see cref="M:Outpost31.Core.Admin.Testing.Regression(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">RegressionTest</see>
-                    </item>
+                    <item><see cref="M:Outpost31.Core.Admin.Deployment.Deploy(System.String)">Deploy</see></item>
+                    <item><see cref="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">Refresh</see></item>
+                    <item><see cref="M:Outpost31.Core.Admin.Testing.Regression(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">Regression</see></item>
                 </list>
             </note><HowTo>
                 <note type="todo" title="How-To">
                     <h3>Modify the AdminMode setting</h3>
                     <list type="number">
-                        <item>
-                            Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.
-                        </item>
-                        <item>
-                            Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.
-                        </item>
-                        <item>
-                            Change the value of the <c>AdminMode</c> setting to the desired value.
-                        </item>
-                        <item>
-                            Save the changes to the <c>Web.Config</c> file.
-                        </item>
+                        <item>Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.</item>
+                        <item>Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.</item>
+                        <item>Change the value of the <c>AdminMode</c> setting to the desired value.</item>
+                        <item>Save the changes to the <c>Web.Config</c> file.</item>
                     </list>
                     For example, to set the AdminMode to `RegressionTest`:
                     <code>
@@ -162,24 +137,14 @@
         </member>
         <member name="T:Outpost31.Core.Logger.LogAppEvent">
             <summary>Logs an application event.</summary>
-            <remarks>
-                <para>
-                Core.Logger.LogEvent external XML
-            </para>
-                <!-- Failed to insert some or all of included XML --><include file="AppData/XMLDoc/ProjectInfo.xml" path="TngnOpto/Class[@name=&quot;ProjectInfo&quot;]/Callback/*" />
-            </remarks>
+            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
         </member>
         <member name="P:Outpost31.Core.Logger.LogAppEvent.ExeAsmName">
-            <summary>The executing assembly name.</summary>
-            <remarks>
-                <!-- Failed to insert some or all of included XML --><include file="AppData/XmlDoc/Common.xml" path="TngnOpto/Class[@name=&quot;Common&quot;]/ExeAsmName/*" />
-            </remarks>
+            <summary>A required log file component.</summary>
         </member>
         <member name="M:Outpost31.Core.Logger.LogAppEvent.Critical(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>Generate a critical log.</summary>
-            <remarks>
-            This is public because TngnWsvc may need to call it.
-            </remarks>
+            <remarks>This is public because TngnWsvc may need to call it.</remarks>
             <param name="avatarSystem"></param>
             <param name="exeAsmName"></param>
             <param name="msec"></param>

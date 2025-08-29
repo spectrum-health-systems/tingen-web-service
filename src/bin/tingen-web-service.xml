@@ -35,11 +35,7 @@
         </member>
         <member name="T:TingenWebService.TingenWebService">
             <summary>The entry class for the Tingen Web Service.</summary>
-            <remarks>
-              The heavy lifting is done by <see cref="T:Outpost31.ProjectInfo"> Outpost31</see>.<br/>
-              <br/>
-              For more information about the Tingen Web Service, please see the <see cref="T:TingenWebService.ProjectInfo"/> file.
-            </remarks>
+            <remarks>For more information about the Tingen Web Service, please see the <see cref="T:TingenWebService.ProjectInfo"/> file.</remarks>
         </member>
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>A required log file component.</summary>
@@ -53,11 +49,11 @@
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Determines what the Tingen Web Service will do, if anything.</summary>
-            <param name="sentOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
-            <param name="sentScriptParameter">The original Script Parameter that is sent from Avatar.</param>
+            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
+            <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         </member>
-        <member name="M:TingenWebService.TingenWebService.WriteStartLog(System.String)">
+        <member name="M:TingenWebService.TingenWebService.WriteStartLog">
             <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
         </member>
         <member name="M:TingenWebService.TingenWebService.LogMsg(ScriptLinkStandard.Objects.OptionObject2015,System.String)">

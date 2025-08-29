@@ -4,8 +4,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 // -----------------------------------------------------------------------------
-// u250828_code
-// u250828_documentation
+// u250829_code
+// u250829_documentation
 // =============================================================================
 
 using System;
@@ -19,11 +19,7 @@ using Outpost31.Core.Admin;
 namespace TingenWebService
 {
     /// <summary>The entry class for the Tingen Web Service.</summary>
-    /// <remarks>
-    ///   The heavy lifting is done by <see cref="Outpost31.ProjectInfo"> Outpost31</see>.<br/>
-    ///   <br/>
-    ///   For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.
-    /// </remarks>
+    /// <remarks>For more information about the Tingen Web Service, please see the <see cref="ProjectInfo"/> file.</remarks>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
@@ -49,22 +45,17 @@ namespace TingenWebService
         {
             /* For debugging only!
              */
-            WriteStartLog("Start");
+            //WriteStartLog();
 
             string avatarSystem = Settings.Default.AvatarSystem;
 
-            /* There are additional Administrative functions that can be performed by the Tingen Web Service. Please see
-             * the Manual for more information.
+            /* This functionality is used for administrative purposes, and will eventually be moved to a web call.
              */
             AdminMode.Parse(origOptObj, origScriptParam, WsvcVer, avatarSystem, Settings.Default.AdminMode);
-
-            Outpost31.Core.Logger.LogAppEvent.Critical(avatarSystem, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
 
             // TODO - Move this to a Parse() method?
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                WriteStartLog("Start1");
-
                 Outpost31.Core.Logger.LogAppEvent.Critical(avatarSystem, ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
 
                 return origOptObj.ToReturnOptionObject(0, "");
@@ -76,34 +67,25 @@ namespace TingenWebService
                 //-//Outpost31.Core.Avatar.AvtrParameter.Request(tngnWsvcSession);
 
                 //-//return tngnWsvcSession.OptObj.Finalized;
-                WriteStartLog("Start2");
                 return origOptObj.ToReturnOptionObject(0, "");
             }
             else
             {
-                WriteStartLog("Start3");
                 return origOptObj.ToReturnOptionObject(0, "");
             }
         }
 
         /// <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
-        internal static void WriteStartLog(string time)
+        internal static void WriteStartLog()
         {
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Tingen Web Service.{time}", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
+            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Tingen Web Service.started", $"Tingen Web Service started: {DateTime.Now:MM/dd/yyyy-HH:mm:ss.fffffff}");
         }
 
         /// <summary>Build a message for the critical error.</summary>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
         /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>A message for the critical error log.</returns>
-        internal static string LogMsg(OptionObject2015 origOptObj, string origScriptParam)
-        {
-            var t = $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
-
-            File.WriteAllText($@"C:\Tingen_Data\WebService\UAT\Tingen.tt", t);
-        
-        WriteStartLog("Start5");
-            return $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
-        }
+        internal static string LogMsg(OptionObject2015 origOptObj, string origScriptParam) =>
+            $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
     }
 }
