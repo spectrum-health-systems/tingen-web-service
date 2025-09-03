@@ -26,10 +26,12 @@ namespace TingenWebService.Configuration
 
         internal static Dictionary<string, string> Load(Settings runtimeConfig)
         {
+            // Should have log here.
             // Need to convert this, since it's used as an integer elsewhere.
-            int traceLimitAsInt = Convert.ToInt32(runtimeConfig.TraceLimit);
+            //int traceLimitAsInt = Convert.ToInt32(runtimeConfig.TraceLimit);
+            //Outpost31.Core.Logger.LogAppEvent.Trace(2, traceLimitAsInt, runtimeConfig.AvatarSystem, ExeAsmName, 0);
 
-            Outpost31.Core.Logger.LogAppEvent.Trace(2, traceLimitAsInt, runtimeConfig.AvatarSystem, ExeAsmName, 0);
+
 
             return new Dictionary<string, string>
             {
