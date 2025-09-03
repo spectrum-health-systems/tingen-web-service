@@ -16,124 +16,25 @@
         </member>
         <member name="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem">
             <summary>The Avatar System that the Tingen Web Service will interface with.</summary>
-            <remarks>
-              It is <b><i>very important</i></b> that <c>AvatarSystem</c> is set correctly, otherwise lots of bad things can <i>and will</i> happen!<br />
-              <br />
-              Common Avatar Systems are: <c>UAT</c>, <c>LIVE</c>, <c>SBOX</c>, and<c> BUILD</c>. However, the Tingen Web Service is only<br />
-              able to interface with the <b><c>UAT</c></b> and <b><c> LIVE</c></b> Avatar Systems.<br />
-              <br />
-              <HowTo>
-                <note type="todo" title="How-To">
-                    <h3>Modify the AvtrSys setting</h3>
-                    <list type="number">
-                        <item>Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.</item>
-                        <item>Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.</item>
-                        <item>Change the value of the <c>AvtrSys</c> setting to the desired value.</item>
-                        <item>Save the changes to the <c>Web.Config</c> file.</item>
-                    </list>
-                    For example, to set the Avatar System to `LIVE`:
-                    <code>
-                        &lt;setting name="AvtrSys" serializeAs="String"&gt;
-                            &lt;value&gt;LIVE&lt;/value&gt;
-                        &lt;/setting&gt;
-                    </code>
-                    Changes to the <c>AvtrSys</c> setting will be applied the next time the Tingen Web Service is executed.<br />
-                </note>
-            </HowTo>
-            </remarks>
             <value>The default value is <c>UAT</c>.</value>
         </member>
         <member name="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystemCode">
             <summary>The Avatar System Code used to login to Avatar.</summary>
-            <remarks>
-                The Avatar <i>System Code</i> determines (in part) what Avatar functionality a user has access to while they are logged into
-                an Avatar <i>System</i>.<br/>
-                <br/>
-                Organizations may have many different Avatar <i>System Codes</i>, but only a few Avatar <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/>.<br/>
-                <br/>
-                And just to make things confusing, sometimes an Avatar System Code may be similar or the same as an Avatar System.
-            </remarks>
         </member>
-        <member name="T:Outpost31.Core.Admin.Deployment">
-            <summary>Logic for deployment processes.</summary>
-            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
+        <member name="P:Outpost31.Core.Avatar.AvatarOptionObject.Original">
+            <summary>The original <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> sent from Avatar.</summary>
+            <remarks>This OptionObject is <i>never</i> modified during a Tingen Web Service session.</remarks>
         </member>
-        <member name="P:Outpost31.Core.Admin.Deployment.ExeAsmName">
+        <member name="P:Outpost31.Core.Avatar.AvatarOptionObject.Worker">
+            <summary>The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> where work is done.</summary>
+            <remarks>This OptionObject is <i>potentially</i> modified during a Tingen Web Service session.</remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvatarOptionObject.Completed">
+            <summary>The finalized <see cref="T:ScriptLinkStandard.Objects.OptionObject2015">OptionObject</see> that is returned to Avatar.</summary>
+            <remarks>This is the finalized OptionObject, ready to be returned to Avatar.</remarks>
+        </member>
+        <member name="P:Outpost31.Core.Avatar.AvatarOptionObject.ExeAsmName">
             <summary>A required log file component.</summary>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Deployment.Deploy(System.String)">
-            <summary>Deploy the Tingen Web Service framework.</summary>
-            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Deployment.CreateFolderFramework(System.String)">
-            <summary>Create the Tingen Web Service folder framework.</summary>
-            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">
-            <summary>Refresh application data that is required by the Tingen Web Service.</summary>
-            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Deployment.CopyDirectory(System.String,System.String)">
-            TODO move to a utility class
-        </member>
-        <member name="T:Outpost31.Core.Admin.Testing">
-            <summary>Provides testing and debugging operations.</summary>
-            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
-        </member>
-        <member name="P:Outpost31.Core.Admin.Testing.ExeAsmName">
-            <summary>A required log file component.</summary>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Testing.Regression(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">
-            <summary>Runs regression tests.</summary>
-            <param name="sentOptionObject">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
-            <param name="sentScriptParameter">The original Script Parameter that is sent from Avatar.</param>
-            <param name="wsvcVer">The current version of the Tingen Web Service.</param>
-            <param name="avatarSystem">The <see cref="!:AvatarEnvironment.AvatarSystem"/>Avatar system that the Tingen Web Service will interface with.</param>
-        </member>
-        <member name="M:Outpost31.Core.Admin.Testing.GenerateAppLogs(System.String,System.Int32)">
-            <summary>Generates various application logs.</summary>
-            <param name="avatarSystem">The identifier for the avatar system or application context in which the logging operations are performed.</param>
-            <param name="msec">Pause, in milliseconds.</param>
-        </member>
-        <member name="T:Outpost31.Core.Admin.AdminMode">
-            <summary>Logic for administrative mode options.</summary>
-            <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file. </remarks>
-        </member>
-        <member name="P:Outpost31.Core.Admin.AdminMode.ExeAsmName">
-            <summary>A required log file component.</summary>
-        </member>
-        <member name="M:Outpost31.Core.Admin.AdminMode.Parse(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String,System.String)">
-            <summary>Determines if a administrative mode should be executed.</summary>
-            <remarks> <note title="Administrative mode options">
-                The following administrative modes are available:
-                <list type="bullet">
-                    <item><see cref="M:Outpost31.Core.Admin.Deployment.Deploy(System.String)">Deploy</see></item>
-                    <item><see cref="M:Outpost31.Core.Admin.Deployment.RefreshAppData(System.String)">Refresh</see></item>
-                    <item><see cref="M:Outpost31.Core.Admin.Testing.Regression(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.String,System.String)">Regression</see></item>
-                </list>
-            </note><HowTo>
-                <note type="todo" title="How-To">
-                    <h3>Modify the AdminMode setting</h3>
-                    <list type="number">
-                        <item>Open the <c>Web.Config</c> file located in the root directory of the Tingen Web Service.</item>
-                        <item>Locate the <c>AvtrSys</c> setting within the <c>applicationSettings</c> section.</item>
-                        <item>Change the value of the <c>AdminMode</c> setting to the desired value.</item>
-                        <item>Save the changes to the <c>Web.Config</c> file.</item>
-                    </list>
-                    For example, to set the AdminMode to `RegressionTest`:
-                    <code>
-                        &lt;setting name="AdminMode" serializeAs="String"&gt;
-                            &lt;value&gt;RegressionTest&lt;/value&gt;
-                        &lt;/setting&gt;
-                    </code>
-                    Changes to the <c>AdminMode</c> setting will be applied the next time the Tingen Web Service is executed.<br />
-                </note>
-            </HowTo></remarks>
-            <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
-            <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
-            <param name="tngnWsvcVer">The current version of the Tingen Web Service.</param>
-            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem" />Avatar system that the Tingen Web Service will interface with.</param>
-            <param name="adminMode">The administrative mode setting.</param>
         </member>
         <member name="T:Outpost31.Core.Logger.LogAppEvent">
             <summary>Logs an application event.</summary>
@@ -154,6 +55,38 @@
             <param name="fromMethod"></param>
             <param name="fromLine"></param>
         </member>
+        <member name="M:Outpost31.Core.Logger.LogAppEvent.Trace(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>Generate a trace log.</summary>
+            <param name="traceLevel"></param>
+            <param name="traceLimit"></param>
+            <param name="avatarSystem"></param>
+            <param name="exeAsmName"></param>
+            <param name="msec"></param>
+            <param name="fromClassPath"></param>
+            <param name="fromMethod"></param>
+            <param name="fromLine"></param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogAppEvent.Debuggler(System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>Generate a debug log.</summary>
+            <param name="avatarSystem"></param>
+            <param name="exeAsmName"></param>
+            <param name="msec"></param>
+            <param name="logBody"></param>
+            <param name="fromClassPath"></param>
+            <param name="fromMethod"></param>
+            <param name="fromLine"></param>
+        </member>
+        <member name="M:Outpost31.Core.Logger.LogAppEvent.Error(System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>Generate an error log.</summary>
+            <param name="avatarSystem"></param>
+            <param name="exeAsmName"></param>
+            <param name="msec"></param>
+            <param name="errorMsg"></param>
+            <param name="errorCode"></param>
+            <param name="fromClassPath"></param>
+            <param name="fromMethod"></param>
+            <param name="fromLine"></param>
+        </member>
         <member name="M:Outpost31.Core.Logger.LogAppEvent.Primeval(System.String,System.Int32)">
             <summary>Primeval logs are used when the advanced logging infrastructure isn't available.</summary>
             <remarks>
@@ -169,8 +102,59 @@
             <param name="avatarSystem">The sys</param>
             <param name="logBody">The log message, which defaults to "Primeval log." if not specified.</param>
         </member>
-        <member name="P:Outpost31.Module.Admin.Development.ExeAsmName">
+        <member name="M:Outpost31.Core.Logger.LogAppEvent.GetClassName(System.String)">
+            <summary>Get the class name from the full class path.</summary>
+            <param name="fromClassPath"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Outpost31.Core.Request.Parser.ExeAsmName">
             <summary>A required log file component.</summary>
+        </member>
+        <member name="M:Outpost31.Core.Request.Parser.ParseRequest(Outpost31.Core.Session.TngnWsvcSession)">
+            <summary></summary>
+            <param name="tngnWsvcSession"></param>
+        </member>
+        <member name="P:Outpost31.Core.Session.TngnWsvcSession.ExeAsmName">
+            <summary>A required log file component.</summary>
+        </member>
+        <member name="T:Outpost31.Module.Administration.Deployment">
+            <summary>Administrative deployment functionality.</summary>
+        </member>
+        <member name="P:Outpost31.Module.Administration.Deployment.ExeAsmName">
+            <summary>A required log file component.</summary>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Deployment.FullDeploy(System.String,System.Int32)">
+            <summary>Deploy the Tingen Web Service framework.</summary>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Deployment.CreateFolderFramework(System.String,System.Int32)">
+            <summary>Create the Tingen Web Service folder framework.</summary>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Deployment.RefreshAppData(System.String,System.Int32)">
+            <summary>Refresh application data that is required by the Tingen Web Service.</summary>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Deployment.CopyDirectory(System.String,System.String)">
+            TODO move to a utility class
+        </member>
+        <member name="T:Outpost31.Module.Administration.Testing">
+            <summary>Administrative testing functionality.</summary>
+        </member>
+        <member name="P:Outpost31.Module.Administration.Testing.ExeAsmName">
+            <summary>A required log file component.</summary>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Testing.Regression(System.String,System.Int32)">
+            <summary>Runs regression tests.</summary>
+            <param name="sentOptionObject">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
+            <param name="sentScriptParameter">The original Script Parameter that is sent from Avatar.</param>
+            <param name="tngnWsvcVer">The current version of the Tingen Web Service.</param>
+            <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/>Avatar system that the Tingen Web Service will interface with.</param>
+        </member>
+        <member name="M:Outpost31.Module.Administration.Testing.GenerateAppLogs(System.String,System.Int32,System.Int32)">
+            <summary>Generates various application logs.</summary>
+            <param name="avatarSystem">The identifier for the avatar system or application context in which the logging operations are performed.</param>
+            <param name="msec">Pause, in milliseconds.</param>
         </member>
         <member name="T:Outpost31.ProjectInfo">
             <summary>Provides additional information about Outpost31.</summary>

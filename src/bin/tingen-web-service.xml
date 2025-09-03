@@ -4,6 +4,9 @@
         <name>TingenWebService</name>
     </assembly>
     <members>
+        <member name="P:TingenWebService.Configuration.RuntimeConfig.ExeAsmName">
+            <summary>A required log file component.</summary>
+        </member>
         <member name="T:TingenWebService.ProjectInfo">
             <summary>Provides additional information about the Tingen Web Service.</summary>
             <remarks>
@@ -40,21 +43,18 @@
         <member name="P:TingenWebService.TingenWebService.ExeAsmName">
             <summary>A required log file component.</summary>
         </member>
-        <member name="P:TingenWebService.TingenWebService.WsvcVer">
+        <member name="P:TingenWebService.TingenWebService.TngnWsvcVer">
             <summary>The current version of the Tingen Web Service.</summary>
         </member>
         <member name="M:TingenWebService.TingenWebService.GetVersion">
             <summary>Get the current version of the Tingen Web Service.</summary>
-            <returns>The current <see cref="P:TingenWebService.TingenWebService.WsvcVer"/> of the Tingen Web Service.</returns>
+            <returns>The current <see cref="P:TingenWebService.TingenWebService.TngnWsvcVer"/> of the Tingen Web Service.</returns>
         </member>
         <member name="M:TingenWebService.TingenWebService.RunScript(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Determines what the Tingen Web Service will do, if anything.</summary>
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> sent from Avatar.</param>
             <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
             <returns>An <see cref="T:ScriptLinkStandard.Objects.OptionObject2015"/> representing the result of the Script Parameter request.</returns>
-        </member>
-        <member name="M:TingenWebService.TingenWebService.WriteStartLog">
-            <summary>Writes a simple log file to indicate that the Tingen Web Service has started.</summary>
         </member>
         <member name="M:TingenWebService.TingenWebService.LogMsg(ScriptLinkStandard.Objects.OptionObject2015,System.String)">
             <summary>Build a message for the critical error.</summary>
