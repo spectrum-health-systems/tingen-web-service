@@ -1,0 +1,27 @@
+﻿<TngnWsvc>
+
+    <Class name="asmx">
+
+        <!-- ======================================================================= -->
+
+        <RunScript> <!-- <include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="asmx"]/RunScript/*'/> -->
+            <note title="Development logging">
+                This method contains a number of log commands that may be used during development, but should be commented out in production code.<br/>
+                <br/>
+                These commands are not part of the public API, since the logging infrastructure hasn't been initialized at this point, and they are all a little bit different and write to different locations.<br/>
+                <br/>
+                I want these commands to be available for developers to use as needed, but at the same time I want to minimize the amount of clutter they create. Hence, I've attempted to keep them on a single line, including an in-line comment.<br/>
+            </note>
+            <br/>
+            <note title="Runtime settings">
+                The runtime settings are built using values in Web.config, but since Outpost31 doesn't reference the TingenWebService project, the values are converted into a dictionary instead of a strongly-typed object. This makes it easier to pass to Outpost31.Core.TngnWsvcSession.Start(), at the expense of making the class a little uglier.<br/>
+                <br/>
+                Care must be taken to ensure the keys in Web.config match the keys expected by the code.
+            </note>
+        </RunScript>
+
+        <!-- ======================================================================= -->
+
+    </Class>
+
+</TngnWsvc>

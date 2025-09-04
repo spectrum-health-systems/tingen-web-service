@@ -4,18 +4,18 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 // -----------------------------------------------------------------------------
-// u250903_code
-// u250903_documentation
+// u250904_code
+// u250904_documentation
 // =============================================================================
 
+using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services;
+using Outpost31.Core.Request;
 using Outpost31.Core.Session;
 using ScriptLinkStandard.Objects;
 using TingenWebService.Configuration;
-using Outpost31.Core.Request;
 using TingenWebService.Properties;
-using System.Collections.Generic;
 
 namespace TingenWebService
 {
@@ -30,55 +30,49 @@ namespace TingenWebService
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
         /// <summary>The current version of the Tingen Web Service.</summary>
-        public static string TngnWsvcVer { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        public static string Version { get; set; } = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         /// <summary>Get the current version of the Tingen Web Service.</summary>
-        /// <returns>The current <see cref="TngnWsvcVer"/> of the Tingen Web Service.</returns>
+        /// <returns>The current <see cref="Version"/> of the Tingen Web Service.</returns>
         [WebMethod]
-        public string GetVersion() => $"VERSION {TngnWsvcVer}";
+        public string GetVersion() => $"VERSION {Version}";
 
         /// <summary>Determines what the Tingen Web Service will do, if anything.</summary>
+        /// <remarks><include file='AppData/XmlDoc/Asmx.xml' path='TngnWsvc/Class[@name="asmx"]/RunScript/*'/></remarks>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
         /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>An <see cref="OptionObject2015"/> representing the result of the Script Parameter request.</returns>
         [WebMethod]
         public OptionObject2015 RunScript(OptionObject2015 origOptObj, string origScriptParam) //TODO Rename to "Original"
         {
-            /* Use this when you need to verify that the web service is actually starting.*/
-            //File.WriteAllText($@"C:\Tingen_Data\WebService\Started", $"{DateTime.Now:MM/dd/yyyy-HH:mm:ss);
-
-            Dictionary<string, string> runtimeConfig = RuntimeConfig.Load(Settings.Default);
-
-            /* Use this to when you need to verify that the web service started, and actually did something.*/
-            //Outpost31.Core.Logger.RootLog.StatusLog(runtimeConfig.AvatarSystem, "Started");
+            Dictionary<string, string> runtimeConfig = RuntimeConfig.Load(Settings.Default, Version);
 
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
-                Outpost31.Core.Logger.LogAppEvent.Critical(runtimeConfig["AvatarSystem"], ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
+                //TODO Check this
+                Outpost31.Core.Logger.LogEvent.Critical(runtimeConfig["DataFolder"], runtimeConfig["AvatarSystem"], ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
 
                 return origOptObj.ToReturnOptionObject(0, $"Missing arguments! Please see log files for more information.");
             }
-            else if (runtimeConfig["WsvcMode"] == "enabled") //TODO ...or passthrough?
+            else if (runtimeConfig["Mode"] == "enabled") //TODO ...or passthrough?
             {
-                /* Use this to verify the web service is enabled.*/
-                //Outpost31.Core.Logger.LogAppEvent.Debuggler(runtimeConfig.AvatarSystem, ExeAsmName,0, "Web Service Enabled");
+                Instance session = Instance.Start(origOptObj, origScriptParam, runtimeConfig);
 
-                TngnWsvcSession tngnWsvcSession = TngnWsvcSession.Start(origOptObj, origScriptParam, TngnWsvcVer, runtimeConfig);
+                Parser.ParseRequest(session);
 
-                Parser.ParseRequest(tngnWsvcSession);
-
-                return tngnWsvcSession.OptionObject.Completed;
+                //return origOptObj.ToReturnOptionObject(0, "");
+                return session.OptionObject.Completed;
             }
             else
             {
-                /* Use this to verify the web service is disabled.*/
-                //Outpost31.Core.Logger.LogAppEvent.Critical(runtimeConfig.AvatarSystem, ExeAsmName, 0, "Disabled.");
+                //Outpost31.Core.Logger.LogEvent.Critical(runtimeConfig["DataFolder"], runtimeConfig["AvatarSystem"], ExeAsmName, 0, "Disabled.");
 
-                return origOptObj.ToReturnOptionObject(3, $"The Tingen Web Service is disabled.");
+                return origOptObj.ToReturnOptionObject(0, "");
             }
         }
 
         /// <summary>Build a message for the critical error.</summary>
+        /// <remarks>This is here so it won't clutter RunScript().</remarks>
         /// <param name="origOptObj">The <see cref="OptionObject2015"/> sent from Avatar.</param>
         /// <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>
         /// <returns>A message for the critical error log.</returns>
@@ -86,3 +80,7 @@ namespace TingenWebService
             $"The OptionObject (\"{origOptObj}\") and/or Script Parameter (\"{origScriptParam}\") were not sent from Avatar.";
     }
 }
+
+/* Use this when debugging
+ */
+//File.WriteAllText($@"C:\Tingen_Data\WebService\Started", $"{DateTime.Now:MM/dd/yyyy-HH:mm:ss); /* DEBUG USE ONLY */

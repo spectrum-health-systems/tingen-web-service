@@ -35,18 +35,36 @@ namespace TingenWebService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Enabled")]
-        public string WsvcMode {
+        public string Mode {
             get {
-                return ((string)(this["WsvcMode"]));
+                return ((string)(this["Mode"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string TraceLimit {
+        public string TraceLogLimit {
             get {
-                return ((string)(this["TraceLimit"]));
+                return ((string)(this["TraceLogLimit"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Tingen_www\\WebService")]
+        public string WwwFolderBase {
+            get {
+                return ((string)(this["WwwFolderBase"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Tingen_Data\\WebService")]
+        public string DataFolderBase {
+            get {
+                return ((string)(this["DataFolderBase"]));
             }
         }
     }

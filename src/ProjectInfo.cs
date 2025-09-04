@@ -4,8 +4,8 @@
 // Copyright (c) A Pretty Cool Program. All rights reserved.
 // Licensed under the Apache 2.0 license.
 // -----------------------------------------------------------------------------
-// Release 25.8
-// u250829
+// Release 25.9
+// u250904
 // =============================================================================
 
 namespace TingenWebService
@@ -15,7 +15,7 @@ namespace TingenWebService
     ///  <para>
     ///    <b>About the Tingen Web Service</b><br/>
     ///    Netsmart's Avatar™ is a behavioral health EHR that offers a recovery-focused suite of solutions that
-    ///    leverage real-time analytics and clinical decision support to drive value-based care.
+    ///    leverage real-time analytics and clinical decision support to drive value-based care.<br/>
     ///    <br/>
     ///    While Avatar™ is a robust platform, it isn't perfect. The good news is that you can extend myAvatar™
     ///    functionality via Netsmart's Avatar™ Web Services, and/or custom web services that are written by other
