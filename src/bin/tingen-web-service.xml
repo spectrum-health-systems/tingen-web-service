@@ -12,7 +12,8 @@
         </member>
         <member name="M:TingenWebService.Configuration.RuntimeConfig.Load(TingenWebService.Properties.Settings,System.String)">
             <summary>Loads the runtime configuration for the Tingen Web Service.</summary>
-            <param name="runtimeConfig"></param>
+            <remarks>Most settings are from the Web.config file.</remarks>
+            <param name="webConfigSettings">The Settings.settings content</param>
             <returns>A dictionary with the runtime configuration.</returns>
         </member>
         <member name="T:TingenWebService.ProjectInfo">

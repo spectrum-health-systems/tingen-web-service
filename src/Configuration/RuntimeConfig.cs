@@ -21,19 +21,19 @@ namespace TingenWebService.Configuration
         /// <summary>A required log file component.</summary>
         public static string ExeAsmName { get; set; } = Assembly.GetExecutingAssembly().GetName().Name;
 
-
         /// <summary>Loads the runtime configuration for the Tingen Web Service.</summary>
-        /// <param name="runtimeConfig"></param>
+        /// <remarks>Most settings are from the Web.config file.</remarks>
+        /// <param name="webConfigSettings">The Settings.settings content</param>
         /// <returns>A dictionary with the runtime configuration.</returns>
-        internal static Dictionary<string, string> Load(Settings runtimeConfig, string tngnWsvcVer) =>
+        internal static Dictionary<string, string> Load(Settings webConfigSettings, string tngnWsvcVer) =>
             new Dictionary<string, string>
             {
                 { "Version",        tngnWsvcVer },
-                { "AvatarSystem",   runtimeConfig.AvatarSystem },
-                { "Mode",           runtimeConfig.Mode.ToLower() },
-                { "BaseWwwFolder",  $@"{runtimeConfig.WwwFolderBase}\{runtimeConfig.AvatarSystem}" },
-                { "BaseDataFolder", $@"{runtimeConfig.DataFolderBase}\{runtimeConfig.AvatarSystem}" },
-                { "TraceLogLimit",  runtimeConfig.TraceLogLimit}
+                { "AvatarSystem",   webConfigSettings.AvatarSystem },
+                { "Mode",           webConfigSettings.Mode.ToLower() },
+                { "BaseWwwFolder",  $@"{webConfigSettings.WwwFolderBase}\{webConfigSettings.AvatarSystem}" },
+                { "BaseDataFolder", $@"{webConfigSettings.DataFolderBase}\{webConfigSettings.AvatarSystem}" },
+                { "TraceLogLimit",  webConfigSettings.TraceLogLimit}
             };
     }
 }

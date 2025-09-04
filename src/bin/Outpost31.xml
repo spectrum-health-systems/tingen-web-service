@@ -152,6 +152,9 @@
             <summary></summary>
             <param name="session"></param>
         </member>
+        <member name="P:Outpost31.Core.Session.Instance.ExeAsmName">
+            <summary>A required log file component.</summary>
+        </member>
         <member name="M:Outpost31.Core.Session.Instance.Start(ScriptLinkStandard.Objects.OptionObject2015,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>A required log file component.</summary>
         </member>
