@@ -50,7 +50,11 @@ namespace TingenWebService
             if (origOptObj == null || string.IsNullOrWhiteSpace(origScriptParam))
             {
                 //TODO Check this
-                Outpost31.Core.Logger.LogEvent.Critical(runtimeConfig["DataFolder"], runtimeConfig["AvatarSystem"], ExeAsmName, 0, "Missing arguments", LogMsg(origOptObj, origScriptParam));
+                Outpost31.Core.Logger.LogEvent.Critical(runtimeConfig["DataFolder"],
+                                                        runtimeConfig["AvatarSystem"],
+                                                        ExeAsmName, 0,
+                                                        "Missing arguments",
+                                                        LogMsg(origOptObj, origScriptParam));
 
                 return origOptObj.ToReturnOptionObject(0, $"Missing arguments! Please see log files for more information.");
             }
