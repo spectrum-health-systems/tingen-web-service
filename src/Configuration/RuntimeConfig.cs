@@ -28,12 +28,12 @@ namespace TingenWebService.Configuration
         internal static Dictionary<string, string> Load(Settings webConfigSettings, string tngnWsvcVer) =>
             new Dictionary<string, string>
             {
-                { "Version",        tngnWsvcVer },
-                { "AvatarSystem",   webConfigSettings.AvatarSystem },
-                { "Mode",           webConfigSettings.Mode.ToLower() },
+                { "Version",          tngnWsvcVer },
+                { "AvatarSystem",     webConfigSettings.AvatarSystem },
+                { "Mode",             webConfigSettings.Mode.ToLower() },
                 { "SystemWwwFolder",  $@"{webConfigSettings.WwwFolderBase}\{webConfigSettings.AvatarSystem}" },
                 { "SystemDataFolder", $@"{webConfigSettings.DataFolderBase}\{webConfigSettings.AvatarSystem}" },
-                { "TraceLogLimit",  webConfigSettings.TraceLogLimit}
+                { "TraceLogLimit",    webConfigSettings.TraceLogLimit}
             };
     }
 }
