@@ -70,7 +70,14 @@
             </note><br /><note title="Runtime settings">
                 The runtime settings are built using values in Web.config, but since Outpost31 doesn't reference the TingenWebService project, the values are converted into a dictionary instead of a strongly-typed object. This makes it easier to pass to Outpost31.Core.TngnWsvcSession.Start(), at the expense of making the class a little uglier.<br />
                 <br />
-                Care must be taken to ensure the keys in Web.config match the keys expected by the code.
+                Care must be taken to ensure the keys in Web.config match the keys expected by the code.<br />
+            </note><br /><note type="caution" title="Important!">
+                Do not change the names of the the following parameters:
+                <list type="bullet">
+                    <item>origOptObj</item>
+                    <item>origScriptParam</item>
+                </list>
+                For some reason, changing these names causes the web service to fail.
             </note></remarks>
             <param name="origOptObj">The <see cref="T:ScriptLinkStandard.Objects.OptionObject2015" /> sent from Avatar.</param>
             <param name="origScriptParam">The original Script Parameter that is sent from Avatar.</param>

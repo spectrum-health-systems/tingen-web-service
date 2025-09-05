@@ -81,17 +81,9 @@
         <member name="P:Outpost31.Core.Logger.LogEvent.ExeAsmName">
             <summary>A required log file component.</summary>
         </member>
-        <member name="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
+        <member name="M:Outpost31.Core.Logger.LogEvent.Critical(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
             <summary>Generate a critical log.</summary>
             <remarks>This is public because TngnWsvc may need to call it.</remarks>
-            <param name="avatarSystem"></param>
-            <param name="exeAsmName"></param>
-            <param name="msec"></param>
-            <param name="logName"></param>
-            <param name="logBody"></param>
-            <param name="fromClassPath"></param>
-            <param name="fromMethod"></param>
-            <param name="fromLine"></param>
         </member>
         <member name="M:Outpost31.Core.Logger.LogEvent.Trace(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.Int32)">
             <summary>Generate a trace log.</summary>
@@ -149,7 +141,7 @@
             <summary>A required log file component.</summary>
         </member>
         <member name="M:Outpost31.Core.Request.Parser.ParseRequest(Outpost31.Core.Session.Instance)">
-            <summary></summary>
+            <summary>Parse a request.</summary>
             <param name="session"></param>
         </member>
         <member name="P:Outpost31.Core.Session.Instance.ExeAsmName">
