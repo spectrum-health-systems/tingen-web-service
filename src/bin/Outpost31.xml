@@ -74,6 +74,80 @@
             <param name="origParam">The original Script Parameter sent from Avatar.</param>
             <returns>A string indicating if an Script Parameter was sent or not.</returns>
         </member>
+        <member name="T:Outpost31.Core.Framework.Folders">
+            <summary>
+            Represents a set of folder paths used by the Outpost31 framework.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.SystemWww">
+            <summary>
+            Gets or sets the path to the system WWW folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.SystemData">
+            <summary>
+            Gets or sets the path to the system data folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.AppData">
+            <summary>
+            Gets or sets the path to the application data folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Archive">
+            <summary>
+            Gets or sets the path to the archive folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Blueprint">
+            <summary>
+            Gets or sets the path to the blueprint folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Config">
+            <summary>
+            Gets or sets the path to the configuration folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Export">
+            <summary>
+            Gets or sets the path to the export folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Import">
+            <summary>
+            Gets or sets the path to the import folder.
+            </summary>
+        </member>
+        <member name="P:Outpost31.Core.Framework.Folders.Session">
+            <summary>
+            Gets or sets the path to the session folder.
+            </summary>
+        </member>
+        <member name="M:Outpost31.Core.Framework.Folders.Load(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Loads folder paths based on provided parameters.
+            </summary>
+            <param name="systemDataFolder">The system data folder path.</param>
+            <param name="systemWwwFolder">The system WWW folder path.</param>
+            <param name="avatarUser">The avatar user name.</param>
+            <param name="date">The date string.</param>
+            <param name="time">The time string.</param>
+            <returns>A <see cref="T:Outpost31.Core.Framework.Folders"/> instance with initialized paths.</returns>
+        </member>
+        <member name="M:Outpost31.Core.Framework.Folders.CreateFolderFramework(Outpost31.Core.Framework.Folders,System.Int32)">
+            <summary>
+            Creates the folder framework by ensuring all folders exist.
+            </summary>
+            <param name="folders">The <see cref="T:Outpost31.Core.Framework.Folders"/> instance containing folder paths.</param>
+            <param name="traceLogLimit">The trace log limit.</param>
+        </member>
+        <member name="M:Outpost31.Core.Framework.Folders.CreateSessionFolder(System.String)">
+            <summary>
+            Creates the session folder if it does not exist.
+            </summary>
+            <param name="sessionFolder">The session folder path.</param>
+        </member>
         <member name="T:Outpost31.Core.Logger.LogEvent">
             <summary>Logs an application event.</summary>
             <remarks>For more information about Outpost31, please see the <see cref="T:Outpost31.ProjectInfo"/> file.</remarks>
@@ -156,11 +230,11 @@
         <member name="P:Outpost31.Module.Administration.Deployment.ExeAsmName">
             <summary>A required log file component.</summary>
         </member>
-        <member name="M:Outpost31.Module.Administration.Deployment.Deploy(System.String,System.String,System.String,System.Int32)">
+        <member name="M:Outpost31.Module.Administration.Deployment.Deploy(Outpost31.Core.Framework.Folders,System.String,System.String,System.String,System.Int32)">
             <summary>Deploy the Tingen Web Service framework.</summary>
             <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
         </member>
-        <member name="M:Outpost31.Module.Administration.Deployment.CreateFolderFramework(System.String,System.Int32)">
+        <member name="M:Outpost31.Module.Administration.Deployment.CreateFolderFramework(Outpost31.Core.Framework.Folders,System.Int32)">
             <summary>Create the Tingen Web Service folder framework.</summary>
             <param name="avatarSystem">The <see cref="P:Outpost31.Core.Avatar.AvatarEnvironment.AvatarSystem"/></param>
         </member>

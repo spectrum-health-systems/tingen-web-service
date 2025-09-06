@@ -72,7 +72,7 @@
                 <br />
                 Care must be taken to ensure the keys in Web.config match the keys expected by the code.<br />
             </note><br /><note type="caution" title="Important!">
-                Do not change the names of the the following parameters:
+                Do not change the names of the following parameters:
                 <list type="bullet">
                     <item>origOptObj</item>
                     <item>origScriptParam</item>
